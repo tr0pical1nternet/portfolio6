@@ -1,0 +1,40 @@
+/* Font Declarations */
+
+@font-face {
+  font-family: 'AkzidenzGrotesk-Super';
+  src:  url('fonts/AkzidenzGroteskBQ-Super.eot');
+  src:  url('fonts/AkzidenzGroteskBQ-Super.eot?#iefix') format('embedded-opentype'),
+        url('fonts/AkzidenzGroteskBQ-Super.otf')  format('opentype'),
+        url('fonts/AkzidenzGroteskBQ-Super.woff')  format('woff'),
+        url('fonts/AkzidenzGroteskBQ-Super.woff')  format('woff2'),
+        url('fonts/AkzidenzGroteskBQ-Super.ttf')  format('truetype'),
+        url('fonts/AkzidenzGroteskBQ-Super.svg#AkzidenzGrotesk-Super') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Redefine box-sizing */
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Global Typography */
+
+body {
+  font-family: sans-serif;
+  line-height: 1.4;
+  font-size: 1rem;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "AkzidenzGrotesk-Super", "Helvetica-Neue-Black", "Helvetica-Black", "Ariel-Black", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: .04em;
+}

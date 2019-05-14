@@ -1,0 +1,150 @@
+{ "portfolioItems":
+  [
+    { 
+      "id": 0,
+      "slug":"centerstaging",
+      "devices":["mobile","tablet","desktop"],
+      "title":"Center Staging",
+      "alt":"Center Staging Website",
+      "url":"centerstaging.net",
+      "scope":[
+        "Logo Redesign",
+        "Visual Design",
+        "Icon Design",
+        "Custom WordPress Theme",
+        "Video Editing",
+        "Search Engine Optimization"
+      ],
+      "features":[
+        "Revolution Slider",
+        "Envira Gallery",
+        "Custom SVG icon menus",
+        "Custom testimonial slider",
+        "Site caching and optimization",
+        "CloudFlare CDN",
+        "Automatic cloud backups",
+        "GDPR compliant analytics"],
+      "desc":"Shortly after Raven purchased Center Staging they requested a new website to give the company a fresh image and make it easier to use for both customers and staff. In addition to the website, we updated the company's logo to make it feel contemporary while staying close enough to the existing branding that they could gradually phase it on their trucks, uniforms, signage, business cards, etc, avoiding costly upgrades."
+    },
+    {
+      "id": 1,
+      "slug":"raven",
+      "devices":["mobile","tablet","desktop"],
+      "title":"RAVEN",
+      "alt":"Raven Website",
+      "url":"ravenpmg.com",
+      "scope":[
+        "Mobile Visual Design",
+        "Icon Design",
+        "Custom WordPress Theme",
+        "Search Engine Optimization"
+      ],
+      "features":[
+        "Revolution Slider",
+        "Envira Gallery",
+        "Polyhedral crew overlays",
+        "Site caching and optimization",
+        "CloudFlare CDN","Automatic cloud backups",
+        "GDPR compliant analytics"
+      ],
+      "desc":"Raven needed a site that would showcase their innovativeness in the event design industry. They provided the visual design for a desktop version from which I designed a mobile first responsive theme. The site centers their portfolio, so we carefully incorporated sliders, galleries, and carousels to convey their content as intuitively as possible."
+    },
+    {
+      "id": 2,
+      "slug":"cdesigns",
+      "devices":["mobile","tablet","desktop"],
+      "title":"CDesigns, Inc",
+      "alt":"CDesigns, Inc. Website",
+      "url":"cdesignsinc.com",
+      "scope":[
+        "Logo Redesign",
+        "Visual Design",
+        "Custom WordPress Child Theme"
+      ],
+      "features":[
+        "Portfolio post type and taxonomies",
+        "PhotoSwipe lightbox by Dmitry Semenov",
+        "Site caching and optimization",
+        "Automatic cloud backups"
+      ],
+      "desc":"CDesigns, Inc provides high end renovations and wanted their site to reflect the sophistication of their work. After completing the visual design I was able to find an existing WordPress theme that had the right structure, and built a child theme to suit. The result was an attractive site that was inexpensive and easy to maintain."
+    },
+    {
+      "id": 3,
+      "slug":"spruced",
+      "devices":["mobile","tablet","desktop"],
+      "title":"Spruced",
+      "alt":"Spruced Website",
+      "url":"spruced-dc.com",
+      "scope":["Visual Design","Content Design","Custom WordPress Child Theme"],
+      "features":["Custom testimonial accordion","Automatic cloud backups","Google Analytics"],
+      "desc":"Spruced is a personal organizing company, so when we designed their website it was important to keep the aesthetic as clean as possible. We had a great starting point with origami-inspired logo designed by <a href=\"https:\/\/walkerinkworks.com\/\" alt=\"Walker Ink\" target=\"_blank\">Walker Ink<\/a>. I worked closely with the owner to design content that is simple, informative, and leads the customer to the contact page."
+    },
+    {
+      "id": 4,
+      "slug":"sedimentpress",
+      "devices":["mobile","tablet","desktop"],
+      "title":"Sediment Press",
+      "alt":"Sediment Press Website",
+      "url":"sedimentpress.com",
+      "scope":[
+        "Logo Design",
+        "Visual Design",
+        "Custom WordPress Child Theme",
+        "Store Setup",
+        "Content Creation",
+        "Backend Development"],
+      "features":[
+        "Online store with WooCommerce",
+        "Built on Storefront theme by WooCommerce",
+        "Custom portfolio post type, taxonomies, and page templates",
+        "JustifiedGallery by Miro Mannino",
+        "PhotoSwipe lightbox by Dmitry Semenov",
+        "Automatic cloud backups",
+        "Google Analytics"
+      ],
+      "desc":"Sediment Press is a design and screenprinting company I founded in 2012. Primarily an online store and design portfolio, I wanted to make a site that was aesthetically rustic, with lots of hand drawn elements, while being functionally polished, with a seamless checkout and integrated payment gateway."
+    },
+    {
+      "id": 5,
+      "slug":"studiorusso",
+      "devices":["desktop"],
+      "title":"Studio Russo",
+      "alt":"Studio Russo Website",
+      "url":"studiorussollc.com",
+      "scope":["Custom WordPress Theme","Backend Development"],
+      "features":[
+        "Envira Gallery",
+        "Before and After section with AJAX filtering",
+        "Custom text fields for page specific text"],
+      "desc":"The original Studio Russo site befell a tragic accident and required a rebuild from scratch. I designed a custom theme identical to the original while upgrading the gallery and making improvements to the backend. (The client requested the site not be built responsively)"
+    }
+  ],
+  "imageSizes": [
+    [ "xxs", 128 ],
+    [ "xs", 256 ],
+    [ "s", 512 ],
+    [ "m", 1024 ],
+    [ "l", 1280 ],
+    [ "xl", 1440 ],
+    [ "xxl", 2048 ]
+  ],
+  "socialLinks": 
+    [
+      {
+        "name": "Twitter",
+        "slug": "twitter",
+        "href": "https://twitter.com/tr0pical1ntrnet"        
+      },
+      {
+        "name": "CodePen",
+        "slug": "twitter",
+        "href": "https://codepen.io/tr0pical1nternet/#"
+      },
+      {
+        "name": "GitHub",
+        "slug": "github",
+        "href": "https://github.com/tr0pical1nternet"
+      }
+    ]
+}
