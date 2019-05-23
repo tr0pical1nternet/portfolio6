@@ -40,7 +40,7 @@ for (let i = 0; i < siteData.portfolioItems.length; i++) {
     let defaultWidth = 72;
 
     // Loop through all sizes of each image
-    for (let k = 0; k < siteData.imageSizes.length; k++) {;
+    for (let k = 0; k < siteData.imageSizes.length; k++) {
       let size = siteData.imageSizes[k][0];
       let file = imageFile(item.slug, device, size);
 
@@ -67,8 +67,17 @@ for (let i = 0; i < siteData.portfolioItems.length; i++) {
       width:    defaultWidth
     });
   }
-  console.log(siteData.portfolioItems[i]);
+  // console.log(siteData.portfolioItems[i]);
 }
+
+// Loop through each Social link in siteData
+// for (let i = 0; i < siteData.socialLinks.length; i++) {
+//   let item = siteData.socialLinks[i];
+//   siteData.socialLinks[i].src = "../images/optimized/svg/icon-" + item.slug + ".svg";
+//   siteData.socialLinks[i].class = item.slug + "-icon";
+// }
+
+// console.log(siteData.socialLinks);
 
 gulp.task('images', function (cb) {
   siteData.imageSizes.forEach(function (size) {
@@ -126,7 +135,7 @@ gulp.task('svgo', () => {
         }, {
           removeViewBox: false
         }, {
-          removeDimensions: true
+          // removeDimensions: true
         }, {
           removeAttrs: {
             attrs: 'fill'
@@ -134,7 +143,7 @@ gulp.task('svgo', () => {
         }]
       }
     ))
-    .pipe(gulp.dest('src/images/optimized/svg'));
+    .pipe(gulp.dest('src/images/svg/optimized'));
 });
 
 // Copy fonts to sitedir
@@ -144,7 +153,7 @@ gulp.task('fonts', function() {
     .pipe(browserSync.stream());
 });
 
-// // browserSync and file watching
+// browserSync and file watching
 gulp.task('serve', function () {
   browserSync.init({
     server: sitePath,
@@ -153,7 +162,7 @@ gulp.task('serve', function () {
 
   gulp.watch('src/stylus/*.styl', gulp.series('stylus'));
   gulp.watch('src/pug/*.pug', gulp.series('pug'));
-  gulp.watch('src/images/*.svg', gulp.series('svgo', 'pug'));
+  gulp.watch('src/images/svg/*.svg', gulp.series('svgo', 'pug'));
   gulp.watch('src/fonts/*.{ttf,otf,svg,eot,woff,woff2}', gulp.series('fonts'));
   gulp.watch(sitePath + '*.html').on('change', browserSync.reload);
 });

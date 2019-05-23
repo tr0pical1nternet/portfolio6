@@ -1,16 +1,15 @@
 main
-  dl(id="portfolio-accordion" role="presentation" class=accordion data-allow-toggle="true")
+  div(id="portfolio-accordion" role="presentation" class=accordion data-allow-toggle="true")
     each item, index in portfolioItems
-      dt(class="gallery" aria-level="3" aria-labelledby=item.slug + "-heading" role="figure")
+      div(class="gallery" aria-level="3" aria-labelledby=item.slug + "-heading" role="figure")
         div(class="gallery-inner")
-          - var imagedir = "images"
           each image in item.images
             figure(class="gallery-item" role="group")
               img(src=image.src class=image.class alt=image.alt srcset=image.srcset width=image.width)
         button(id=item.slug + "-toggle" aria-expanded="true" class="accordion-trigger" aria-controls=item.slug + "-panel" type="button")
           span(class="toggle-contents") info
 
-      dd(id=item.slug + "-panel" class="accordion-panel" role="region")
+      div(id=item.slug + "-panel" class="accordion-panel" role="region")
         header
           a(href="http://" + item.url title = item.title alt=item.alt)
             h2(id=slug + "-heading" role="heading" class="accordion-panel") #{item.title}

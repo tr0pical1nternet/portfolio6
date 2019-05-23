@@ -1,13 +1,20 @@
+mixin linkItem(linkHref, linkClass, linkAlt)
+  li
+    a(href = linkHref alt=linkAlt)
+      div(id = linkClass class = "icon social-icon " + linkClass)
+        block
+
+
+
 header.site-header(role="banner")
    div.site-title
     h1 #[span.web-design Web Design] #[span.portfolio Portfolio]
     h2 Charles Robertson
     nav.social(aria-label="Social")
       ul
-        each link in socialLinks
-          li
-            a(href=link.href alt="Charles on " + link.name)
-              div(class="icon social__icon" width="32px")
-                //- include #{'../images/svg/icon-' + link.slug + '.svg'}
-    
-
+        +linkItem('https://twitter.com/tr0pical1ntrnet', 'twitter-icon', 'Charles on Twitter')
+          include ../images/svg/optimized/icon-twitter.svg
+        +linkItem('https://codepen.io/tr0pical1nternet/#', 'codepen-icon', 'Charles on CodePen')
+          include ../images/svg/optimized/icon-codepen.svg
+        +linkItem('https://github.com/tr0pical1nternet', 'github-icon', 'Charles on GitHub')
+          include ../images/svg/optimized/icon-github.svg
