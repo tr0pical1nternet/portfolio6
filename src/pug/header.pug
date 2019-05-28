@@ -8,9 +8,10 @@ mixin linkItem(linkHref, linkClass, linkAlt)
 
 header.site-header(role="banner")
    div.site-title
-    h1 #[span.web-design Web Design] #[span.portfolio Portfolio]
-    h2 Charles Robertson
-    nav.social(aria-label="Social")
+    //- h1 #[span.site-title__web-design Web Design] #[span.site-title__portfolio Portfolio]
+    h1.site-title__web-design Web Design
+    h2.site-title__charles-robertson Charles Robertson
+    nav.site-title__contact(aria-label="Contact")
       ul
         +linkItem('https://twitter.com/tr0pical1ntrnet', 'twitter-icon', 'Charles on Twitter')
           include ../images/svg/optimized/icon-twitter.svg

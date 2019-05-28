@@ -1,0 +1,45 @@
+.site-title
+  display grid
+  grid-template-areas "web-design web-design" "contact charles-robertson"
+  margin-bottom margin1
+
+  h1, h2
+    margin-top 0
+    margin-bottom 0
+
+.site-title__web-design, .site-title__portfolio, .site-title__charles-robertson
+  padding .75em margin0
+  color color1
+  background-color color0
+  line-height 1
+
+.site-title__web-design
+  padding-right 2em
+  border-radius 0 2em 2em 0
+  margin-right auto
+  text-transform uppercase
+  font-size 2.5rem
+  grid-area web-design
+
+.site-title__charles-robertson
+  padding-left 2em
+  border-radius 2em 0 0 2em
+  font-size 1.25rem
+  grid-area charles-robertson
+
+.site-title__contact
+  ul
+    list-style none
+    padding .05em .3em .05em 0
+    margin 0
+    display flex
+    justify-content flex-end
+  
+  li
+    padding .5em .25em
+    &:first
+      padding-left 0
+
+
+
+

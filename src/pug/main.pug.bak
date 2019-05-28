@@ -1,0 +1,31 @@
+main
+  div(id="portfolio-accordion" role="presentation" class=accordion data-allow-toggle="true")
+    each item, index in portfolioItems
+      div(class="gallery" aria-level="3" aria-labelledby=item.slug + "-heading" role="figure")
+        div(class="gallery-inner")
+          each image in item.images
+            figure(class="gallery-item" role="group")
+              img(src=image.src class=image.class alt=image.alt srcset=image.srcset width=image.width)
+        button(id=item.slug + "-toggle" aria-expanded="true" class="accordion-trigger" aria-controls=item.slug + "-panel" type="button")
+          span(class="toggle-contents") info
+
+      div(id=item.slug + "-panel" class="accordion-panel" role="region")
+        header
+          a(href="http://" + item.url title = item.title alt=item.alt)
+            h2(id=slug + "-heading" role="heading" class="accordion-panel") #{item.title}
+            span(class="info-header-link") #{item.url}
+
+        div(class="info")  
+          section(class="cell")
+            h3 Overview
+            p !{item.desc}
+          section(class="cell")
+            h3 Scope
+            ul
+              each listing in item.scope
+                li= listing
+          section(class="cell")
+            h3 Features
+            ul
+              each feature in item.features
+                li= feature

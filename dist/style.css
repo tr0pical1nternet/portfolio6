@@ -356,3 +356,93 @@ html {
 *:after {
   box-sizing: inherit;
 }
+body {
+  font-family: sans-serif;
+}
+.icon {
+  a: display block;
+}
+.icon svg {
+  overflow: visible;
+  display: block;
+}
+.visually-hidden {
+  display: none;
+}
+.site-title {
+  display: grid;
+  grid-template-areas: "web-design web-design" "contact charles-robertson";
+  margin-bottom: 3rem;
+}
+.site-title h1,
+.site-title h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.site-title__web-design,
+.site-title__portfolio,
+.site-title__charles-robertson {
+  padding: 0.75em 1.25rem;
+  color: #fff;
+  background-color: #000;
+  line-height: 1;
+}
+.site-title__web-design {
+  padding-right: 2em;
+  border-radius: 0 2em 2em 0;
+  margin-right: auto;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  grid-area: web-design;
+}
+.site-title__charles-robertson {
+  padding-left: 2em;
+  border-radius: 2em 0 0 2em;
+  font-size: 1.25rem;
+  grid-area: charles-robertson;
+}
+.site-title__contact ul {
+  list-style: none;
+  padding: 0.05em 0.3em 0.05em 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+.site-title__contact li {
+  padding: 0.5em 0.25em;
+}
+.site-title__contact li:first {
+  padding-left: 0;
+}
+.carousel__track {
+  list-style: none;
+  padding: 0 0;
+  margin: 1.25rem 0;
+}
+.carousel__device,
+.carousel__device__border {
+  width: calc(100vw - calc(2 * 1.25rem));
+  position: relative;
+  z-index: 20;
+}
+.carousel__device svg,
+.carousel__device__border svg {
+  display: block;
+  fill: #000;
+  stroke: #fff;
+  stroke-width: 1;
+}
+.carousel__device__screen--01 {
+  width: calc(calc(100vw - calc(2 * 1.25rem)) * .21);
+  height: 0;
+  padding-bottom: 37%;
+  position: absolute;
+  bottom: 6.9%;
+  overflow: hidden;
+  left: 1.05%;
+  z-index: 0;
+}
+.carousel__device__screen-content {
+  width: 100%;
+  position: absolute;
+}

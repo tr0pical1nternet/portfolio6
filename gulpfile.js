@@ -26,79 +26,63 @@ function imageFile(slug, device, size) {
 // Retrieve site data
 var siteData = JSON.parse(fs.readFileSync('./src/json/site-data.json', 'utf8'));
 
-// Loop through each gallery in portfolio
-for (let i = 0; i < siteData.portfolioItems.length; i++) {
-  siteData.portfolioItems[i].images = [];
-  let item = siteData.portfolioItems[i];
+// PUTTING THIS ON HOLD UNTIL I CHANGE IMAGE DATA TO FIT
+// NEW FILE STRUCTURE
 
-  // Loop through each image in gallery
-  for (let j = 0; j < item.devices.length; j++) {
-    let device = item.devices[j];
+// // Loop through each gallery in portfolio
+// for (let i = 0; i < siteData.portfolioItems.length; i++) {
+//   siteData.portfolioItems[i].images = [];
+//   let item = siteData.portfolioItems[i];
+
+//   // Loop through each image in gallery
+//   for (let j = 0; j < item.devices.length; j++) {
+//     let device = item.devices[j];
     
-    // Begin create srcset tags
-    let srcsets = [];
-    let defaultWidth = 72;
+//     // Begin create srcset tags
+//     let srcsets = [];
+//     let defaultWidth = 72;
 
-    // Loop through all sizes of each image
-    for (let k = 0; k < siteData.imageSizes.length; k++) {
-      let size = siteData.imageSizes[k][0];
-      let file = imageFile(item.slug, device, size);
+//     // Loop through all sizes of each image
+//     for (let k = 0; k < siteData.imageSizes.length; k++) {
+//       let size = siteData.imageSizes[k][0];
+//       let file = imageFile(item.slug, device, size);
 
-      // If file exists, create srcset entry
-      if (fs.existsSync(imagePath + file)) {
-        let width = sizeOf(imagePath + file).width;
+//       // If file exists, create srcset entry
+//       if (fs.existsSync(imagePath + file)) {
+//         let width = sizeOf(imagePath + file).width;
 
-        // Get the width of the smallest size to use for default image size
-        if (size === 'xxs') {
-          defaultWidth = width;
-        };
+//         // Get the width of the smallest size to use for default image size
+//         if (size === 'xxs') {
+//           defaultWidth = width;
+//         };
 
-        // Add srcset entry to srcsets array
-        srcsets.push(imageAddr + file + ' ' + width + 'w');
-      }
-    }
+//         // Add srcset entry to srcsets array
+//         srcsets.push(imageAddr + file + ' ' + width + 'w');
+//       }
+//     }
 
-    // Push image data to portfolio item
-    siteData.portfolioItems[i].images.push({
-      src:      imageAddr + imageFile(item.slug, device, 'xxl'),
-      alt:      'Screenshot of the ' + item.title + ' website on a ' + device + ' device',
-      srcset:   srcsets.join(', '),
-      class:    'gallery-image ' + device,
-      width:    defaultWidth
-    });
-  }
-  // console.log(siteData.portfolioItems[i]);
-}
-
-// Loop through each Social link in siteData
-// for (let i = 0; i < siteData.socialLinks.length; i++) {
-//   let item = siteData.socialLinks[i];
-//   siteData.socialLinks[i].src = "../images/optimized/svg/icon-" + item.slug + ".svg";
-//   siteData.socialLinks[i].class = item.slug + "-icon";
+//     // Push image data to portfolio item
+//     siteData.portfolioItems[i].images.push({
+//       src:      imageAddr + imageFile(item.slug, device, 'xxl'),
+//       alt:      'Screenshot of the ' + item.title + ' website on a ' + device + ' device',
+//       srcset:   srcsets.join(', '),
+//       class:    'gallery-image ' + device,
+//       width:    defaultWidth
+//     });
+//   }
+//   // console.log(siteData.portfolioItems[i]);
 // }
 
-// console.log(siteData.socialLinks);
-
-gulp.task('images', function (cb) {
-  siteData.imageSizes.forEach(function (size) {
-    gulp.src('src/images/jpg/*.jpg')
-      .pipe(imageResize( { width: size[1] }))
-      .pipe(rename(function (path) { path.basename += '_' + size[0]; }))
-      .pipe(imagemin())
-      .pipe(gulp.dest(sitePath + 'images'))
-  });
-  cb();
-});
-
-// images(function () { console.log('Images done')} );
-
-// gulp.task('imagemin', () =>
-//   gulp.src('src/images/jpg/*.jpg')
-//     .pipe(imagemin([
-//       imagemin.jpegtran()
-//     ]))
-//     .pipe(gulp.dest(sitePath + 'images'))
-// );
+// gulp.task('images', function (cb) {
+//   siteData.imageSizes.forEach(function (size) {
+//     gulp.src('src/images/jpg/*.jpg')
+//       .pipe(imageResize( { width: size[1] }))
+//       .pipe(rename(function (path) { path.basename += '_' + size[0]; }))
+//       .pipe(imagemin())
+//       .pipe(gulp.dest(sitePath + 'images'))
+//   });
+//   cb();
+// });
 
 // Compile Pug files into HTML
 gulp.task('pug', function () {
@@ -156,8 +140,8 @@ gulp.task('fonts', function() {
 // browserSync and file watching
 gulp.task('serve', function () {
   browserSync.init({
-    server: sitePath,
-    browser: 'FireFox Developer Edition'
+    server: sitePath
+    // browser: 'FireFox Developer Edition'
   });
 
   gulp.watch('src/stylus/*.styl', gulp.series('stylus'));
