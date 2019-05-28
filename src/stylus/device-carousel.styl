@@ -1,15 +1,41 @@
 
+.carousel
 
 .carousel__track
     list-style none
     padding 0 0
     margin margin0 0
+    position relative
+    height 54.664vw
 
+.carousel__panel
+    display inline-block
+    position relative
+    height 100%
+
+    & > svg
+        display block
+        height 100%
 
 .carousel__device
-    
+    margin 0
+    position absolute
+
+    &__00
+        width 23.17%
+        left 0
+        top 35.64%
+        z-index 20
+
+    &__01
+        width: 84.80%
+        left 15.20%
+        top 11.62%
+        z-index 10
+
+
 .carousel__device__border
-    width "calc(100vw - calc(2 * %s))" % margin0
+    // width "calc(100vw - calc(2 * %s))" % margin0
     position relative
     z-index 20
     
@@ -19,15 +45,24 @@
         stroke #FFF
         stroke-width 1
 
-.carousel__device__screen--01
-    width "calc(calc(100vw - calc(2 * %s)) * .21)" % margin0
-    height 0
-    padding-bottom 37%
+.carousel__device__screen
     position absolute
-    bottom 6.9%
     overflow hidden
-    left 1.05%
-    z-index 0
+    height 0
+    z-index 10
+
+    &--00
+        width 91.33%
+        padding-bottom 159.19%
+        left 4.33%
+        top 8.79%
+
+    &--01
+        width 91.24%
+        padding-bottom 51.98%
+        left 4.38%
+        top 6.02%
+    
 
 .carousel__device__screen-content
     width 100%

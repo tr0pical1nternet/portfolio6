@@ -140,8 +140,8 @@ gulp.task('fonts', function() {
 // browserSync and file watching
 gulp.task('serve', function () {
   browserSync.init({
-    server: sitePath
-    // browser: 'FireFox Developer Edition'
+    server: sitePath,
+    browser: 'FireFox Developer Edition'
   });
 
   gulp.watch('src/stylus/*.styl', gulp.series('stylus'));
