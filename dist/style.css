@@ -434,18 +434,23 @@ body {
 .carousel__device {
   margin: 0;
   position: absolute;
+  z-index: 0;
 }
-.carousel__device__00 {
+.carousel__device--00 {
   width: 23.17%;
   left: 0;
   top: 35.64%;
-  z-index: 20;
+  z-index: 10;
 }
-.carousel__device__01 {
+.carousel__device--01 {
   width: 84.8%;
   left: 15.2%;
   top: 11.62%;
-  z-index: 10;
+}
+.carousel__device--02 {
+  width: 49.71%;
+  left: 0;
+  top: 0;
 }
 .carousel__device__border {
   position: relative;
@@ -453,6 +458,7 @@ body {
 }
 .carousel__device__border svg {
   display: block;
+  overflow: visible;
   fill: #000;
   stroke: #fff;
   stroke-width: 1;
@@ -461,7 +467,7 @@ body {
   position: absolute;
   overflow: hidden;
   height: 0;
-  z-index: 10;
+  z-index: 0;
 }
 .carousel__device__screen--00 {
   width: 91.33%;
@@ -474,6 +480,12 @@ body {
   padding-bottom: 51.98%;
   left: 4.38%;
   top: 6.02%;
+}
+.carousel__device__screen--02 {
+  width: 82.01%;
+  padding-bottom: 47.44%;
+  left: 9.04%;
+  top: 4.33%;
 }
 .carousel__device__screen-content {
   width: 100%;

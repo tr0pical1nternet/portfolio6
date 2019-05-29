@@ -141,7 +141,7 @@ gulp.task('fonts', function() {
 gulp.task('serve', function () {
   browserSync.init({
     server: sitePath,
-    browser: 'FireFox Developer Edition'
+    browser: 'FireFox'
   });
 
   gulp.watch('src/stylus/*.styl', gulp.series('stylus'));
