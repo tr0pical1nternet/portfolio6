@@ -358,6 +358,7 @@ html {
 }
 body {
   font-family: sans-serif;
+  background-color: #ddd;
 }
 .icon {
   a: display block;
@@ -365,6 +366,7 @@ body {
 .icon svg {
   overflow: visible;
   display: block;
+  fill: #000;
 }
 .visually-hidden {
   display: none;
@@ -383,7 +385,7 @@ body {
 .site-title__portfolio,
 .site-title__charles-robertson {
   padding: 0.75em 1.25rem;
-  color: #fff;
+  color: #ddd;
   background-color: #000;
   line-height: 1;
 }
@@ -449,8 +451,28 @@ body {
 }
 .carousel__device--02 {
   width: 49.71%;
+  left: 5.49%;
+  top: 0;
+}
+.carousel__device--03 {
+  width: 74.61%;
+  left: 0;
+  top: 45.55%;
+}
+.carousel__device--04 {
+  width: 36.65%;
+  left: 63.35%;
+  top: 10.77%;
+}
+.carousel__device--05 {
+  width: 100%;
   left: 0;
   top: 0;
+}
+.carousel__device--06 {
+  width: 100%;
+  left: 0;
+  top: 64.12%;
 }
 .carousel__device__border {
   position: relative;
@@ -460,8 +482,8 @@ body {
   display: block;
   overflow: visible;
   fill: #000;
-  stroke: #fff;
-  stroke-width: 1;
+  stroke: #ddd;
+  stroke-width: 0.5;
 }
 .carousel__device__screen {
   position: absolute;
@@ -486,6 +508,30 @@ body {
   padding-bottom: 47.44%;
   left: 9.04%;
   top: 4.33%;
+}
+.carousel__device__screen--03 {
+  width: 75.53%;
+  padding-bottom: 40.34%;
+  left: 12.38%;
+  top: 9.29%;
+}
+.carousel__device__screen--04 {
+  width: 86.23%;
+  padding-bottom: 125.71%;
+  left: 6.89%;
+  top: 7.25%;
+}
+.carousel__device__screen--05 {
+  width: 85.91%;
+  padding-bottom: 61.18%;
+  left: 7.04%;
+  top: 7.39%;
+}
+.carousel__device__screen--06 {
+  width: 95.76%;
+  padding-bottom: 44.2%;
+  left: 2.13%;
+  top: 4.08%;
 }
 .carousel__device__screen-content {
   width: 100%;

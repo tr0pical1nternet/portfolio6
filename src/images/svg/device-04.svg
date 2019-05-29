@@ -1,1 +1,10 @@
-<svg id="svg8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101.21 149.19"><title>device-04</title><path d="M88.17,0H13A13,13,0,0,0,0,13v123.1a13,13,0,0,0,13,13.05H88.17a13,13,0,0,0,13-13.05V13A13,13,0,0,0,88.17,0Zm6.07,138.05H7V10.82H94.24Z"/><rect x="43.53" y="141.27" width="14.15" height="4.7" rx="2.35" ry="2.35"/><path d="M6.18,143.62v21.17H-149.46V81.67h152V71.3h-158.7A3.67,3.67,0,0,0-159.8,75V175.42a3.67,3.67,0,0,0,3.67,3.66h169a3.66,3.66,0,0,0,3.66-3.66v-31.8Z"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="svg8" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 101.2 149.2" style="enable-background:new 0 0 101.2 149.2;" xml:space="preserve">
+<title>device-04</title>
+<path d="M88.2,0H13C5.8,0,0,5.8,0,13v123.1c0,7.2,5.8,13,12.9,13c0,0,0,0,0.1,0h75.2c7.2,0,13-5.8,13-13c0,0,0,0,0-0.1V13
+	C101.2,5.8,95.3,0,88.2,0z M94.2,138.1H7V10.8h87.2V138.1z"/>
+<path d="M45.9,141.3h9.5c1.3,0,2.3,1.1,2.3,2.4v0c0,1.3-1.1,2.4-2.3,2.4h-9.5c-1.3,0-2.3-1.1-2.3-2.4v0
+	C43.5,142.3,44.6,141.3,45.9,141.3z"/>
+</svg>
