@@ -1,6 +1,7 @@
 /* eslint-disable semi */
 
 const fs = require('fs');
+const path = require('path');
 const sizeOf = require('image-size');
 const gulp = require('gulp');
 const imageResize = require('gulp-image-resize');
@@ -26,8 +27,43 @@ function imageFile(slug, device, size) {
 // Retrieve site data
 var siteData = JSON.parse(fs.readFileSync('./src/json/site-data.json', 'utf8'));
 
-// PUTTING THIS ON HOLD UNTIL I CHANGE IMAGE DATA TO FIT
-// NEW FILE STRUCTURE
+// Generate srcset attributes for images
+function createSrcsets() {
+  // Loop through each image in the image list
+  for (let i = 0; i < siteData.images.length; i++) {
+    let srcsets = [];
+    let defaultWidth = 72;
+    let imageFilename = siteData.images[i].filename;
+
+    // Loop through all sizes of each image
+    Object.keys(siteData.imageSizes).map(function (objectKey, index) {
+      srcsetFilename = path.basename(imageFilename, path.extname(imageFilename)) + "_" + objectKey + path.extname(imageFilename);
+      
+      if (fs.existsSync(imagePath + srcsetFilename)) {
+        let srcsetWidth = sizeOf(imagePath + srcsetFilename).width;
+        
+        if (objectKey === 'xxs') {
+          defaultWidth = siteData.imageSizes[objectKey];
+        }
+
+        srcsets.push(imageAddr + srcsetFilename + ' ' + srcsetWidth + 'w');
+      }
+
+      // siteData.images[i].push({
+      //   src:    imageFilename,
+      //   srcset: srcsets.join(' ,'),
+      //   width:  defaultWidth
+      // })
+
+      siteData.images[i]['src'] = imageFilename;
+      siteData.images[i]['srcset'] = srcsets.join(' ');
+      siteData.images[i]['width'] = defaultWidth;
+    });
+  }
+}
+
+createSrcsets();
+console.log(siteData.images)
 
 // // Loop through each gallery in portfolio
 // for (let i = 0; i < siteData.portfolioItems.length; i++) {

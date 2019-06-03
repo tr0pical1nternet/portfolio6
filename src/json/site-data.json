@@ -2,12 +2,12 @@
   [
     { 
       "id": 0,
-      "slug":"centerstaging",
-      "devices":["mobile","tablet","desktop"],
-      "title":"Center Staging",
-      "alt":"Center Staging Website",
-      "url":"centerstaging.net",
-      "scope":[
+      "slug": "center-staging",
+      "devices": ["mobile","tablet","desktop"],
+      "title": "Center Staging",
+      "alt": "Center Staging Website",
+      "url": "centerstaging.net",
+      "scope": [
         "Logo Redesign",
         "Visual Design",
         "Icon Design",
@@ -15,7 +15,7 @@
         "Video Editing",
         "Search Engine Optimization"
       ],
-      "features":[
+      "features": [
         "Revolution Slider",
         "Envira Gallery",
         "Custom SVG icon menus",
@@ -24,7 +24,8 @@
         "CloudFlare CDN",
         "Automatic cloud backups",
         "GDPR compliant analytics"],
-      "desc":"Shortly after Raven purchased Center Staging they requested a new website to give the company a fresh image and make it easier to use for both customers and staff. In addition to the website, we updated the company's logo to make it feel contemporary while staying close enough to the existing branding that they could gradually phase it on their trucks, uniforms, signage, business cards, etc, avoiding costly upgrades."
+      "desc": "Shortly after Raven purchased Center Staging they requested a new website to give the company a fresh image and make it easier to use for both customers and staff. In addition to the website, we updated the company's logo to make it feel contemporary while staying close enough to the existing branding that they could gradually phase it on their trucks, uniforms, signage, business cards, etc, avoiding costly upgrades.",
+      "gallery-images": [ 0, 1, 2, 3, 4, 5, 6]
     },
     {
       "id": 1,
@@ -82,7 +83,7 @@
     },
     {
       "id": 4,
-      "slug":"sedimentpress",
+      "slug":"sediment-press",
       "devices":["mobile","tablet","desktop"],
       "title":"Sediment Press",
       "alt":"Sediment Press Website",
@@ -107,7 +108,7 @@
     },
     {
       "id": 5,
-      "slug":"studiorusso",
+      "slug":"studio-russo",
       "devices":["desktop"],
       "title":"Studio Russo",
       "alt":"Studio Russo Website",
@@ -120,6 +121,7 @@
       "desc":"The original Studio Russo site befell a tragic accident and required a rebuild from scratch. I designed a custom theme identical to the original while upgrading the gallery and making improvements to the backend. (The client requested the site not be built responsively)"
     }
   ],
+
   "imageSizes": {
      "xxs": 128,
      "xs": 256,
@@ -128,50 +130,52 @@
      "l": 1280,
      "xl": 1440
   },
+
   "images": [
     {
       "id": 0,
       "title": "Center Staging Home",
       "alt": "centerstaging.net home page in full, sized for a device with a narrow screen.",
-      "src": "images/center-staging_device-00.jpg"
+      "filename": "center-staging_device-00.jpg"
     },
     {
       "id": 1,
       "title": "Center Staging Home",
       "alt": "centerstaging.net home page in full, sized for a device with a wide screen.",
-      "src": "images/center-staging_device-01.jpg"
+      "filename": "center-staging_device-01.jpg"
     },
     {
       "id": 2,
       "title": "Center Staging Build Video",
       "alt": "centerstaging.net build video.",
-      "src": "images/center-staging_device-02.png"
+      "filename": "center-staging_device-02.png"
     },
     {
       "id": 3,
       "title": "Center Staging Rentals",
       "alt": "centerstaging.net rentals page in full. Each rental category has a custom icon.",
-      "src": "images/center-staging_device-03.png"
+      "filename": "center-staging_device-03.png"
     },
     {
       "id": 4,
       "title": "Center Staging Mobile Stages",
       "alt": "centerstaging.net mobile stage overview page.",
-      "src": "images/center-staging_device-04.jpg"
+      "filename": "center-staging_device-04.jpg"
     },
     {
       "id": 5,
       "title": "Center Staging Gallery",
       "alt": "centerstaging.net gallery page.",
-      "src": "images/center-staging_device-05.jpg"
+      "filename": "center-staging_device-05.jpg"
     },
     {
       "id": 6,
       "title": "Center Staging Contact",
       "alt": "centerstaging.net contact page.",
-      "src": "images/center-staging_device-06.png"
+      "filename": "center-staging_device-06.png"
     }
   ],
+  
   "socialLinks": 
     [
       {
