@@ -29,6 +29,7 @@ var siteData = JSON.parse(fs.readFileSync('./src/json/site-data.json', 'utf8'));
 
 // Generate srcset attributes for images
 function createSrcsets() {
+
   // Loop through each image in the image list
   for (let i = 0; i < siteData.images.length; i++) {
     let srcsets = [];
@@ -49,12 +50,6 @@ function createSrcsets() {
         srcsets.push(imageAddr + srcsetFilename + ' ' + srcsetWidth + 'w');
       }
 
-      // siteData.images[i].push({
-      //   src:    imageFilename,
-      //   srcset: srcsets.join(' ,'),
-      //   width:  defaultWidth
-      // })
-
       siteData.images[i]['src'] = imageFilename;
       siteData.images[i]['srcset'] = srcsets.join(' ');
       siteData.images[i]['width'] = defaultWidth;
@@ -63,51 +58,6 @@ function createSrcsets() {
 }
 
 createSrcsets();
-console.log(siteData.images)
-
-// // Loop through each gallery in portfolio
-// for (let i = 0; i < siteData.portfolioItems.length; i++) {
-//   siteData.portfolioItems[i].images = [];
-//   let item = siteData.portfolioItems[i];
-
-//   // Loop through each image in gallery
-//   for (let j = 0; j < item.devices.length; j++) {
-//     let device = item.devices[j];
-    
-//     // Begin create srcset tags
-//     let srcsets = [];
-//     let defaultWidth = 72;
-
-//     // Loop through all sizes of each image
-//     for (let k = 0; k < siteData.imageSizes.length; k++) {
-//       let size = siteData.imageSizes[k][0];
-//       let file = imageFile(item.slug, device, size);
-
-//       // If file exists, create srcset entry
-//       if (fs.existsSync(imagePath + file)) {
-//         let width = sizeOf(imagePath + file).width;
-
-//         // Get the width of the smallest size to use for default image size
-//         if (size === 'xxs') {
-//           defaultWidth = width;
-//         };
-
-//         // Add srcset entry to srcsets array
-//         srcsets.push(imageAddr + file + ' ' + width + 'w');
-//       }
-//     }
-
-//     // Push image data to portfolio item
-//     siteData.portfolioItems[i].images.push({
-//       src:      imageAddr + imageFile(item.slug, device, 'xxl'),
-//       alt:      'Screenshot of the ' + item.title + ' website on a ' + device + ' device',
-//       srcset:   srcsets.join(', '),
-//       class:    'gallery-image ' + device,
-//       width:    defaultWidth
-//     });
-//   }
-//   // console.log(siteData.portfolioItems[i]);
-// }
 
 gulp.task('images', function (cb) {
   Object.keys(siteData.imageSizes).map(function (objectKey, index) {
