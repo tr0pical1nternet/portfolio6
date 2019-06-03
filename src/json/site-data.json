@@ -120,14 +120,57 @@
       "desc":"The original Studio Russo site befell a tragic accident and required a rebuild from scratch. I designed a custom theme identical to the original while upgrading the gallery and making improvements to the backend. (The client requested the site not be built responsively)"
     }
   ],
-  "imageSizes": [
-    [ "xxs", 128 ],
-    [ "xs", 256 ],
-    [ "s", 512 ],
-    [ "m", 1024 ],
-    [ "l", 1280 ],
-    [ "xl", 1440 ],
-    [ "xxl", 2048 ]
+  "imageSizes": {
+     "xxs": 128,
+     "xs": 256,
+     "s": 512,
+     "m": 1024,
+     "l": 1280,
+     "xl": 1440
+  },
+  "images": [
+    {
+      "id": 0,
+      "title": "Center Staging Home",
+      "alt": "centerstaging.net home page in full, sized for a device with a narrow screen.",
+      "src": "images/center-staging_device-00.jpg"
+    },
+    {
+      "id": 1,
+      "title": "Center Staging Home",
+      "alt": "centerstaging.net home page in full, sized for a device with a wide screen.",
+      "src": "images/center-staging_device-01.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Center Staging Build Video",
+      "alt": "centerstaging.net build video.",
+      "src": "images/center-staging_device-02.png"
+    },
+    {
+      "id": 3,
+      "title": "Center Staging Rentals",
+      "alt": "centerstaging.net rentals page in full. Each rental category has a custom icon.",
+      "src": "images/center-staging_device-03.png"
+    },
+    {
+      "id": 4,
+      "title": "Center Staging Mobile Stages",
+      "alt": "centerstaging.net mobile stage overview page.",
+      "src": "images/center-staging_device-04.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Center Staging Gallery",
+      "alt": "centerstaging.net gallery page.",
+      "src": "images/center-staging_device-05.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Center Staging Contact",
+      "alt": "centerstaging.net contact page.",
+      "src": "images/center-staging_device-06.png"
+    }
   ],
   "socialLinks": 
     [

@@ -426,12 +426,15 @@ body {
   height: 54.664vw;
 }
 .carousel__panel {
+  width: 100vw;
+}
+.carousel__panel-inner {
   display: inline-block;
-  position: relative;
   height: 100%;
 }
-.carousel__panel > svg {
+.carousel__panel-inner > svg {
   display: block;
+  position: relative;
   height: 100%;
 }
 .carousel__device {

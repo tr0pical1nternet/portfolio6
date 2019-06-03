@@ -73,16 +73,18 @@ var siteData = JSON.parse(fs.readFileSync('./src/json/site-data.json', 'utf8'));
 //   // console.log(siteData.portfolioItems[i]);
 // }
 
-// gulp.task('images', function (cb) {
-//   siteData.imageSizes.forEach(function (size) {
-//     gulp.src('src/images/jpg/*.jpg')
-//       .pipe(imageResize( { width: size[1] }))
-//       .pipe(rename(function (path) { path.basename += '_' + size[0]; }))
-//       .pipe(imagemin())
-//       .pipe(gulp.dest(sitePath + 'images'))
-//   });
-//   cb();
-// });
+gulp.task('images', function (cb) {
+  Object.keys(siteData.imageSizes).map(function (objectKey, index) {
+    gulp.src('src/images/img/*.{jpg,png}')
+      .pipe(imageResize( { width: siteData.imageSizes[objectKey] }))
+      .pipe(rename(function (path) { path.basename += '_' + objectKey; }))
+      .pipe(imagemin([
+        imagemin.jpegtran({ progressive: true })
+      ]))
+      .pipe(gulp.dest(sitePath + 'images'))
+  });
+  cb();
+});
 
 // Compile Pug files into HTML
 gulp.task('pug', function () {
