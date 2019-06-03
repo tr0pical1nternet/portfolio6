@@ -416,20 +416,28 @@ body {
 .site-title__contact li:first {
   padding-left: 0;
 }
-.carousel,
+.carousel {
+  height: 54.664vw;
+  margin: 1.25rem 0;
+  overflow: hidden;
+}
 .carousel__track {
   display: flex;
-  list-style: none;
-  padding: 0 0;
-  margin: 1.25rem 0;
   position: relative;
-  height: 54.664vw;
+  width: 300vw;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  list-style: none;
 }
 .carousel__panel {
   width: 100vw;
+  height: 100%;
+  text-align: center;
 }
 .carousel__panel-inner {
   display: inline-block;
+  position: relative;
   height: 100%;
 }
 .carousel__panel-inner > svg {
@@ -538,6 +546,8 @@ body {
   top: 4.08%;
 }
 .carousel__device__screen-content {
-  width: 100%;
   position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
 }

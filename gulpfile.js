@@ -17,13 +17,6 @@ const sitePath = 'dist/';
 const imagePath = sitePath + 'images/';
 const imageAddr = 'images/';
 
-// Global functions
-// Concatenates image file name from slug, device, and size strings
-function imageFile(slug, device, size) {
-  let name = slug + '_' + device + '_' + size + '.jpg';
-  return name;
-}
-
 // Retrieve site data
 var siteData = JSON.parse(fs.readFileSync('./src/json/site-data.json', 'utf8'));
 
@@ -56,7 +49,6 @@ function createSrcsets() {
     });
   }
 }
-
 createSrcsets();
 
 gulp.task('images', function (cb) {
