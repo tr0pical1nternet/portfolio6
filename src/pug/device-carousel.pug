@@ -1,62 +1,106 @@
-//- .outer
-//-   .inner
-//-     include ../images/svg/optimized/panel-0.svg
+mixin glide__slide(slideNum)
+  li(class="glide__slide")
+    div(class="glide__slide-inner")
+      block
 
-section(class="carousel" aria-labelledby="carousel-heading")
-  h3(id="carousel__heading" class="visually-hidden") Portfolio
-  
-  ul(class="carousel__track")
-    li(class="carousel__panel carousel__panel--0")
-      div(class="carousel__panel-inner")
+mixin device(deviceNum)
+  figure(class="device device--" + deviceNum)
+    div(class="device__border device-border--" + deviceNum role="presentation")
+      block
+    div(class="device__screen device__screen--" + deviceNum)
+      img(class="device__content device__content" + deviceNum src=images[parseInt(deviceNum,10)].src)
+
+
+
+div(class="glide")
+  div(class="glide__track" data-glide-el="track")
+    ul(class="glide__slides")
+      +glide__slide()
         include ../images/svg/optimized/panel-0.svg
-        
-        figure(class="carousel__device carousel__device--00")
-          div(class="carousel__device__border carousel__device__border--00" role="presentation")
-            include ../images/svg/optimized/device-00.svg
-          div(class="carousel__device__screen carousel__device__screen--00")
-            img(class="carousel__device__screen-content carousel__device__screen-content--00" src="images/center-staging_device-00.jpg")
-        
-        figure(class="carousel__device carousel__device--01")
-          div(class="carousel__device__border carousel__device__border--01" role="presentation")
-            include ../images/svg/optimized/device-01.svg
-          div(class="carousel__device__screen carousel__device__screen--01")
-            img(class="carousel__device__screen-content carousel__device__screen-content--01" src="images/center-staging_device-01.jpg")
-    
-    li(class="carousel__panel carousel__panel--1")
-      div(class="carousel__panel-inner")    
+        +device("00")
+          include ../images/svg/optimized/device-00.svg
+        +device("01")
+          include ../images/svg/optimized/device-01.svg
+      +glide__slide()
         include ../images/svg/optimized/panel-1.svg
-        
-        figure(class="carousel__device carousel__device--02")
-          div(class="carousel__device__border carousel__device__border--02" role="presentation")
-            include ../images/svg/optimized/device-02.svg
-          div(class="carousel__device__screen carousel__device__screen--02")
-            img(class="carousel__device__screen-content carousel__device__screen-content--02" src="images/center-staging_device-02.png")
-        
-        figure(class="carousel__device carousel__device--03")
-          div(class="carousel__device__border carousel__device__border--03" role="presentation")
-            include ../images/svg/optimized/device-03.svg
-          div(class="carousel__device__screen carousel__device__screen--03")
-            img(class="carousel__device__screen-content carousel__device__screen-content--03" src="images/center-staging_device-03.png")
-        
-        figure(class="carousel__device carousel__device--04")
-          div(class="carousel__device__border carousel__device__border--04" role="presentation")
-            include ../images/svg/optimized/device-04.svg
-          div(class="carousel__device__screen carousel__device__screen--04")
-            img(class="carousel__device__screen-content carousel__device__screen-content--03" src="images/center-staging_device-04.jpg")
-          
-    li(class="carousel__panel carousel__panel--2")
-      div(class="carousel__panel-inner")
+        +device("02")
+          include ../images/svg/optimized/device-02.svg
+        +device("03")
+          include ../images/svg/optimized/device-03.svg
+        +device("04")
+          include ../images/svg/optimized/device-04.svg
+      +glide__slide()
         include ../images/svg/optimized/panel-2.svg
+        +device("05")
+          include ../images/svg/optimized/device-05.svg
+        +device("06")
+          include ../images/svg/optimized/device-06.svg
+
+      //- li(class="glide__slide")
+      //-   div(class="glide__slide-inner")
+      //-     include ../images/svg/optimized/panel-0.svg
+      //- li(class="glide__slide")
+      //-   div(class="glide__slide--inner")
+      //-     include ../images/svg/optimized/panel-1.svg
+      //- li(class="glide__slide")
+      //-   div(class="glide__slide--inner")
+      //-     include ../images/svg/optimized/panel-2.svg
+
+//- section(class="carousel" aria-labelledby="carousel-heading")
+//-   h3(id="carousel__heading" class="visually-hidden") Portfolio
+  
+//-   ul(class="carousel__track")
+//-     li(class="carousel__panel carousel__panel--0")
+//-       div(class="carousel__panel-inner")
+//-         include ../images/svg/optimized/panel-0.svg
         
-        figure(class="carousel__device carousel__device--05")
-          div(class="carousel__device__border carousel__device__border--05" role="presentation")
-            include ../images/svg/optimized/device-05.svg
-          div(class="carousel__device__screen carousel__device__screen--05")
-            img(class="carousel__device__screen-content carousel__device__screen-content--05" src="images/center-staging_device-05.jpg")
+//-         figure(class="carousel__device carousel__device--00")
+//-           div(class="carousel__device__border carousel__device__border--00" role="presentation")
+//-             include ../images/svg/optimized/device-00.svg
+//-           div(class="carousel__device__screen carousel__device__screen--00")
+//-             img(class="carousel__device__screen-content carousel__device__screen-content--00" src="images/center-staging_device-00.jpg")
         
-        figure(class="carousel__device carousel__device--06")
-          div(class="carousel__device__border carousel__device__border--06" role="presentation")
-            include ../images/svg/optimized/device-06.svg
-          div(class="carousel__device__screen carousel__device__screen--06")
-            img(class="carousel__device__screen-content carousel__device__screen-content--06" src="images/center-staging_device-06.png")
+//-         figure(class="carousel__device carousel__device--01")
+//-           div(class="carousel__device__border carousel__device__border--01" role="presentation")
+//-             include ../images/svg/optimized/device-01.svg
+//-           div(class="carousel__device__screen carousel__device__screen--01")
+//-             img(class="carousel__device__screen-content carousel__device__screen-content--01" src="images/center-staging_device-01.jpg")
+    
+//-     li(class="carousel__panel carousel__panel--1")
+//-       div(class="carousel__panel-inner")
+//-         include ../images/svg/optimized/panel-1.svg
+        
+//-         figure(class="carousel__device carousel__device--02")
+//-           div(class="carousel__device__border carousel__device__border--02" role="presentation")
+//-             include ../images/svg/optimized/device-02.svg
+//-           div(class="carousel__device__screen carousel__device__screen--02")
+//-             img(class="carousel__device__screen-content carousel__device__screen-content--02" src="images/center-staging_device-02.png")
+        
+//-         figure(class="carousel__device carousel__device--03")
+//-           div(class="carousel__device__border carousel__device__border--03" role="presentation")
+//-             include ../images/svg/optimized/device-03.svg
+//-           div(class="carousel__device__screen carousel__device__screen--03")
+//-             img(class="carousel__device__screen-content carousel__device__screen-content--03" src="images/center-staging_device-03.png")
+        
+//-         figure(class="carousel__device carousel__device--04")
+//-           div(class="carousel__device__border carousel__device__border--04" role="presentation")
+//-             include ../images/svg/optimized/device-04.svg
+//-           div(class="carousel__device__screen carousel__device__screen--04")
+//-             img(class="carousel__device__screen-content carousel__device__screen-content--03" src="images/center-staging_device-04.jpg")
+          
+//-     li(class="carousel__panel carousel__panel--2")
+//-       div(class="carousel__panel-inner")
+//-         include ../images/svg/optimized/panel-2.svg
+        
+//-         figure(class="carousel__device carousel__device--05")
+//-           div(class="carousel__device__border carousel__device__border--05" role="presentation")
+//-             include ../images/svg/optimized/device-05.svg
+//-           div(class="carousel__device__screen carousel__device__screen--05")
+//-             img(class="carousel__device__screen-content carousel__device__screen-content--05" src="images/center-staging_device-05.jpg")
+        
+//-         figure(class="carousel__device carousel__device--06")
+//-           div(class="carousel__device__border carousel__device__border--06" role="presentation")
+//-             include ../images/svg/optimized/device-06.svg
+//-           div(class="carousel__device__screen carousel__device__screen--06")
+//-             img(class="carousel__device__screen-content carousel__device__screen-content--06" src="images/center-staging_device-06.png")
       

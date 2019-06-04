@@ -416,136 +416,177 @@ body {
 .site-title__contact li:first {
   padding-left: 0;
 }
-.carousel {
-  height: 54.664vw;
+.glide {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box; }
+  .glide * {
+    box-sizing: inherit; }
+  .glide__track {
+    overflow: hidden; }
+  .glide__slides {
+    position: relative;
+    width: 100%;
+    list-style: none;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    touch-action: pan-Y;
+    overflow: hidden;
+    padding: 0;
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
+    will-change: transform; }
+    .glide__slides--dragging {
+      user-select: none; }
+  .glide__slide {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    white-space: normal;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent; }
+    .glide__slide a {
+      user-select: none;
+      -webkit-user-drag: none;
+      -moz-user-select: none;
+      -ms-user-select: none; }
+  .glide__arrows {
+    -webkit-touch-callout: none;
+    user-select: none; }
+  .glide__bullets {
+    -webkit-touch-callout: none;
+    user-select: none; }
+  .glide--rtl {
+    direction: rtl; }
+
+.glide {
+  height: 60vw;
   margin: 1.25rem 0;
   overflow: hidden;
 }
-.carousel__track {
-  display: flex;
-  position: relative;
-  width: 300vw;
-  margin: 0;
-  padding: 0;
+.glide__track {
   height: 100%;
-  list-style: none;
 }
-.carousel__panel {
-  width: 100vw;
+.glide__slides {
   height: 100%;
+  margin: 0;
+}
+.glide__slide {
   text-align: center;
 }
-.carousel__panel-inner {
+.glide__slide-inner {
   display: inline-block;
   position: relative;
   height: 100%;
 }
-.carousel__panel-inner > svg {
+.glide__slide-inner > svg {
   display: block;
   position: relative;
   height: 100%;
 }
-.carousel__device {
+.device {
   margin: 0;
   position: absolute;
   z-index: 0;
 }
-.carousel__device--00 {
+.device--00 {
   width: 23.17%;
   left: 0;
   top: 35.64%;
   z-index: 10;
 }
-.carousel__device--01 {
+.device--01 {
   width: 84.8%;
   left: 15.2%;
   top: 11.62%;
 }
-.carousel__device--02 {
+.device--02 {
   width: 49.71%;
   left: 5.49%;
   top: 0;
 }
-.carousel__device--03 {
+.device--03 {
   width: 74.61%;
   left: 0;
   top: 45.55%;
 }
-.carousel__device--04 {
+.device--04 {
   width: 36.65%;
   left: 63.35%;
   top: 10.77%;
 }
-.carousel__device--05 {
+.device--05 {
   width: 100%;
   left: 0;
   top: 0;
 }
-.carousel__device--06 {
+.device--06 {
   width: 100%;
   left: 0;
   top: 64.12%;
 }
-.carousel__device__border {
+.device__border {
   position: relative;
   z-index: 20;
 }
-.carousel__device__border svg {
+.device__border svg {
   display: block;
   overflow: visible;
   fill: #000;
   stroke: #ddd;
   stroke-width: 0.5;
 }
-.carousel__device__screen {
+.device__screen {
   position: absolute;
   overflow: hidden;
   height: 0;
   z-index: 0;
 }
-.carousel__device__screen--00 {
+.device__screen--00 {
   width: 91.33%;
   padding-bottom: 159.19%;
   left: 4.33%;
   top: 8.79%;
 }
-.carousel__device__screen--01 {
+.device__screen--01 {
   width: 91.24%;
   padding-bottom: 51.98%;
   left: 4.38%;
   top: 6.02%;
 }
-.carousel__device__screen--02 {
+.device__screen--02 {
   width: 82.01%;
   padding-bottom: 47.44%;
   left: 9.04%;
   top: 4.33%;
 }
-.carousel__device__screen--03 {
+.device__screen--03 {
   width: 75.53%;
   padding-bottom: 40.34%;
   left: 12.38%;
   top: 9.29%;
 }
-.carousel__device__screen--04 {
+.device__screen--04 {
   width: 86.23%;
   padding-bottom: 125.71%;
   left: 6.89%;
   top: 7.25%;
 }
-.carousel__device__screen--05 {
+.device__screen--05 {
   width: 85.91%;
   padding-bottom: 61.18%;
   left: 7.04%;
   top: 7.39%;
 }
-.carousel__device__screen--06 {
+.device__screen--06 {
   width: 95.76%;
   padding-bottom: 44.2%;
   left: 2.13%;
   top: 4.08%;
 }
-.carousel__device__screen-content {
+.device__content {
   position: absolute;
   width: 100%;
   top: 0;

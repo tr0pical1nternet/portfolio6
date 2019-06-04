@@ -1,34 +1,31 @@
 
-.carousel
-    height 54.664vw
+.glide
+    height 60vw
     margin margin0 0
     overflow hidden
 
-.carousel__track
-    display flex
-    position relative
-    width 300vw
-    margin 0
-    padding 0
+.glide__track
     height 100%
-    list-style none
 
-.carousel__panel
-    width 100vw
+.glide__slides
     height 100%
+    margin 0
+
+.glide__slide
     text-align center
 
-.carousel__panel-inner
+.glide__slide-inner
     display inline-block
     position relative
     height 100%
+    // margin 0 auto
 
     & > svg
         display block
         position relative
         height 100%
 
-.carousel__device
+.device
     margin 0
     position absolute
     z-index 0
@@ -68,7 +65,7 @@
         left 0
         top 64.12%
 
-.carousel__device__border
+.device__border
     position relative
     z-index 20
     
@@ -79,7 +76,7 @@
         stroke color8
         stroke-width .5
 
-.carousel__device__screen
+.device__screen
     position absolute
     overflow hidden
     height 0
@@ -127,7 +124,7 @@
         left 2.13%
         top 4.08%
 
-.carousel__device__screen-content
+.device__content
     position absolute
     width 100%
     top 0
