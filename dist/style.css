@@ -11,6 +11,7 @@ html {
   font-style: normal;
   font-weight: 300;
   src: local(".SFNSText-Light");
+  src: local("Helvetica Neue");
   src: local(".HelveticaNeueDeskInterface-Light");
   src: local(".LucidaGrandeUI");
   src: local("Ubuntu Light");
@@ -42,7 +43,7 @@ h6 {
   font-style: normal;
 }
 a {
-  color: #3ba5ff;
+  color: #008aff;
 }
 a:visited {
   color: #ba55d3;
@@ -113,6 +114,7 @@ a:visited {
 }
 .social-icon svg {
   width: 1.75rem;
+  fill: #008aff;
 }
 .main-menu {
   padding: 0 1.25rem;
@@ -124,7 +126,7 @@ a:visited {
   justify-content: space-around;
 }
 .main-menu__menu-item a:visited {
-  color: #3ba5ff;
+  color: #008aff;
 }
 .glide {
   position: relative;
@@ -250,7 +252,7 @@ a:visited {
   transition: fill 0.2s ease;
 }
 .device__border svg:hover {
-  fill: #3ba5ff;
+  fill: #008aff;
 }
 .device__screen {
   position: absolute;
