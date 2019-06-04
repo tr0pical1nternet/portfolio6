@@ -315,10 +315,8 @@ a:visited {
 }
 .description__link {
   display: inline-block;
-  margin: 0 0 0.5em 0;
+  margin: 0 2.15em 1em auto;
   padding-top: 0.5em;
-  margin-left: auto;
-  margin-right: 2.15em;
   font-style: italic;
 }
 .description__text-wrap {
@@ -327,12 +325,56 @@ a:visited {
   padding: 0 1.25rem 3rem;
   background-color: #000;
   color: #ddd;
-  border-radius: 0 3rem 0 0;
+  border-radius: 0 3rem 0 3rem;
   line-height: 1.5;
 }
 .description__heading {
   font-size: 1.5rem;
+  margin-top: 3rem;
+  margin-bottom: 1.25rem;
 }
 .description__list {
   margin-top: 0;
+}
+footer {
+  background-color: #000;
+}
+.footer-menu {
+  padding: 3rem 1.25rem;
+  border-radius: 0 3rem 0 0;
+  background-color: #ddd;
+  font-size: 0.75rem;
+  display: grid;
+  grid-template-areas: "portfolio-heading bio-heading contact-heading" "portfolio-list bio-list contact-list";
+  grid-template-columns: auto auto auto;
+  justify-content: space-around;
+}
+.footer-menu__heading {
+  width: auto;
+  font-size: 1.25em;
+}
+.footer-menu__heading--portfolio {
+  grid-area: portfolio-heading;
+}
+.footer-menu__heading--bio {
+  grid-area: bio-heading;
+}
+.footer-menu__heading--contact {
+  grid-area: contact-heading;
+}
+.footer-menu__list {
+  width: auto;
+  list-style: none;
+  padding-left: 0;
+  line-height: 1.5;
+  font-size: 1em;
+}
+.footer-menu__list--portfolio {
+  grid-area: portfolio-list;
+}
+.footer-menu__list--bio {
+  grid-area: bio-list;
+}
+.footer-menu__list--contact {
+  contact-area: contact-list;
 }

@@ -1,0 +1,43 @@
+footer
+	background-color color0
+
+.footer-menu
+	padding margin1 margin0
+	border-radius 0 3rem 0 0
+	background-color color8
+	font-size .75rem
+	display grid
+	grid-template-areas "portfolio-heading bio-heading contact-heading" "portfolio-list bio-list contact-list"
+	grid-template-columns auto auto auto
+	justify-content space-around
+
+.footer-menu__heading
+	width auto
+	font-size 1.25em
+	
+
+	&--portfolio
+		grid-area portfolio-heading
+
+	&--bio
+		grid-area bio-heading
+	
+	&--contact
+		grid-area contact-heading
+
+
+.footer-menu__list
+	width auto
+	list-style none
+	padding-left 0
+	line-height 1.5
+	font-size 1em
+
+	&--portfolio
+		grid-area portfolio-list
+	
+	&--bio
+		grid-area bio-list
+	
+	&--contact
+		contact-area contact-list
