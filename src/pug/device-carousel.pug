@@ -9,7 +9,7 @@ mixin device(deviceNum)
     div(class="device__border device__border--" + deviceNum role="presentation")
       block
     div(class="device__screen device__screen--" + deviceNum)
-      img(class="device__content device__content" + deviceNum title=images[index].title alt=images[index].alt src=images[index].src srcset=images[index].srcset)
+      img(class="device__content device__content--" + deviceNum title=images[index].title alt=images[index].alt src=images[index].src srcset=images[index].srcset)
 
 div(class="glide")
   div(class="glide__track" data-glide-el="track")
