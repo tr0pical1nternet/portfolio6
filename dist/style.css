@@ -7,6 +7,19 @@ html {
   box-sizing: inherit;
 }
 @font-face {
+  font-family: System;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNSText-Light");
+  src: local(".HelveticaNeueDeskInterface-Light");
+  src: local(".LucidaGrandeUI");
+  src: local("Ubuntu Light");
+  src: local("Segoe UI Light");
+  src: local("Roboto-Light");
+  src: local("DroidSans");
+  src: local("Tahoma");
+}
+@font-face {
   font-family: 'AkzidenzGrotesk-Super';
   font-style: normal;
   font-weight: normal;
@@ -14,7 +27,7 @@ html {
   src: url("fonts/AkzidenzGroteskBQ-Super.woff") format('woff2');
 }
 body {
-  font-family: sans-serif;
+  font-family: System;
   background-color: #ddd;
   margin: 0;
 }
@@ -152,7 +165,7 @@ a:visited {
 
 .glide {
   height: 60vw;
-  margin: 1.25rem 0;
+  margin: 1.25rem 0 3rem;
   overflow: hidden;
 }
 .glide__track {
@@ -284,4 +297,21 @@ a:visited {
   width: 100%;
   top: 0;
   left: 0;
+}
+.description__title {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+  margin-bottom: -0.3em;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.description__text-wrap {
+  padding: 1.25rem 1.25rem;
+  background-color: #000;
+  color: #ddd;
+  border-radius: 0 3rem 0 0;
+}
+.description__link {
+  display: inline-block;
+  margin: 0 0 0.5em 0;
 }

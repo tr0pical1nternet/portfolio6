@@ -7,6 +7,20 @@ colorB = mediumorchid
 margin0 = 1.25rem // Distance from screen edge
 margin1 = 3rem // Vertical distance between blocks
 
+/* Define the "system" font family */
+@font-face {
+  font-family System
+  font-style normal
+  font-weight 300
+  src local(".SFNSText-Light")
+  src local(".HelveticaNeueDeskInterface-Light")
+  src local(".LucidaGrandeUI")
+  src local("Ubuntu Light")
+  src local("Segoe UI Light")
+  src local("Roboto-Light")
+  src local("DroidSans")
+  src local("Tahoma")
+}
 
 @font-face {
   font-family 'AkzidenzGrotesk-Super'
@@ -17,7 +31,7 @@ margin1 = 3rem // Vertical distance between blocks
 }
 
 body
-  font-family sans-serif
+  font-family System
   background-color color8
   margin 0
 
