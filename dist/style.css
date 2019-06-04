@@ -313,13 +313,26 @@ a:visited {
   font-size: 2rem;
   text-transform: uppercase;
 }
-.description__text-wrap {
-  padding: 1.25rem 1.25rem;
-  background-color: #000;
-  color: #ddd;
-  border-radius: 0 3rem 0 0;
-}
 .description__link {
   display: inline-block;
   margin: 0 0 0.5em 0;
+  padding-top: 0.5em;
+  margin-left: auto;
+  margin-right: 2.15em;
+  font-style: italic;
+}
+.description__text-wrap {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1.25rem 3rem;
+  background-color: #000;
+  color: #ddd;
+  border-radius: 0 3rem 0 0;
+  line-height: 1.5;
+}
+.description__heading {
+  font-size: 1.5rem;
+}
+.description__list {
+  margin-top: 0;
 }
