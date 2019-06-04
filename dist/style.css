@@ -87,24 +87,32 @@ a:visited {
   grid-area: web-design;
 }
 .site-title__charles-robertson {
-  padding-right: 2em;
+  padding-right: 1em;
   padding-top: 0.7em;
   border-radius: 0 2em 2em 0;
   font-size: 1.25rem;
   grid-area: charles-robertson;
 }
-.site-title__contact ul {
+.site-title__contact-list {
+  height: 100%;
   list-style: none;
-  padding: 0.05em 0 0.05em 0.3em;
+  padding: 0.05em 1.25rem 0.05em 0.375em;
   margin: 0;
   display: flex;
   justify-content: flex-start;
+  align-items: center;
 }
-.site-title__contact li {
+.site-title__contact-item {
   padding: 0.5em 0.25em;
 }
-.site-title__contact li:first {
+.site-title__contact-item:first {
   padding-left: 0;
+}
+.site-title__contact-item:last-child {
+  padding-right: 0;
+}
+.social-icon svg {
+  width: 1.75rem;
 }
 .main-menu {
   padding: 0 1.25rem;

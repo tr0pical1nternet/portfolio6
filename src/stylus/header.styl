@@ -25,24 +25,32 @@
   grid-area web-design
 
 .site-title__charles-robertson
-  padding-right 2em
+  padding-right 1em
   padding-top .7em
   border-radius 0 2em 2em 0
   font-size 1.25rem
   grid-area charles-robertson
 
-.site-title__contact
-  ul
-    list-style none
-    padding .05em 0 .05em .3em
-    margin 0
-    display flex
-    justify-content flex-start
+.site-title__contact-list
+  height 100%
+  list-style none
+  padding .05em 1.25rem .05em .375em
+  margin 0
+  display flex
+  justify-content flex-start
+  align-items center
   
-  li
-    padding .5em .25em
-    &:first
-      padding-left 0
+.site-title__contact-item
+  padding .5em .25em
+  
+  &:first
+    padding-left 0
+  
+  &:last-child
+    padding-right 0
+
+.social-icon svg
+  width 1.75rem
 
 .main-menu
   padding 0 margin0
