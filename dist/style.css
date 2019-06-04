@@ -356,9 +356,32 @@ html {
 *:after {
   box-sizing: inherit;
 }
+@font-face {
+  font-family: 'AkzidenzGrotesk-Super';
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/AkzidenzGroteskBQ-Super.woff") format('woff');
+  src: url("fonts/AkzidenzGroteskBQ-Super.woff") format('woff2');
+}
 body {
   font-family: sans-serif;
   background-color: #ddd;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "AkzidenzGrotesk-Super", "Helvetica-Neue-Black", "Helvetica-Black", "Ariel-Black", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+a {
+  color: #51cbec c;
+}
+a:visited {
+  color: #ba55d3;
 }
 .icon {
   a: display block;
@@ -371,10 +394,12 @@ body {
 .visually-hidden {
   display: none;
 }
+.site-header {
+  margin-bottom: 3rem;
+}
 .site-title {
   display: grid;
-  grid-template-areas: "web-design web-design" "contact charles-robertson";
-  margin-bottom: 3rem;
+  grid-template-areas: "charles-robertson contact" "web-design web-design";
 }
 .site-title h1,
 .site-title h2 {
@@ -384,37 +409,50 @@ body {
 .site-title__web-design,
 .site-title__portfolio,
 .site-title__charles-robertson {
-  padding: 0.75em 1.25rem 0.54em;
+  padding: 0.55em 1.25rem 0.54em;
   color: #ddd;
   background-color: #000;
   line-height: 1;
 }
 .site-title__web-design {
-  padding-right: 2em;
-  border-radius: 0 2em 2em 0;
-  margin-right: auto;
+  padding-left: 2em;
+  border-radius: 2em 0 0 2em;
+  margin-left: auto;
   text-transform: uppercase;
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   grid-area: web-design;
 }
 .site-title__charles-robertson {
-  padding-left: 2em;
-  border-radius: 2em 0 0 2em;
+  padding-right: 2em;
+  padding-top: 0.7em;
+  border-radius: 0 2em 2em 0;
   font-size: 1.25rem;
   grid-area: charles-robertson;
 }
 .site-title__contact ul {
   list-style: none;
-  padding: 0.05em 0.3em 0.05em 0;
+  padding: 0.05em 0 0.05em 0.3em;
   margin: 0;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 .site-title__contact li {
   padding: 0.5em 0.25em;
 }
 .site-title__contact li:first {
   padding-left: 0;
+}
+.main-menu {
+  padding: 0 1.25rem;
+}
+.main-menu ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  justify-content: space-around;
+}
+.main-menu__menu-item a {
+  text-decoration: none;
 }
 .glide {
   position: relative;

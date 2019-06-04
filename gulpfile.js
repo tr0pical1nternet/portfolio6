@@ -67,7 +67,7 @@ gulp.task('images', function (cb) {
 // Compile Pug files into HTML
 gulp.task('pug', function () {
 	return gulp.src('src/pug/index.pug')
-		.pipe(pug({data: siteData}))
+		.pipe(pug({data: siteData, pretty: true}))
 		.pipe(gulp.dest(sitePath));
 });
 

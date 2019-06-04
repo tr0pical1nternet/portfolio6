@@ -4,10 +4,8 @@ mixin linkItem(linkHref, linkClass, linkAlt)
       div(id = linkClass class = "icon social-icon " + linkClass)
         block
 
-
-
 header.site-header(role="banner")
-   div.site-title
+  div.site-title
     //- h1 #[span.site-title__web-design Web Design] #[span.site-title__portfolio Portfolio]
     h1.site-title__web-design Web Design
     h2.site-title__charles-robertson Charles Robertson
@@ -19,3 +17,11 @@ header.site-header(role="banner")
           include ../images/svg/optimized/icon-codepen.svg
         +linkItem('https://github.com/tr0pical1nternet', 'github-icon', 'Charles on GitHub')
           include ../images/svg/optimized/icon-github.svg
+  nav.main-menu
+    ul
+      li.main-menu__menu-item
+        a(href='#') portfolio
+      li.main-menu__menu-item
+        a(href='#') bio
+      li.main-menu__menu-item
+        a(href='#') contact
