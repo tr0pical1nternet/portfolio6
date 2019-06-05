@@ -4,6 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const sizeOf = require('image-size');
 const gulp = require('gulp');
+const gm = require('gm');
 const imageResize = require('gulp-image-resize');
 const imagemin = require('gulp-imagemin');
 const rename = require('gulp-rename');
@@ -32,7 +33,7 @@ function createSrcsets() {
 		// Loop through all sizes of each image
 		Object.keys(siteData.imageSizes).map(function (objectKey) {
 			var srcsetFilename = path.basename(imageFilename, path.extname(imageFilename)) + '_' + objectKey + path.extname(imageFilename);
-      
+
 			if (fs.existsSync(imagePath + srcsetFilename)) {
 				let srcsetWidth = sizeOf(imagePath + srcsetFilename).width;
         
