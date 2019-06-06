@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const sizeOf = require('image-size');
 const gulp = require('gulp');
-const gm = require('gm');
+// const gm = require('gm');
 const imageResize = require('gulp-image-resize');
 const imagemin = require('gulp-imagemin');
 const rename = require('gulp-rename');
@@ -103,7 +103,7 @@ gulp.task('svgo', () => {
 					// removeDimensions: true
 				}, {
 					removeAttrs: {
-						attrs: 'fill'
+						attrs: ('fill|stroke.*|data-name')
 					}
 				}]
 			}

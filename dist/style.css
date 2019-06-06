@@ -61,7 +61,7 @@ a:visited {
   display: none;
 }
 .site-header {
-  margin-bottom: 1.25rem;
+  margin-bottom: 0;
 }
 .site-title {
   display: grid;
@@ -121,11 +121,12 @@ a:visited {
   padding: 0 1.25rem;
   font-size: 1.125rem;
 }
-.main-menu .main-menu__list {
+.main-menu__list {
   list-style: none;
   padding-left: 0;
   display: flex;
   justify-content: space-around;
+  margin-bottom: 0;
 }
 .main-menu__item a:visited {
   color: #008aff;
@@ -324,6 +325,7 @@ a:visited {
 }
 .description__text-wrap {
   display: flex;
+  position: relative;
   flex-direction: column;
   padding: 0 1.25rem 2.5rem;
   background-color: #000;
@@ -331,13 +333,43 @@ a:visited {
   border-radius: 0 3rem 0 3rem;
   line-height: 1.5;
 }
+.description__text {
+  color: #ddd;
+}
 .description__heading {
   font-size: 1.5rem;
-  margin-top: 1.25rem;
+  margin-top: calc(1.25rem / 2);
   margin-bottom: 1.25rem;
+  color: #fff;
 }
 .description__list {
   margin-top: 0;
+}
+.description__next {
+  background: none;
+  width: 2.5rem;
+  padding: 10%;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  padding: 0;
+  border: none;
+  transform: translateY(-50%);
+  opacity: 0.75;
+  transition: opacity 0.2s ease;
+}
+.description__next:hover {
+  opacity: 1;
+}
+.description__half-circ {
+  fill: #008aff;
+}
+.description__right-arrow {
+  stroke: #fff;
+  stroke-width: 25;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  fill: none;
 }
 .bio {
   background-color: #000;

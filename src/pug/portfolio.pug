@@ -42,9 +42,12 @@ section(class="portfolio" aria-labelledby="#portfolio__heading")
     div(class="description__text-wrap")
       a(class="description__link" href="http://" + portfolioItems[0].url title=portfolioItems[0].title alt=portfolioItems[0].alt) !{portfolioItems[0].url}
       p(class="description__text") !{portfolioItems[0].desc}
-
+      
       h4(class="description__heading") Scope
       ul(class="description__list")
         each listing in portfolioItems[0].scope
           li= listing
+      
+      button(class="description__next")
+        include ../images/svg/optimized/right-arrow.svg
 

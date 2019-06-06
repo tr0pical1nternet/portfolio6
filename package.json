@@ -1,5 +1,5 @@
 {
-  "name": "portfolio5",
+  "name": "portfolio6",
   "version": "0.0.0",
   "description": "charlesrobertson.co from scratch",
   "main": "gulpfile.js",
@@ -20,20 +20,24 @@
   },
   "homepage": "https://github.com/tr0pical1nternet/portfolio5#readme",
   "dependencies": {
+    "acorn": "^6.1.1",
+    "axios": "^0.19.0",
     "browser-sync": "^2.26.5",
     "gulp": "^4.0.2",
     "gulp-image-resize": "^0.13.0",
     "gulp-pug": "^4.0.1",
     "gulp-rename": "^1.4.0",
     "gulp-stylus": "^2.7.0",
-    "image-size": "^0.7.1"
+    "image-size": "^0.7.4",
+    "lodash": "^4.17.11",
+    "npm-check-updates": "^3.1.10"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-import": "^2.17.3",
     "gulp-data": "^1.3.1",
-    "gulp-imagemin": "^5.0.3",
-    "gulp-svgo": "^2.1.0"
+    "gulp-imagemin": "^6.0.0",
+    "gulp-svgo": "^2.1.1"
   }
 }

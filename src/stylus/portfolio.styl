@@ -149,6 +149,7 @@
 
 .description__text-wrap
     display flex
+    position relative
     flex-direction column
     padding 0 margin0 margin1
     background-color color0
@@ -158,14 +159,46 @@
 
 .description__text
     // margin-top 0
+    color color8
 
 .description__heading
     font-size 1.5rem
-    margin-top margin0
+    margin-top "calc(%s / 2)" % margin0
     margin-bottom margin0
+    color color9
 
 .description__list
     margin-top 0
     
+.description__next
+    background none
+    width 2.5rem
+    padding 10%
+    position absolute
+    right 0
+    top 50%
+    padding 0
+    border none
+    transform translateY(-50%)
+    opacity .75
+    transition opacity .2s ease
+
+    &:hover
+        opacity 1
+
+.description__half-circ
+    fill colorA
+    // opacity .75
+
+.description__right-arrow
+    stroke color9
+    stroke-width 25
+    stroke-linejoin round
+    stroke-linecap round
+    fill none
+    
+
+    
+
 
 
