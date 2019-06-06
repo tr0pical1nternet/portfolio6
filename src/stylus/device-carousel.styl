@@ -1,7 +1,7 @@
 
 .glide
-    height 60vw
-    margin 0 0 margin1
+    height "calc(60vw + %s)" % (2 * margin1)
+    margin 0
     overflow hidden
 
 .glide__track
@@ -10,6 +10,8 @@
 .glide__slides
     height 100%
     margin 0
+    padding-top: margin1
+    padding-bottom: margin1
 
 .glide__slide
     text-align center
@@ -135,17 +137,15 @@
     left 0
 
 .description__title
-    margin-left margin0
-    margin-right margin0
-    margin-bottom -.3em
+    margin margin0 margin0 -.3em
     font-size 2rem
     text-transform uppercase
 
 .description__link
     display inline-block
-    margin 0 2.15em 1em auto
     padding-top .5em
-    font-style italic
+    font-size 1.125rem
+    // font-style italic
 
 .description__text-wrap
     display flex
@@ -161,7 +161,7 @@
 
 .description__heading
     font-size 1.5rem
-    margin-top margin1
+    margin-top margin0
     margin-bottom margin0
 
 .description__list

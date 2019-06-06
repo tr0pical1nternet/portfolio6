@@ -11,39 +11,40 @@ mixin device(deviceNum)
     div(class="device__screen device__screen--" + deviceNum)
       img(class="device__content device__content--" + deviceNum title=images[index].title alt=images[index].alt src=images[index].src srcset=images[index].srcset)
 
-div(class="glide")
-  div(class="glide__track" data-glide-el="track")
-    ul(class="glide__slides")
-      +glide__slide()
-        include ../images/svg/optimized/panel-0.svg
-        +device("00")
-          include ../images/svg/optimized/device-00.svg
-        +device("01")
-          include ../images/svg/optimized/device-01.svg
-      +glide__slide()
-        include ../images/svg/optimized/panel-1.svg
-        +device("02")
-          include ../images/svg/optimized/device-02.svg
-        +device("03")
-          include ../images/svg/optimized/device-03.svg
-        +device("04")
-          include ../images/svg/optimized/device-04.svg
-      +glide__slide()
-        include ../images/svg/optimized/panel-2.svg
-        +device("05")
-          include ../images/svg/optimized/device-05.svg
-        +device("06")
-          include ../images/svg/optimized/device-06.svg
+section(class="portfolio" aria-labelledby="#portfolio__heading")
+  h3(id="portfolio__heading" class="portfolio__heading visually-hidden") Portfolio
+  div(class="glide")
+    div(class="glide__track" data-glide-el="track")
+      ul(class="glide__slides")
+        +glide__slide()
+          include ../images/svg/optimized/panel-0.svg
+          +device("00")
+            include ../images/svg/optimized/device-00.svg
+          +device("01")
+            include ../images/svg/optimized/device-01.svg
+        +glide__slide()
+          include ../images/svg/optimized/panel-1.svg
+          +device("02")
+            include ../images/svg/optimized/device-02.svg
+          +device("03")
+            include ../images/svg/optimized/device-03.svg
+          +device("04")
+            include ../images/svg/optimized/device-04.svg
+        +glide__slide()
+          include ../images/svg/optimized/panel-2.svg
+          +device("05")
+            include ../images/svg/optimized/device-05.svg
+          +device("06")
+            include ../images/svg/optimized/device-06.svg
 
-div(class="description")
-  h3(class="description__title") !{portfolioItems[0].title}
-  
-  div(class="description__text-wrap")
-    a(class="description__link" href="http://" + portfolioItems[0].url title=portfolioItems[0].title alt=portfolioItems[0].alt) !{portfolioItems[0].url}
-    p(class="description__text") !{portfolioItems[0].desc}
+  div(class="description")
+    h3(class="description__title") !{portfolioItems[0].title}
+    div(class="description__text-wrap")
+      a(class="description__link" href="http://" + portfolioItems[0].url title=portfolioItems[0].title alt=portfolioItems[0].alt) !{portfolioItems[0].url}
+      p(class="description__text") !{portfolioItems[0].desc}
 
-    h4(class="description__heading") Scope
-    ul(class="description__list")
-      each listing in portfolioItems[0].scope
-        li= listing
+      h4(class="description__heading") Scope
+      ul(class="description__list")
+        each listing in portfolioItems[0].scope
+          li= listing
 

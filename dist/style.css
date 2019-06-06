@@ -28,7 +28,7 @@ html {
   src: url("fonts/AkzidenzGroteskBQ-Super.woff") format('woff2');
 }
 body {
-  font-family: System;
+  font-family: System, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   background-color: #ddd;
   margin: 0;
 }
@@ -44,6 +44,7 @@ h6 {
 }
 a {
   color: #008aff;
+  text-decoration: none;
 }
 a:visited {
   color: #ba55d3;
@@ -60,7 +61,7 @@ a:visited {
   display: none;
 }
 .site-header {
-  margin-bottom: 3rem;
+  margin-bottom: 1.25rem;
 }
 .site-title {
   display: grid;
@@ -118,14 +119,15 @@ a:visited {
 }
 .main-menu {
   padding: 0 1.25rem;
+  font-size: 1.125rem;
 }
-.main-menu ul {
+.main-menu .main-menu__list {
   list-style: none;
   padding-left: 0;
   display: flex;
   justify-content: space-around;
 }
-.main-menu__menu-item a:visited {
+.main-menu__item a:visited {
   color: #008aff;
 }
 .glide {
@@ -174,8 +176,8 @@ a:visited {
     direction: rtl; }
 
 .glide {
-  height: 60vw;
-  margin: 0 0 3rem;
+  height: calc(60vw + 5rem);
+  margin: 0;
   overflow: hidden;
 }
 .glide__track {
@@ -184,6 +186,8 @@ a:visited {
 .glide__slides {
   height: 100%;
   margin: 0;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 .glide__slide {
   text-align: center;
@@ -309,22 +313,19 @@ a:visited {
   left: 0;
 }
 .description__title {
-  margin-left: 1.25rem;
-  margin-right: 1.25rem;
-  margin-bottom: -0.3em;
+  margin: 1.25rem 1.25rem -0.3em;
   font-size: 2rem;
   text-transform: uppercase;
 }
 .description__link {
   display: inline-block;
-  margin: 0 2.15em 1em auto;
   padding-top: 0.5em;
-  font-style: italic;
+  font-size: 1.125rem;
 }
 .description__text-wrap {
   display: flex;
   flex-direction: column;
-  padding: 0 1.25rem 3rem;
+  padding: 0 1.25rem 2.5rem;
   background-color: #000;
   color: #ddd;
   border-radius: 0 3rem 0 3rem;
@@ -332,7 +333,7 @@ a:visited {
 }
 .description__heading {
   font-size: 1.5rem;
-  margin-top: 3rem;
+  margin-top: 1.25rem;
   margin-bottom: 1.25rem;
 }
 .description__list {
@@ -345,7 +346,7 @@ a:visited {
 .bio__content {
   background-color: #ddd;
   border-radius: 0 3rem 3rem 0;
-  padding: 3rem 1.25rem;
+  padding: 2.5rem 1.25rem;
   position: relative;
   overflow: hidden;
 }
@@ -354,21 +355,22 @@ a:visited {
   font-size: 2rem;
 }
 .bio__figure {
-  width: 60vw;
-  border-radius: 40vw;
+  width: 50vw;
+  border-radius: 50%;
   overflow: hidden;
-  margin: 0 -13% 0 0;
+  margin: -5% -13% 0 0;
   float: right;
-  shape-outside: circle(60%) border-box;
+  shape-outside: circle(50%) border-box;
 }
 .bio__img {
+  display: block;
   width: 100%;
 }
 footer {
   background-color: #ddd;
 }
 .footer-menu {
-  padding: 3rem 1.25rem;
+  padding: 2.5rem 1.25rem;
   border-radius: 3rem 0 0 0;
   background-color: #000;
   font-size: 0.875rem;

@@ -5,7 +5,7 @@ colorA = #008aff
 colorB = mediumorchid
 
 margin0 = 1.25rem // Distance from screen edge
-margin1 = 3rem // Vertical distance between blocks
+margin1 = 2.5rem // Vertical distance between blocks
 
 /* Define the "system" font family */
 @font-face {
@@ -32,7 +32,7 @@ margin1 = 3rem // Vertical distance between blocks
 }
 
 body
-  font-family System
+  font-family System, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
   background-color color8
   margin 0
 
@@ -45,6 +45,7 @@ h1, h2, h3, h4, h5, h6 {
 
 a
   color colorA
+  text-decoration none
 
   &:visited
     color colorB
