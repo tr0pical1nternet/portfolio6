@@ -71,6 +71,7 @@ a:visited {
 .site-title h2 {
   margin-top: 0;
   margin-bottom: 0;
+  color: #fff;
 }
 .site-title__web-design,
 .site-title__portfolio,
@@ -128,6 +129,10 @@ a:visited {
   justify-content: space-around;
   margin-bottom: 0;
 }
+.main-menu__item {
+  font-family: "AkzidenzGrotesk-Super", "Helvetica-Neue-Black", "Helvetica-Black", "Ariel-Black", sans-serif;
+  font-size: 1.125rem;
+}
 .main-menu__item a:visited {
   color: #008aff;
 }
@@ -178,7 +183,7 @@ a:visited {
 
 .glide {
   height: calc(60vw + 5rem);
-  margin: 0;
+  margin: 0 0 1rem;
   overflow: hidden;
 }
 .glide__track {
@@ -313,15 +318,20 @@ a:visited {
   top: 0;
   left: 0;
 }
+.description__header {
+  display: inline-block;
+  padding: 0.75rem 2.25em 0.75rem 1.25rem;
+  color: #fff;
+  background-color: #000;
+  border-radius: 0 3rem 3rem 0;
+}
 .description__title {
-  margin: 1.25rem 1.25rem -0.3em;
-  font-size: 2rem;
+  margin: 0;
+  font-size: 1.5rem;
   text-transform: uppercase;
 }
 .description__link {
   display: inline-block;
-  padding-top: 0.5em;
-  font-size: 1.125rem;
 }
 .description__text-wrap {
   display: flex;

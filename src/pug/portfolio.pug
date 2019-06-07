@@ -38,12 +38,14 @@ section(class="portfolio" aria-labelledby="#portfolio__heading")
             include ../images/svg/optimized/device-06.svg
 
   div(class="description")
-    h3(class="description__title") !{portfolioItems[0].title}
-    div(class="description__text-wrap")
+    header(class="description__header")
+      h4(class="description__title") !{portfolioItems[0].title}
       a(class="description__link" href="http://" + portfolioItems[0].url title=portfolioItems[0].title alt=portfolioItems[0].alt) !{portfolioItems[0].url}
+
+    div(class="description__text-wrap")
       p(class="description__text") !{portfolioItems[0].desc}
       
-      h4(class="description__heading") Scope
+      h5(class="description__heading") Scope
       ul(class="description__list")
         each listing in portfolioItems[0].scope
           li= listing
