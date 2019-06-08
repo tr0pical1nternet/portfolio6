@@ -82,7 +82,7 @@ a:visited {
   line-height: 1;
 }
 .site-title__web-design {
-  padding-left: 2em;
+  padding-left: 1.5em;
   border-radius: 2em 0 0 2em;
   margin-left: auto;
   text-transform: uppercase;
@@ -318,24 +318,28 @@ a:visited {
   top: 0;
   left: 0;
 }
-.description__header {
+.portfolio-info__slides {
+  list-style: none;
+  padding-left: 0;
+}
+.portfolio-info__header {
   display: inline-block;
   padding: 1rem 2.75rem 1rem 1.25rem;
   color: #fff;
   background-color: #000;
   border-radius: 0 3rem 3rem 0;
 }
-.description__title {
+.portfolio-info__title {
   margin: 0;
   font-size: 1.75rem;
   text-transform: uppercase;
 }
-.description__link {
+.portfolio-info__link {
   display: inline-block;
   font-size: 1.25rem;
   font-style: italic;
 }
-.description__text-wrap {
+.portfolio-info__text-wrap {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -345,19 +349,19 @@ a:visited {
   border-radius: 0 3rem 0 3rem;
   line-height: 1.5;
 }
-.description__text {
+.portfolio-info__text {
   color: #ddd;
 }
-.description__heading {
+.portfolio-info__heading {
   font-size: 1.5rem;
   margin-top: calc(1.25rem / 2);
   margin-bottom: 1.25rem;
   color: #fff;
 }
-.description__list {
+.portfolio-info__list {
   margin-top: 0;
 }
-.description__next {
+.portfolio-info__next {
   background: none;
   width: 2.25rem;
   padding: 10%;
@@ -370,13 +374,13 @@ a:visited {
   opacity: 0.75;
   transition: opacity 0.2s ease;
 }
-.description__next:hover {
+.portfolio-info__next:hover {
   opacity: 1;
 }
-.description__half-circ {
+.portfolio-info__half-circ {
   fill: #008aff;
 }
-.description__right-arrow {
+.portfolio-info__right-arrow {
   stroke: #fff;
   stroke-width: 25;
   stroke-linejoin: round;
