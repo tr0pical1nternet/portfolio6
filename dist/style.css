@@ -319,6 +319,9 @@ a:visited {
   left: 0;
   -webkit-overflow-scrolling: touch;
 }
+.portfolio-info {
+  overflow: hidden;
+}
 .portfolio-info__slides {
   list-style: none;
   padding-left: 0;
