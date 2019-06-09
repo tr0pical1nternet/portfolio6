@@ -371,12 +371,17 @@ a:visited {
   margin-top: 0;
   margin-bottom: 0;
 }
-.portfolio-info__bottom-decoration {
+.portfolio-info__bottom-fill {
   flex-grow: 1;
   background-color: #000;
 }
-.portfolio-info__bottom-decoration-inner {
-  margin-top: auto;
+.portfolio-info__bottom-cap {
+  background-color: #ddd;
+}
+.portfolio-info__bottom-cap-inner {
+  padding-bottom: 2.5rem;
+  border-radius: 0 0 0 3rem;
+  background-color: #000;
 }
 .portfolio-info__next {
   background: none;
@@ -407,14 +412,6 @@ a:visited {
 .bio {
   background-color: #000;
   overflow: hidden;
-}
-.bio__top-decoration {
-  background-color: #ddd;
-}
-.bio__top-decoration-inner {
-  padding-bottom: 2.5rem;
-  border-radius: 0 0 0 3rem;
-  background-color: #000;
 }
 .bio__content {
   background-color: #ddd;
