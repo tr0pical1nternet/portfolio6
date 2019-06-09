@@ -135,6 +135,7 @@
     width 100%
     top 0
     left 0
+    -webkit-overflow-scrolling touch
 
 // Temp until I can figure out variable height slides
 .portfolio-info
@@ -148,6 +149,12 @@
     padding-left 0
     // height 100%
     display flex
+    margin-bottom 0
+
+.portfolio-info__slide
+    width 100vw
+    display flex
+    flex-direction column
 
 .portfolio-info__header
     display inline-block
@@ -155,6 +162,7 @@
     color color9
     background-color color0
     border-radius 0 3rem 3rem 0
+    margin-right auto
 
 .portfolio-info__title
     // margin margin0 margin0 -.3em
@@ -173,10 +181,10 @@
     display flex
     position relative
     flex-direction column
-    padding 0 margin0 margin1
+    padding 0 margin0 0
     background-color color0
     color color8
-    border-radius 0 3rem 0 3rem
+    border-radius 0 3rem 0 0
     line-height 1.5
 
 .portfolio-info__text
@@ -191,7 +199,16 @@
 
 .portfolio-info__list
     margin-top 0
-    
+    margin-bottom 0
+
+.portfolio-info__bottom-decoration
+    flex-grow 1
+    background-color #000
+
+.portfolio-info__bottom-decoration-inner
+    margin-top auto
+       
+
 .portfolio-info__next
     background none
     width 2.25rem
