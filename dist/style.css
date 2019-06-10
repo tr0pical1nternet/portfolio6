@@ -243,7 +243,8 @@ a:visited {
   transition: fill 0.2s ease;
 }
 .device__border svg:hover {
-  fill: #008aff;
+  stroke: #008aff;
+  stroke-width: 0.75;
 }
 .device__screen {
   position: absolute;
@@ -303,6 +304,7 @@ a:visited {
 .portfolio-info {
   overflow-x: hidden;
 }
+.portfolio-info__track,
 .portfolio-info__slides {
   list-style: none;
   padding-left: 0;
@@ -359,14 +361,6 @@ a:visited {
   flex-grow: 1;
   background-color: #000;
 }
-.portfolio-info__bottom-cap {
-  background-color: #ddd;
-}
-.portfolio-info__bottom-cap-inner {
-  padding-bottom: 2.5rem;
-  border-radius: 0 0 0 3rem;
-  background-color: #000;
-}
 .portfolio-info__next {
   background: none;
   width: 2.25rem;
@@ -396,6 +390,14 @@ a:visited {
 .bio {
   background-color: #000;
   overflow: hidden;
+}
+.bio__top-decoration {
+  background-color: #ddd;
+}
+.bio__top-decoration-inner {
+  padding-bottom: 2.5rem;
+  border-radius: 0 0 0 3rem;
+  background-color: #000;
 }
 .bio__content {
   background-color: #ddd;
