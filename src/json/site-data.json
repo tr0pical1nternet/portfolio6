@@ -117,56 +117,67 @@
      "xl": 1440
   },
 
-  "images": [
-    {
-      "id": 0,
-      "title": "Center Staging Home",
-      "alt": "centerstaging.net home page in full, sized for a device with a narrow screen.",
-      "filename": "center-staging_device-00.jpg"
-    },
-    {
-      "id": 1,
-      "title": "Center Staging Home",
-      "alt": "centerstaging.net home page in full, sized for a device with a wide screen.",
-      "filename": "center-staging_device-01.jpg"
-    },
-    {
-      "id": 2,
-      "title": "Center Staging Build Video",
-      "alt": "centerstaging.net build video.",
-      "filename": "center-staging_device-02.png"
-    },
-    {
-      "id": 3,
-      "title": "Center Staging Rentals",
-      "alt": "centerstaging.net rentals page in full. Each rental category has a custom icon.",
-      "filename": "center-staging_device-03.png"
-    },
-    {
-      "id": 4,
-      "title": "Center Staging Mobile Stages",
-      "alt": "centerstaging.net mobile stage overview page.",
-      "filename": "center-staging_device-04.jpg"
-    },
-    {
-      "id": 5,
-      "title": "Center Staging Gallery",
-      "alt": "centerstaging.net gallery page.",
-      "filename": "center-staging_device-05.jpg"
-    },
-    {
-      "id": 6,
-      "title": "Center Staging Contact",
-      "alt": "centerstaging.net contact page.",
-      "filename": "center-staging_device-06.png"
-    },
-    {
-      "id": 7,
-      "title": "Charles Robertson",
-      "alt": "Photo of Charles Robertson",
-      "filename": "charles-photo.jpg"
-    }
-  ],
+  "images": {
+    "portfolioGallery": [
+      {
+        "id": 0,
+        "title": "Center Staging Home",
+        "alt": "centerstaging.net home page in full, sized for a device with a narrow screen",
+        "filename": "center-staging_device-00.jpg"
+      },
+      {
+        "id": 1,
+        "title": "Center Staging Home",
+        "alt": "centerstaging.net home page in full, sized for a device with a wide screen",
+        "filename": "center-staging_device-01.jpg"
+      },
+      {
+        "id": 2,
+        "title": "Center Staging Build Video",
+        "alt": "centerstaging.net build video.",
+        "filename": "center-staging_device-02.png"
+      },
+      {
+        "id": 3,
+        "title": "Center Staging Rentals",
+        "alt": "centerstaging.net rentals page in full. Each rental category has a custom icon",
+        "filename": "center-staging_device-03.png"
+      },
+      {
+        "id": 4,
+        "title": "Center Staging Mobile Stages",
+        "alt": "centerstaging.net mobile stage overview page",
+        "filename": "center-staging_device-04.jpg"
+      },
+      {
+        "id": 5,
+        "title": "Center Staging Gallery",
+        "alt": "centerstaging.net gallery page",
+        "filename": "center-staging_device-05.jpg"
+      },
+      {
+        "id": 6,
+        "title": "Center Staging Contact",
+        "alt": "centerstaging.net contact page",
+        "filename": "center-staging_device-06.png"
+      },
+      {
+        "id": 7,
+        "title": "Raven Home",
+        "alt": "ravenpmg.com contact home page",
+        "filename": "raven_device-00.png"
+      }
+    ],
+
+    "bio": [
+      {
+        "id": 99,
+        "title": "Charles Robertson",
+        "alt": "Photo of Charles Robertson",
+        "filename": "charles-photo.jpg"
+      }
+    ]
+  },
   
   "socialLinks": 
     [

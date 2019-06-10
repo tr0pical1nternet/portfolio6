@@ -24,31 +24,35 @@ var siteData = JSON.parse(fs.readFileSync('./src/json/site-data.json', 'utf8'));
 // Generate srcset attributes for images
 function createSrcsets() {
 
-	// Loop through each image in the image list
-	for (let i = 0; i < siteData.images.length; i++) {
-		let srcsets = [];
-		let defaultWidth = 72;
-		let imageFilename = siteData.images[i].filename;
+	// Loop through each image set in the image list
+	Object.keys(siteData.images).map(function (imageSet) {
 
-		// Loop through all sizes of each image
-		Object.keys(siteData.imageSizes).map(function (objectKey) {
-			var srcsetFilename = path.basename(imageFilename, path.extname(imageFilename)) + '_' + objectKey + path.extname(imageFilename);
+		// Loop through each image in the image list
+		for (let i = 0; i < siteData.images[imageSet].length; i++) {
+			let srcsets = [];
+			let defaultWidth = 72;
+			let imageFilename = siteData.images[imageSet][i].filename;
 
-			if (fs.existsSync(imagePath + srcsetFilename)) {
-				let srcsetWidth = sizeOf(imagePath + srcsetFilename).width;
-        
-				if (objectKey === 'xxs') {
-					defaultWidth = siteData.imageSizes[objectKey];
+			// Loop through all sizes of each image
+			Object.keys(siteData.imageSizes).map(function (objectKey) {
+				var srcsetFilename = path.basename(imageFilename, path.extname(imageFilename)) + '_' + objectKey + path.extname(imageFilename);
+
+				if (fs.existsSync(imagePath + srcsetFilename)) {
+					let srcsetWidth = sizeOf(imagePath + srcsetFilename).width;
+					
+					if (objectKey === 'xxs') {
+						defaultWidth = siteData.imageSizes[objectKey];
+					}
+
+					srcsets.push(imageAddr + srcsetFilename + ' ' + srcsetWidth + 'w');
 				}
 
-				srcsets.push(imageAddr + srcsetFilename + ' ' + srcsetWidth + 'w');
-			}
-
-			siteData.images[i]['src'] = imageAddr + imageFilename;
-			siteData.images[i]['srcset'] = srcsets.join(' ');
-			siteData.images[i]['width'] = defaultWidth;
-		});
-	}
+				siteData.images[imageSet][i]['src'] = imageAddr + imageFilename;
+				siteData.images[imageSet][i]['srcset'] = srcsets.join(' ');
+				siteData.images[imageSet][i]['width'] = defaultWidth;
+			});
+		}
+	});
 }
 createSrcsets();
 
