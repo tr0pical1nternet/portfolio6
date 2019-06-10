@@ -136,74 +136,55 @@ a:visited {
 .main-menu__item a:visited {
   color: #008aff;
 }
-.glide {
-  position: relative;
-  width: 100%;
-  box-sizing: border-box; }
-  .glide * {
-    box-sizing: inherit; }
-  .glide__track {
-    overflow: hidden; }
-  .glide__slides {
-    position: relative;
-    width: 100%;
-    list-style: none;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-    touch-action: pan-Y;
-    overflow: hidden;
-    padding: 0;
-    white-space: nowrap;
-    display: flex;
-    flex-wrap: nowrap;
-    will-change: transform; }
-    .glide__slides--dragging {
-      user-select: none; }
-  .glide__slide {
-    width: 100%;
-    height: 100%;
-    flex-shrink: 0;
-    white-space: normal;
-    user-select: none;
-    -webkit-touch-callout: none;
-    -webkit-tap-highlight-color: transparent; }
-    .glide__slide a {
-      user-select: none;
-      -webkit-user-drag: none;
-      -moz-user-select: none;
-      -ms-user-select: none; }
-  .glide__arrows {
-    -webkit-touch-callout: none;
-    user-select: none; }
-  .glide__bullets {
-    -webkit-touch-callout: none;
-    user-select: none; }
-  .glide--rtl {
-    direction: rtl; }
-
-.glide {
+.portfolio-gallery {
   height: calc(60vw + 5rem);
   margin: 0 0 1rem;
+  position: relative;
+}
+.portfolio-gallery__track {
+  height: 100%;
   overflow: hidden;
 }
-.glide__track {
-  height: 100%;
-}
-.glide__slides {
+.portfolio-gallery__slides {
+  display: flex;
   height: 100%;
   margin: 0;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+  padding: 2.5rem 0;
+  list-style: none;
+  width: 100%;
+  position: relative;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  touch-action: pan-y;
+  overflow: hidden;
+  white-space: nowrap;
+  will-change: transform;
 }
-.glide__slide {
+.portfolio-gallery__slides--dragging {
+  user-select: none;
+}
+.portfolio-gallery__slide {
   text-align: center;
+  height: 100%;
+  width: 100%;
+  flex-shrink: 0;
+  white-space: normal;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
 }
-.glide__slide-inner {
+.portfolio-gallery__slide a {
+  user-select: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.portfolio-gallery__slide-inner {
   display: inline-block;
   position: relative;
   height: 100%;
 }
-.glide__slide-inner > svg {
+.portfolio-gallery__slide-inner > svg {
   display: block;
   position: relative;
   height: 100%;
@@ -320,7 +301,7 @@ a:visited {
   -webkit-overflow-scrolling: touch;
 }
 .portfolio-info {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .portfolio-info__slides {
   list-style: none;
