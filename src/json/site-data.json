@@ -105,20 +105,6 @@
         "Google Analytics"
       ],
       "desc":"Sediment Press is a design and screenprinting company I founded in 2012. Primarily an online store and design portfolio, I wanted to make a site that was aesthetically rustic, with lots of hand drawn elements, while being functionally polished, with a seamless checkout and integrated payment gateway."
-    },
-    {
-      "id": 5,
-      "slug":"studio-russo",
-      "devices":["desktop"],
-      "title":"Studio Russo",
-      "alt":"Studio Russo Website",
-      "url":"studiorussollc.com",
-      "scope":["Custom WordPress Theme","Backend Development"],
-      "features":[
-        "Envira Gallery",
-        "Before and After section with AJAX filtering",
-        "Custom text fields for page specific text"],
-      "desc":"The original Studio Russo site befell a tragic accident and required a rebuild from scratch. I designed a custom theme identical to the original while upgrading the gallery and making improvements to the backend. (The client requested the site not be built responsively)"
     }
   ],
 
