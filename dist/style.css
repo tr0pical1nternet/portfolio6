@@ -420,15 +420,17 @@ a:visited {
   left: 0;
   -webkit-overflow-scrolling: touch;
 }
+.portfolio-info {
+  overflow-x: hidden;
+}
 .portfolio-info__slides {
   list-style: none;
   padding-left: 0;
   display: flex;
   margin-bottom: 0;
 }
-.portfolio-info__slide {
-  width: 100vw;
-  display: flex !important;
+.portfolio-info__slide-inner {
+  display: flex;
   flex-direction: column;
   height: 100%;
 }

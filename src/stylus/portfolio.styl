@@ -172,7 +172,7 @@
     -webkit-overflow-scrolling touch
 
 .portfolio-info
-    // overflow-x hidden
+    overflow-x hidden
     // From Glide
     // position relative
     // width 100%
@@ -203,10 +203,11 @@
     //     user-select none    
 
 .portfolio-info__slide
-    width 100vw
-    display flex !important
-    flex-direction column
-    height 100%
+    // width 100vw
+    // display flex !important
+    // flex-direction column
+    // flex-shrink 0
+    // height 100%
 
     // From Glide
     // flex-shrink 0
@@ -231,6 +232,11 @@
 
 // .portfolio-info--rtl
 //     direction rtl
+
+.portfolio-info__slide-inner
+    display flex
+    flex-direction column
+    height 100%
 
 .portfolio-info__header
     display inline-block
