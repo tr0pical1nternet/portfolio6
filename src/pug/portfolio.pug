@@ -12,21 +12,26 @@ mixin device(deviceNum)
     div(class="device__border device__border--" + deviceNum role="presentation")
       block
     div(class="device__screen device__screen--" + deviceNum)
-      img(class="device__content device__content--" + deviceNum
+      +portfolio-device__img(deviceNum, index)
+  
+mixin portfolio-device__img(deviceNum, index)
+  - var dataAttrs = {}
+  - dataAttrs['data-current-portfolio-item'] = 0
+
+  //- each portfolioItem in portfolioItems
+  - var portfolioItem = portfolioItems[1] //- Select Raven right now, eventually will be a loop with all portfolio items
+  - dataAttrs['data-' + portfolioItem.slug + 'Title'] = images.portfolioGallery[7].title
+  - dataAttrs['data-' + portfolioItem.slug + 'Alt'] = images.portfolioGallery[7].alt
+  - dataAttrs['data-' + portfolioItem.slug + 'Src'] = images.portfolioGallery[7].src
+  - dataAttrs['data-' + portfolioItem.slug + 'Srcset'] = images.portfolioGallery[7].srcset
+
+  img(class="device__content device__content--" + deviceNum
         title=images.portfolioGallery[index].title
         alt=images.portfolioGallery[index].alt
         src=images.portfolioGallery[index].src
         srcset=images.portfolioGallery[index].srcset
-      )
-  
-  //- mixin data-attr(slug)
+      )&attributes(dataAttrs)
 
-  //- mixin formControl(name, model)
-  //-     input.form-control(
-  //-         [(ngModel)]=`${model}.${name}`,
-  //-         name=`${name}`
-  //-         type="text"
-  //-     )&attributes(attributes)&attributes({[name]: 'ngModel'})
 
 section(class="portfolio" aria-labelledby="#portfolio__heading")
   h3(id="portfolio__heading" class="portfolio__heading visually-hidden") Portfolio
