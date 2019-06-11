@@ -61,23 +61,23 @@ section(class="portfolio" aria-labelledby="#portfolio__heading")
             include ../images/svg/optimized/device-06.svg
 
   div(class="portfolio-info")
-    div(class="portfolio-info__track" data-glide-el="track")
-      ul(class="portfolio-info__slides")
-        each portfolioItem, index in portfolioItems
-          li(class="portfolio-info__slide portfolio-info__slide--" + index)
-            header(class="portfolio-info__header")
-              h4(class="portfolio-info__title") !{portfolioItem.title}
-              a(class="portfolio-info__link" href="http://" + portfolioItem.url title=portfolioItem.title alt=portfolioItem.alt) !{portfolioItem.url}
+    //- div(class="portfolio-info__track" data-glide-el="track")
+    ul(class="portfolio-info__slides")
+      each portfolioItem, index in portfolioItems
+        li(class="portfolio-info__slide portfolio-info__slide--" + index)
+          header(class="portfolio-info__header")
+            h4(class="portfolio-info__title") !{portfolioItem.title}
+            a(class="portfolio-info__link" href="http://" + portfolioItem.url title=portfolioItem.title alt=portfolioItem.alt) !{portfolioItem.url}
 
-            div(class="portfolio-info__text-wrap")
-              p(class="portfolio-info__text") !{portfolioItem.desc}
-              
-              h5(class="portfolio-info__heading") Scope
-              ul(class="portfolio-info__list")
-                each listing in portfolioItem.scope
-                  li= listing
+          div(class="portfolio-info__text-wrap")
+            p(class="portfolio-info__text") !{portfolioItem.desc}
+            
+            h5(class="portfolio-info__heading") Scope
+            ul(class="portfolio-info__list")
+              each listing in portfolioItem.scope
+                li= listing
 
-            div(class="portfolio-info__bottom-fill" role="presentation")
+          div(class="portfolio-info__bottom-fill" role="presentation")
 
 
               //- button(class="portfolio-info__next")

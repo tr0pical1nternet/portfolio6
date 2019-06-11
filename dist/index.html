@@ -8,7 +8,8 @@
   <meta name="description" content="Web design portfolio of Charles Robertson">
   <meta name="author" content="Charles Robertson">
   <!-- Scripts-->
-  <script src="glide/glide.js"></script>
+  <script src="js/jquery-2.2.4.min.js"></script>
+  <script src="js/slick.min.js"></script>
   <body>
     <header class="site-header" role="banner">
       <div class="site-title">
@@ -100,92 +101,90 @@
           </div>
         </div>
         <div class="portfolio-info">
-          <div class="portfolio-info__track" data-glide-el="track">
-            <ul class="portfolio-info__slides">
-              <li class="portfolio-info__slide portfolio-info__slide--0">
-                <header class="portfolio-info__header">
-                  <h4 class="portfolio-info__title">Center Staging</h4><a class="portfolio-info__link" href="http://centerstaging.net" title="Center Staging" alt="Center Staging Website">centerstaging.net</a>
-                </header>
-                <div class="portfolio-info__text-wrap">
-                  <p class="portfolio-info__text">After Raven purchased Center Staging in 2018 they wanted to rebrand the company to make it more modern. In addition to the website I redesigned the company's logo, being careful to stay close enough to the existing brand that they could gradually phase it on their trucks, uniforms, signage, etc., avoiding costly upgrades.</p>
-                  <h5 class="portfolio-info__heading">Scope</h5>
-                  <ul class="portfolio-info__list">
-                    <li>Logo Redesign</li>
-                    <li>Visual Design</li>
-                    <li>Icon Design</li>
-                    <li>Custom WordPress Theme</li>
-                    <li>Video Editing</li>
-                    <li>Search Engine Optimization</li>
-                  </ul>
-                </div>
-                <div class="portfolio-info__bottom-fill" role="presentation"></div>
-              </li>
-              <li class="portfolio-info__slide portfolio-info__slide--1">
-                <header class="portfolio-info__header">
-                  <h4 class="portfolio-info__title">RAVEN</h4><a class="portfolio-info__link" href="http://ravenpmg.com" title="RAVEN" alt="Raven Website">ravenpmg.com</a>
-                </header>
-                <div class="portfolio-info__text-wrap">
-                  <p class="portfolio-info__text">Raven needed a site that would showcase their innovativeness in the event design industry. They provided the visual design for a desktop version from which I designed a mobile first responsive theme. The site centers their portfolio, so we carefully incorporated sliders, galleries, and carousels to convey their content as intuitively as possible.</p>
-                  <h5 class="portfolio-info__heading">Scope</h5>
-                  <ul class="portfolio-info__list">
-                    <li>Mobile Visual Design</li>
-                    <li>Icon Design</li>
-                    <li>Custom WordPress Theme</li>
-                    <li>Search Engine Optimization</li>
-                  </ul>
-                </div>
-                <div class="portfolio-info__bottom-fill" role="presentation"></div>
-              </li>
-              <li class="portfolio-info__slide portfolio-info__slide--2">
-                <header class="portfolio-info__header">
-                  <h4 class="portfolio-info__title">CDesigns, Inc</h4><a class="portfolio-info__link" href="http://cdesignsinc.com" title="CDesigns, Inc" alt="CDesigns, Inc. Website">cdesignsinc.com</a>
-                </header>
-                <div class="portfolio-info__text-wrap">
-                  <p class="portfolio-info__text">CDesigns, Inc provides high end renovations and wanted their site to reflect the sophistication of their work. After completing the visual design I was able to find an existing WordPress theme that had the right structure, and built a child theme to suit. The result was an attractive site that was inexpensive and easy to maintain.</p>
-                  <h5 class="portfolio-info__heading">Scope</h5>
-                  <ul class="portfolio-info__list">
-                    <li>Logo Redesign</li>
-                    <li>Visual Design</li>
-                    <li>Custom WordPress Child Theme</li>
-                  </ul>
-                </div>
-                <div class="portfolio-info__bottom-fill" role="presentation"></div>
-              </li>
-              <li class="portfolio-info__slide portfolio-info__slide--3">
-                <header class="portfolio-info__header">
-                  <h4 class="portfolio-info__title">Spruced</h4><a class="portfolio-info__link" href="http://spruced-dc.com" title="Spruced" alt="Spruced Website">spruced-dc.com</a>
-                </header>
-                <div class="portfolio-info__text-wrap">
-                  <p class="portfolio-info__text">Spruced is a personal organizing company, so when we designed their website it was important to keep the aesthetic as clean as possible. We had a great starting point with origami-inspired logo designed by <a href="https://walkerinkworks.com/" alt="Walker Ink" target="_blank">Walker Ink</a>. I worked closely with the owner to design content that is simple, informative, and leads the customer to the contact page.</p>
-                  <h5 class="portfolio-info__heading">Scope</h5>
-                  <ul class="portfolio-info__list">
-                    <li>Visual Design</li>
-                    <li>Content Design</li>
-                    <li>Custom WordPress Child Theme</li>
-                  </ul>
-                </div>
-                <div class="portfolio-info__bottom-fill" role="presentation"></div>
-              </li>
-              <li class="portfolio-info__slide portfolio-info__slide--4">
-                <header class="portfolio-info__header">
-                  <h4 class="portfolio-info__title">Sediment Press</h4><a class="portfolio-info__link" href="http://sedimentpress.com" title="Sediment Press" alt="Sediment Press Website">sedimentpress.com</a>
-                </header>
-                <div class="portfolio-info__text-wrap">
-                  <p class="portfolio-info__text">Sediment Press is a design and screenprinting company I founded in 2012. Primarily an online store and design portfolio, I wanted to make a site that was aesthetically rustic, with lots of hand drawn elements, while being functionally polished, with a seamless checkout and integrated payment gateway.</p>
-                  <h5 class="portfolio-info__heading">Scope</h5>
-                  <ul class="portfolio-info__list">
-                    <li>Logo Design</li>
-                    <li>Visual Design</li>
-                    <li>Custom WordPress Child Theme</li>
-                    <li>Store Setup</li>
-                    <li>Content Creation</li>
-                    <li>Backend Development</li>
-                  </ul>
-                </div>
-                <div class="portfolio-info__bottom-fill" role="presentation"></div>
-              </li>
-            </ul>
-          </div>
+          <ul class="portfolio-info__slides">
+            <li class="portfolio-info__slide portfolio-info__slide--0">
+              <header class="portfolio-info__header">
+                <h4 class="portfolio-info__title">Center Staging</h4><a class="portfolio-info__link" href="http://centerstaging.net" title="Center Staging" alt="Center Staging Website">centerstaging.net</a>
+              </header>
+              <div class="portfolio-info__text-wrap">
+                <p class="portfolio-info__text">After Raven purchased Center Staging in 2018 they wanted to rebrand the company to make it more modern. In addition to the website I redesigned the company's logo, being careful to stay close enough to the existing brand that they could gradually phase it on their trucks, uniforms, signage, etc., avoiding costly upgrades.</p>
+                <h5 class="portfolio-info__heading">Scope</h5>
+                <ul class="portfolio-info__list">
+                  <li>Logo Redesign</li>
+                  <li>Visual Design</li>
+                  <li>Icon Design</li>
+                  <li>Custom WordPress Theme</li>
+                  <li>Video Editing</li>
+                  <li>Search Engine Optimization</li>
+                </ul>
+              </div>
+              <div class="portfolio-info__bottom-fill" role="presentation"></div>
+            </li>
+            <li class="portfolio-info__slide portfolio-info__slide--1">
+              <header class="portfolio-info__header">
+                <h4 class="portfolio-info__title">RAVEN</h4><a class="portfolio-info__link" href="http://ravenpmg.com" title="RAVEN" alt="Raven Website">ravenpmg.com</a>
+              </header>
+              <div class="portfolio-info__text-wrap">
+                <p class="portfolio-info__text">Raven needed a site that would showcase their innovativeness in the event design industry. They provided the visual design for a desktop version from which I designed a mobile first responsive theme. The site centers their portfolio, so we carefully incorporated sliders, galleries, and carousels to convey their content as intuitively as possible.</p>
+                <h5 class="portfolio-info__heading">Scope</h5>
+                <ul class="portfolio-info__list">
+                  <li>Mobile Visual Design</li>
+                  <li>Icon Design</li>
+                  <li>Custom WordPress Theme</li>
+                  <li>Search Engine Optimization</li>
+                </ul>
+              </div>
+              <div class="portfolio-info__bottom-fill" role="presentation"></div>
+            </li>
+            <li class="portfolio-info__slide portfolio-info__slide--2">
+              <header class="portfolio-info__header">
+                <h4 class="portfolio-info__title">CDesigns, Inc</h4><a class="portfolio-info__link" href="http://cdesignsinc.com" title="CDesigns, Inc" alt="CDesigns, Inc. Website">cdesignsinc.com</a>
+              </header>
+              <div class="portfolio-info__text-wrap">
+                <p class="portfolio-info__text">CDesigns, Inc provides high end renovations and wanted their site to reflect the sophistication of their work. After completing the visual design I was able to find an existing WordPress theme that had the right structure, and built a child theme to suit. The result was an attractive site that was inexpensive and easy to maintain.</p>
+                <h5 class="portfolio-info__heading">Scope</h5>
+                <ul class="portfolio-info__list">
+                  <li>Logo Redesign</li>
+                  <li>Visual Design</li>
+                  <li>Custom WordPress Child Theme</li>
+                </ul>
+              </div>
+              <div class="portfolio-info__bottom-fill" role="presentation"></div>
+            </li>
+            <li class="portfolio-info__slide portfolio-info__slide--3">
+              <header class="portfolio-info__header">
+                <h4 class="portfolio-info__title">Spruced</h4><a class="portfolio-info__link" href="http://spruced-dc.com" title="Spruced" alt="Spruced Website">spruced-dc.com</a>
+              </header>
+              <div class="portfolio-info__text-wrap">
+                <p class="portfolio-info__text">Spruced is a personal organizing company, so when we designed their website it was important to keep the aesthetic as clean as possible. We had a great starting point with origami-inspired logo designed by <a href="https://walkerinkworks.com/" alt="Walker Ink" target="_blank">Walker Ink</a>. I worked closely with the owner to design content that is simple, informative, and leads the customer to the contact page.</p>
+                <h5 class="portfolio-info__heading">Scope</h5>
+                <ul class="portfolio-info__list">
+                  <li>Visual Design</li>
+                  <li>Content Design</li>
+                  <li>Custom WordPress Child Theme</li>
+                </ul>
+              </div>
+              <div class="portfolio-info__bottom-fill" role="presentation"></div>
+            </li>
+            <li class="portfolio-info__slide portfolio-info__slide--4">
+              <header class="portfolio-info__header">
+                <h4 class="portfolio-info__title">Sediment Press</h4><a class="portfolio-info__link" href="http://sedimentpress.com" title="Sediment Press" alt="Sediment Press Website">sedimentpress.com</a>
+              </header>
+              <div class="portfolio-info__text-wrap">
+                <p class="portfolio-info__text">Sediment Press is a design and screenprinting company I founded in 2012. Primarily an online store and design portfolio, I wanted to make a site that was aesthetically rustic, with lots of hand drawn elements, while being functionally polished, with a seamless checkout and integrated payment gateway.</p>
+                <h5 class="portfolio-info__heading">Scope</h5>
+                <ul class="portfolio-info__list">
+                  <li>Logo Design</li>
+                  <li>Visual Design</li>
+                  <li>Custom WordPress Child Theme</li>
+                  <li>Store Setup</li>
+                  <li>Content Creation</li>
+                  <li>Backend Development</li>
+                </ul>
+              </div>
+              <div class="portfolio-info__bottom-fill" role="presentation"></div>
+            </li>
+          </ul>
         </div>
       </section>
       <section class="bio">
@@ -200,7 +199,7 @@
           <p>My background is in graphic design. I founded Sediment Press in 2012 as graphic design and screen printing company designing event posters, cards, clothing, and fine art prints.</p>
         </div>
       </section>
-      <script src="js/init-glide.js"></script>
+      <script src="js/init-slick.js"></script>
     </main>
     <footer>
       <nav class="footer-menu">
