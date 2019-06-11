@@ -3,6 +3,8 @@
 $(document).ready(function(){
 	$('.portfolio-gallery__slides').slick({
 		'arrows': false
+		// 'variableWidth': true,
+		// 'centerMode': true
 	});
 });
 
