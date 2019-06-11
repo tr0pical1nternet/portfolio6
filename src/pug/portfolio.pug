@@ -16,14 +16,14 @@ mixin portfolio-gallery__device(deviceNum)
   
 mixin portfolio-gallery__device-content(deviceNum, index)
   - var dataAttrs = {}
-  - dataAttrs['data-current-portfolio-item'] = 0
+  - dataAttrs['data-device'] = deviceNum
 
   //- each portfolioItem in portfolioItems
   - var portfolioItem = portfolioItems[1] //- Select Raven right now, eventually will be a loop with all portfolio items
-  - dataAttrs['data-' + portfolioItem.slug + 'Title'] = images.portfolioGallery[7].title
-  - dataAttrs['data-' + portfolioItem.slug + 'Alt'] = images.portfolioGallery[7].alt
-  - dataAttrs['data-' + portfolioItem.slug + 'Src'] = images.portfolioGallery[7].src
-  - dataAttrs['data-' + portfolioItem.slug + 'Srcset'] = images.portfolioGallery[7].srcset
+  - dataAttrs['data-title-' + deviceNum] = images.portfolioGallery[index + 7].title
+  - dataAttrs['data-alt-' + deviceNum] = images.portfolioGallery[index + 7].alt
+  - dataAttrs['data-src-' + deviceNum] = images.portfolioGallery[index + 7].src
+  - dataAttrs['data-srcset-' + deviceNum] = images.portfolioGallery[index + 7].srcset
 
   img(class="portfolio-gallery__device-content portfolio-gallery__device-content--" + deviceNum
         title=images.portfolioGallery[index].title

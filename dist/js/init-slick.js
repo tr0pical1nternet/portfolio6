@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable no-undef */
 
 $(document).ready(function(){
@@ -12,4 +13,25 @@ $(document).ready(function(){
 	$('.portfolio-info__slides').slick({
 		'arrows': false
 	});
+});
+
+var galleryImages = $('.portfolio-gallery__device-content');
+
+$('.portfolio-info__slides').on('beforeChange', function() {
+	galleryImages.css('opacity', 0);
+
+	galleryImages.each(function(index) {
+		var img = $(this);
+		var deviceNum = ('0' + index).slice(-2);
+		// console.log(deviceNum);
+
+		img.attr('title', img.attr('data-title-' + deviceNum));
+		img.attr('alt', img.attr('data-alt-' + deviceNum));
+		img.attr('src', img.attr('data-src-' + deviceNum));
+		img.attr('srcset', img.attr('data-srcset-' + deviceNum));
+	});
+});
+
+$('.portfolio-info__slides').on('afterChange', function() {
+	galleryImages.css('opacity', 1);
 });
