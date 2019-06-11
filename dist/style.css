@@ -158,7 +158,6 @@ a:visited {
   touch-action: pan-y;
   overflow: hidden;
   white-space: nowrap;
-  will-change: transform;
 }
 .portfolio-gallery__slides--dragging {
   user-select: none;
@@ -302,19 +301,57 @@ a:visited {
   -webkit-overflow-scrolling: touch;
 }
 .portfolio-info {
-  overflow-x: hidden;
+  position: relative;
+  width: 100%;
 }
-.portfolio-info__track,
+.portfolio-info__track {
+  overflow: hidden;
+}
 .portfolio-info__slides {
   list-style: none;
   padding-left: 0;
   display: flex;
   margin-bottom: 0;
+  position: relative;
+  width: 100 $;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  touch-action: pan-Y;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  will-change: transform;
+}
+.portfolio-info__slides--dragging {
+  user-select: none;
 }
 .portfolio-info__slide {
   width: 100vw;
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
+  white-space: normal;
+  user-select: none;
+  --webkit-touch-callout: none;
+  --webkit-tap-highlight-color: transparent;
+}
+.portfolio-info__slide a {
+  user-select: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.portfolio-info__arrows {
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+.portfolio-info__bullets {
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+.portfolio-info--rtl {
+  direction: rtl;
 }
 .portfolio-info__header {
   display: inline-block;
