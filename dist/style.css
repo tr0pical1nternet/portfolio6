@@ -286,113 +286,114 @@ a:visited {
   position: relative;
   height: 100%;
 }
-.device {
+.portfolio-gallery__device {
   margin: 0;
   position: absolute;
   z-index: 0;
 }
-.device--00 {
+.portfolio-gallery__device--00 {
   width: 23.17%;
   left: 0;
   top: 35.64%;
   z-index: 10;
 }
-.device--01 {
+.portfolio-gallery__device--01 {
   width: 84.8%;
   left: 15.2%;
   top: 11.62%;
 }
-.device--02 {
+.portfolio-gallery__device--02 {
   width: 49.71%;
   left: 5.49%;
   top: 0;
 }
-.device--03 {
+.portfolio-gallery__device--03 {
   width: 74.61%;
   left: 0;
   top: 45.55%;
 }
-.device--04 {
+.portfolio-gallery__device--04 {
   width: 36.65%;
   left: 63.35%;
   top: 10.77%;
 }
-.device--05 {
+.portfolio-gallery__device--05 {
   width: 100%;
   left: 0;
   top: 0;
 }
-.device--06 {
+.portfolio-gallery__device--06 {
   width: 100%;
   left: 0;
   top: 64.12%;
 }
-.device__border {
+.portfolio-gallery__device-overlay {
   position: relative;
   z-index: 20;
   pointer-events: none;
 }
-.device__border svg {
+.portfolio-gallery__device-overlay svg {
   display: block;
   overflow: visible;
   fill: #000;
   stroke: #ddd;
   stroke-width: 0.5;
 }
-.device__border svg:hover {
+.portfolio-gallery__device-overlay svg:hover {
   stroke: #008aff;
   stroke-width: 0.75;
 }
-.device__screen {
+.portfolio-gallery__device-screen {
   position: absolute;
   overflow-x: hidden;
   overflow-y: scroll;
   height: 0;
   z-index: 0;
+  background-color: #000;
 }
-.device__screen--00 {
+.portfolio-gallery__device-screen--00 {
   width: 91.33%;
   padding-bottom: 159.19%;
   left: 4.33%;
   top: 8.79%;
 }
-.device__screen--01 {
+.portfolio-gallery__device-screen--01 {
   width: 91.24%;
   padding-bottom: 51.98%;
   left: 4.38%;
   top: 6.02%;
 }
-.device__screen--02 {
+.portfolio-gallery__device-screen--02 {
   width: 82.01%;
   padding-bottom: 47.44%;
   left: 9.04%;
   top: 4.33%;
 }
-.device__screen--03 {
+.portfolio-gallery__device-screen--03 {
   width: 75.53%;
   padding-bottom: 40.34%;
   left: 12.38%;
   top: 9.29%;
 }
-.device__screen--04 {
+.portfolio-gallery__device-screen--04 {
   width: 86.23%;
   padding-bottom: 125.71%;
   left: 6.89%;
   top: 7.25%;
 }
-.device__screen--05 {
+.portfolio-gallery__device-screen--05 {
   width: 85.91%;
   padding-bottom: 61.18%;
   left: 7.04%;
   top: 7.39%;
 }
-.device__screen--06 {
+.portfolio-gallery__device-screen--06 {
   width: 95.76%;
   padding-bottom: 44.2%;
   left: 2.13%;
   top: 4.08%;
 }
-.device__content {
+.portfolio-gallery__device-content {
   position: absolute;
   width: 100%;
   top: 0;
