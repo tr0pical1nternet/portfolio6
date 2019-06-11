@@ -66,6 +66,12 @@ gulp.task('images', function (cb) {
 			]))
 			.pipe(gulp.dest(sitePath + 'images'))
 	});
+	
+	gulp.src('src/images/img/*.{jpg,png}')
+		.pipe(imagemin([
+			imagemin.jpegtran({ progressive: true })
+		]))
+		.pipe(gulp.dest(sitePath + 'images'))
 	cb();
 });
 
