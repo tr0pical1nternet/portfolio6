@@ -37,28 +37,28 @@ section(class="portfolio" aria-labelledby="#portfolio__heading")
   h3(id="portfolio__heading" class="portfolio__heading visually-hidden") Portfolio
   
   div(class="portfolio-gallery")
-    div(class="portfolio-gallery__track" data-glide-el="track")
-      ul(class="portfolio-gallery__slides")
-        +portfolio-gallery__slide()
-          include ../images/svg/optimized/panel-0.svg
-          +device("00")
-            include ../images/svg/optimized/device-00.svg
-          +device("01")
-            include ../images/svg/optimized/device-01.svg
-        +portfolio-gallery__slide()
-          include ../images/svg/optimized/panel-1.svg
-          +device("02")
-            include ../images/svg/optimized/device-02.svg
-          +device("03")
-            include ../images/svg/optimized/device-03.svg
-          +device("04")
-            include ../images/svg/optimized/device-04.svg
-        +portfolio-gallery__slide()
-          include ../images/svg/optimized/panel-2.svg
-          +device("05")
-            include ../images/svg/optimized/device-05.svg
-          +device("06")
-            include ../images/svg/optimized/device-06.svg
+    //- div(class="portfolio-gallery__track" data-glide-el="track")
+    ul(class="portfolio-gallery__slides")
+      +portfolio-gallery__slide()
+        include ../images/svg/optimized/panel-0.svg
+        +device("00")
+          include ../images/svg/optimized/device-00.svg
+        +device("01")
+          include ../images/svg/optimized/device-01.svg
+      +portfolio-gallery__slide()
+        include ../images/svg/optimized/panel-1.svg
+        +device("02")
+          include ../images/svg/optimized/device-02.svg
+        +device("03")
+          include ../images/svg/optimized/device-03.svg
+        +device("04")
+          include ../images/svg/optimized/device-04.svg
+      +portfolio-gallery__slide()
+        include ../images/svg/optimized/panel-2.svg
+        +device("05")
+          include ../images/svg/optimized/device-05.svg
+        +device("06")
+          include ../images/svg/optimized/device-06.svg
 
   div(class="portfolio-info")
     //- div(class="portfolio-info__track" data-glide-el="track")
