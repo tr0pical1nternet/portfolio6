@@ -65,20 +65,20 @@ section(class="portfolio" aria-labelledby="#portfolio__heading")
     ul(class="portfolio-info__slides")
       each portfolioItem, index in portfolioItems
         li(class="portfolio-info__slide portfolio-info__slide--" + index)
-          div(class="portfolio-info__slide-inner")
-            header(class="portfolio-info__header")
-              h4(class="portfolio-info__title") !{portfolioItem.title}
-              a(class="portfolio-info__link" href="http://" + portfolioItem.url title=portfolioItem.title alt=portfolioItem.alt) !{portfolioItem.url}
+          //- div(class="portfolio-info__slide-inner")
+          header(class="portfolio-info__header")
+            h4(class="portfolio-info__title") !{portfolioItem.title}
+            a(class="portfolio-info__link" href="http://" + portfolioItem.url title=portfolioItem.title alt=portfolioItem.alt) !{portfolioItem.url}
 
-            div(class="portfolio-info__text-wrap")
-              p(class="portfolio-info__text") !{portfolioItem.desc}
-              
-              h5(class="portfolio-info__heading") Scope
-              ul(class="portfolio-info__list")
-                each listing in portfolioItem.scope
-                  li= listing
+          div(class="portfolio-info__text-wrap")
+            p(class="portfolio-info__text") !{portfolioItem.desc}
+            
+            h5(class="portfolio-info__heading") Scope
+            ul(class="portfolio-info__list")
+              each listing in portfolioItem.scope
+                li= listing
 
-            div(class="portfolio-info__bottom-fill" role="presentation")
+          div(class="portfolio-info__bottom-fill" role="presentation")
 
 
               //- button(class="portfolio-info__next")

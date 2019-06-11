@@ -181,10 +181,15 @@
     // From Glide
     // overflow hidden
 
+// .slick-track
+//     display flex
+//     flex-wrap nowrap
+//     align-content stretch
+
 .portfolio-info__slides
     list-style none
     padding-left 0
-    display flex
+    // display flex
     margin-bottom 0
 
     // From Glide
@@ -233,10 +238,10 @@
 // .portfolio-info--rtl
 //     direction rtl
 
-.portfolio-info__slide-inner
-    display flex
-    flex-direction column
-    height 100%
+// .portfolio-info__slide-inner
+//     display flex
+//     flex-direction column
+//     height 100%
 
 .portfolio-info__header
     display inline-block
@@ -268,6 +273,7 @@
     color color8
     border-radius 0 3rem 0 0
     line-height 1.5
+    z-index 1
 
 .portfolio-info__text
     // margin-top 0
@@ -284,8 +290,14 @@
     margin-bottom 0
 
 .portfolio-info__bottom-fill
-    flex-grow 1
+    // flex-grow 1
     background-color #000
+    position absolute
+    bottom 0
+    left 0
+    right 0
+    height 50%
+    z-index 0
 
 .portfolio-info__next
     background none
