@@ -72,6 +72,7 @@
 .device__border
     position relative
     z-index 20
+    pointer-events none
     
     svg
         display block
@@ -79,7 +80,7 @@
         fill color0
         stroke color8
         stroke-width .5
-        transition: fill .2s ease
+        // transition fill .2s ease
 
         &:hover
             stroke colorA
@@ -87,7 +88,8 @@
 
 .device__screen
     position absolute
-    overflow hidden
+    overflow-x hidden
+    overflow-y scroll
     height 0
     z-index 0
 
