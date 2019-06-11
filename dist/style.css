@@ -28,7 +28,7 @@ html {
   src: url("fonts/AkzidenzGroteskBQ-Super.woff") format('woff2');
 }
 body {
-  font-family: System, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: System, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Arial, sans-serif;
   background-color: #ddd;
   margin: 0;
 }
@@ -71,7 +71,7 @@ a:visited {
 .site-title h2 {
   margin-top: 0;
   margin-bottom: 0;
-  color: #fff;
+  color: #eee;
 }
 .site-title__web-design,
 .site-title__portfolio,
@@ -319,7 +319,7 @@ a:visited {
 .portfolio-info__header {
   display: inline-block;
   padding: 1rem 2.75rem 1rem 1.25rem;
-  color: #fff;
+  color: #eee;
   background-color: #000;
   border-radius: 0 3rem 3rem 0;
   margin-right: auto;
@@ -351,7 +351,7 @@ a:visited {
   font-size: 1.5rem;
   margin-top: calc(1.25rem / 2);
   margin-bottom: 1.25rem;
-  color: #fff;
+  color: #eee;
 }
 .portfolio-info__list {
   margin-top: 0;
@@ -381,7 +381,7 @@ a:visited {
   fill: #008aff;
 }
 .portfolio-info__right-arrow {
-  stroke: #fff;
+  stroke: #eee;
   stroke-width: 25;
   stroke-linejoin: round;
   stroke-linecap: round;
@@ -447,7 +447,7 @@ footer {
 .footer-menu__heading {
   width: auto;
   font-size: 1.25em;
-  color: #fff;
+  color: #eee;
   margin-top: 0;
 }
 .footer-menu__heading--portfolio {
