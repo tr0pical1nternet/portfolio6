@@ -1,0 +1,1 @@
+Raven needed a site that would showcase their innovativeness in the event design industry. They provided the visual design for a desktop version from which I designed a mobile first responsive theme. The site centers on their portfolio, so we used galleries, carousels, and catagory filtering in concert to convey their content as intuitively as possible.

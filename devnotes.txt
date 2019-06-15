@@ -1,0 +1,21 @@
+Fix gallery vertical scrolling issue in firefox
+Replace scroll bars?! They are super clunky! Probably terrible UX to fuck with!!!
+Customize CSS ease for slide animation
+-- Clean up markup for slides, remove extra divs. Replace list with div
+-- Restructure gallery so every device is in its own slide.
+Content
+	Bio
+		Write Bio paragraphs
+		New pic not in a tank top
+	Portfolio
+		Make screen shots for other sites. Sediment Press, Spruced, CDesigns
+Add underline to portfolio on open
+
+Accessibility
+	Get working keyboard and screen reader versions BEFORE the javascript version
+
+Progressive Enhancement
+	Site loads symantically, and then javascript disects it and reassembles into sliders
+
+Can you have more than one slider controlled by slick?
+
