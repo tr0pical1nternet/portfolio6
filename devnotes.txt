@@ -1,21 +1,35 @@
 Fix gallery vertical scrolling issue in firefox
 Replace scroll bars?! They are super clunky! Probably terrible UX to fuck with!!!
-Customize CSS ease for slide animation
--- Clean up markup for slides, remove extra divs. Replace list with div
+Try to replace touch scroll with a slider or use another scroll library
+
 -- Restructure gallery so every device is in its own slide.
+
 Content
 	Bio
 		Write Bio paragraphs
 		New pic not in a tank top
 	Portfolio
+		Center Staging (add full height mobile)
+		Raven (add full height mobile)
+		-- Sediment Press
+		CDesigns
+		Spruced
+
 		Make screen shots for other sites. Sediment Press, Spruced, CDesigns
-Add underline to portfolio on open
+
+Media Queries
+	Mobile
+		Devices are singular
+	Tablet
+		Devices are grouped in slides
 
 Accessibility
 	Get working keyboard and screen reader versions BEFORE the javascript version
+	Add underline to portfolio on open
 
 Progressive Enhancement
 	Site loads symantically, and then javascript disects it and reassembles into sliders
+	Replace slider plugin with flickity
 
-Can you have more than one slider controlled by slick?
-
+Optimizations	
+	Customize CSS ease for slide animation if necessary
