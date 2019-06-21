@@ -1,4 +1,4 @@
-mixin linkItem(linkHref, linkClass, linkAlt)
+mixin site-title__contact-item(linkHref, linkClass, linkAlt)
   li.site-title__contact-item
     a(href = linkHref alt=linkAlt)
       div(id = linkClass class = "icon social-icon " + linkClass)
@@ -11,11 +11,11 @@ header.site-header(role="banner")
     h2.site-title__web-design Web Design
     nav.site-title__contact(aria-label="Contact")
       ul.site-title__contact-list
-        +linkItem('https://twitter.com/tr0pical1ntrnet', 'twitter-icon', 'Charles on Twitter')
+        +site-title__contact-item('https://twitter.com/tr0pical1ntrnet', 'twitter-icon', 'Charles on Twitter')
           include ../images/svg/optimized/icon-twitter.svg
-        +linkItem('https://codepen.io/tr0pical1nternet/#', 'codepen-icon', 'Charles on CodePen')
+        +site-title__contact-item('https://codepen.io/tr0pical1nternet/#', 'codepen-icon', 'Charles on CodePen')
           include ../images/svg/optimized/icon-codepen.svg
-        +linkItem('https://github.com/tr0pical1nternet', 'github-icon', 'Charles on GitHub')
+        +site-title__contact-item('https://github.com/tr0pical1nternet', 'github-icon', 'Charles on GitHub')
           include ../images/svg/optimized/icon-github.svg
   nav.main-menu
     ul.main-menu__list

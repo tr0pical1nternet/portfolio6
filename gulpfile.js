@@ -110,10 +110,14 @@ gulp.task('svgo', () => {
 				}, {
 					removeViewBox: false
 				}, {
-					// removeDimensions: true
+					removeDimensions: true
 				}, {
 					removeAttrs: {
 						attrs: ('fill|stroke.*|data-name')
+					}
+				}, {
+					addAttributesToSVGElement: {
+						attribute: 'width="72"'
 					}
 				}]
 			}
