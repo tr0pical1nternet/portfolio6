@@ -291,42 +291,6 @@ a:visited {
   position: absolute;
   z-index: 0;
 }
-.portfolio-gallery__device--00 {
-  width: 23.17%;
-  left: 0;
-  top: 35.64%;
-  z-index: 10;
-}
-.portfolio-gallery__device--01 {
-  width: 84.8%;
-  left: 15.2%;
-  top: 11.62%;
-}
-.portfolio-gallery__device--02 {
-  width: 49.71%;
-  left: 5.49%;
-  top: 0;
-}
-.portfolio-gallery__device--03 {
-  width: 74.61%;
-  left: 0;
-  top: 45.55%;
-}
-.portfolio-gallery__device--04 {
-  width: 36.65%;
-  left: 63.35%;
-  top: 10.77%;
-}
-.portfolio-gallery__device--05 {
-  width: 100%;
-  left: 0;
-  top: 0;
-}
-.portfolio-gallery__device--06 {
-  width: 100%;
-  left: 0;
-  top: 64.12%;
-}
 .portfolio-gallery__device-overlay {
   position: relative;
   z-index: 20;
