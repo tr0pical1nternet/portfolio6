@@ -1,87 +1,76 @@
-- function imgDataAttrs (slug, index) { attrString = 'data-' + slug + '-src=' + images[index].src; return attrString; }
+//- Declarations
+- function intToTwoDigitString(int) { return ("0" + int).slice(-2); }
 
 mixin portfolio-gallery__slide(slideNum)
   li(class='portfolio-gallery__slide')
     div(class='portfolio-gallery__slide-inner')
       block
 
-mixin portfolio-gallery__device(deviceNum)
-  - var index = parseInt(deviceNum, 10)
+mixin portfolio-gallery__device(portfolioItemIndex, deviceIndex)
+  - console.log(portfolioItemIndex, deviceIndex)
+  - var deviceStr = intToTwoDigitString(deviceIndex)
 
-  figure(class='portfolio-gallery__device portfolio-gallery__device--' + deviceNum)
-    div(class='portfolio-gallery__device-overlay portfolio-gallery__device-overlay--' + deviceNum role='presentation')
+  figure(class='portfolio-gallery__device portfolio-gallery__device--' + deviceStr)
+    div(class='portfolio-gallery__device-overlay' role='presentation')
       block
-    div(class='portfolio-gallery__device-screen portfolio-gallery__device-screen--' + deviceNum)
-      +portfolio-gallery__device-content(deviceNum, index)
+    div(class='portfolio-gallery__device-screen portfolio-gallery__device-screen--' + deviceStr)
+      +portfolio-gallery__device-content(portfolioItemIndex, deviceIndex)
   
-mixin portfolio-gallery__device-content(deviceNum, index)
-  - var dataAttrs = {}
-  - dataAttrs['data-device'] = deviceNum
+mixin portfolio-gallery__device-content(portfolioItemIndex, deviceIndex)
+  - var portfolioGalleryIndex = (portfolioItemIndex * 7) + deviceIndex
+  if images.portfolioGallery[portfolioGalleryIndex]
+    - console.log(portfolioItemIndex, deviceIndex, portfolioGalleryIndex)
+    img(class='portfolio-gallery__device-content'
+          title=images.portfolioGallery[portfolioGalleryIndex].title
+          alt=images.portfolioGallery[portfolioGalleryIndex].alt
+          src=images.portfolioGallery[portfolioGalleryIndex].src
+          srcset=images.portfolioGallery[portfolioGalleryIndex].srcset
+          width='72'
+        )
 
-  //- each portfolioItem in portfolioItems
-  - var portfolioItem = portfolioItems[1] //- Select Raven right now, eventually will be a loop with all portfolio items
-  - dataAttrs['data-title-' + deviceNum] = images.portfolioGallery[index + 7].title
-  - dataAttrs['data-alt-' + deviceNum] = images.portfolioGallery[index + 7].alt
-  - dataAttrs['data-src-' + deviceNum] = images.portfolioGallery[index + 7].src
-  - dataAttrs['data-srcset-' + deviceNum] = images.portfolioGallery[index + 7].srcset
-
-  img(class='portfolio-gallery__device-content portfolio-gallery__device-content--' + deviceNum
-        title=images.portfolioGallery[index].title
-        alt=images.portfolioGallery[index].alt
-        src=images.portfolioGallery[index].src
-        srcset=images.portfolioGallery[index].srcset
-        width='72'
-      )&attributes(dataAttrs)
-
-
-section(class='portfolio' aria-labelledby='#portfolio__heading')
+//- Portfolio Content
+article(class='portfolio' aria-labelledby='#portfolio__heading')
   h3(id='portfolio__heading' class='portfolio__heading visually-hidden') Portfolio
-  
-  div(class='portfolio-gallery')
-    ul(class='portfolio-gallery__slides')
-      +portfolio-gallery__slide()
-        include ../images/svg/optimized/panel-0.svg
-        +portfolio-gallery__device('00')
-          include ../images/svg/optimized/device-00.svg
-        +portfolio-gallery__device('01')
-          include ../images/svg/optimized/device-01.svg
-      +portfolio-gallery__slide()
-        include ../images/svg/optimized/panel-1.svg
-        +portfolio-gallery__device('02')
-          include ../images/svg/optimized/device-02.svg
-        +portfolio-gallery__device('03')
-          include ../images/svg/optimized/device-03.svg
-        +portfolio-gallery__device('04')
-          include ../images/svg/optimized/device-04.svg
-      +portfolio-gallery__slide()
-        include ../images/svg/optimized/panel-2.svg
-        +portfolio-gallery__device('05')
-          include ../images/svg/optimized/device-05.svg
-        +portfolio-gallery__device('06')
-          include ../images/svg/optimized/device-06.svg
+  each portfolioItem, portfolioItemIndex in portfolioItems
+    article(class='portfolio-item')
+      div(class='portfolio-info')
+        //- div(class='portfolio-info__slide-inner')
+        header(class='portfolio-info__header')
+          h4(class='portfolio-info__title') !{portfolioItem.title}
+          a(class='portfolio-info__link' href='http://' + portfolioItem.url title=portfolioItem.title alt=portfolioItem.alt) !{portfolioItem.url}
 
-  div(class='portfolio-info')
-    //- div(class='portfolio-info__track' data-glide-el='track')
-    ul(class='portfolio-info__slides')
-      each portfolioItem, index in portfolioItems
-        li(class='portfolio-info__slide portfolio-info__slide--' + index)
-          //- div(class='portfolio-info__slide-inner')
-          header(class='portfolio-info__header')
-            h4(class='portfolio-info__title') !{portfolioItem.title}
-            a(class='portfolio-info__link' href='http://' + portfolioItem.url title=portfolioItem.title alt=portfolioItem.alt) !{portfolioItem.url}
+        div(class='portfolio-info__text-wrap')
+          p(class='portfolio-info__text') !{portfolioItem.desc}
+          
+          h5(class='portfolio-info__heading') Scope
+          ul(class='portfolio-info__list')
+            each listing in portfolioItem.scope
+              li= listing
 
-          div(class='portfolio-info__text-wrap')
-            p(class='portfolio-info__text') !{portfolioItem.desc}
-            
-            h5(class='portfolio-info__heading') Scope
-            ul(class='portfolio-info__list')
-              each listing in portfolioItem.scope
-                li= listing
+      section(class='portfolio-gallery')
+        ul(class='portfolio-gallery__slides')
+          +portfolio-gallery__slide('00')
+            +portfolio-gallery__device(portfolioItemIndex, 0)
+              include ../images/svg/optimized/device-00.svg
+            +portfolio-gallery__device(portfolioItemIndex, 1)
+              include ../images/svg/optimized/device-01.svg
+          +portfolio-gallery__slide('01')
+            +portfolio-gallery__device(portfolioItemIndex, 2)
+              include ../images/svg/optimized/device-02.svg
+          +portfolio-gallery__slide('02')
+            +portfolio-gallery__device(portfolioItemIndex, 3)
+              include ../images/svg/optimized/device-03.svg
+          +portfolio-gallery__slide('03')
+            +portfolio-gallery__device(portfolioItemIndex, 4)
+              include ../images/svg/optimized/device-04.svg
+          +portfolio-gallery__slide('04')
+            +portfolio-gallery__device(portfolioItemIndex, 5)
+              include ../images/svg/optimized/device-05.svg
+          +portfolio-gallery__slide('05')
+            +portfolio-gallery__device(portfolioItemIndex, 6)
+              include ../images/svg/optimized/device-06.svg
 
-          div(class='portfolio-info__bottom-fill' role='presentation')
+        //- button(class='portfolio-info__next')
+        //-   include ../images/svg/optimized/right-arrow.svg
 
-
-              //- button(class='portfolio-info__next')
-              //-   include ../images/svg/optimized/right-arrow.svg
-                
 
