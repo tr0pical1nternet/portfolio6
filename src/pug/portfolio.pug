@@ -7,7 +7,6 @@ mixin portfolio-gallery__slide(slideNum)
       block
 
 mixin portfolio-gallery__device(portfolioItemIndex, deviceIndex)
-  - console.log(portfolioItemIndex, deviceIndex)
   - var deviceStr = intToTwoDigitString(deviceIndex)
 
   figure(class='portfolio-gallery__device portfolio-gallery__device--' + deviceStr)
@@ -19,7 +18,6 @@ mixin portfolio-gallery__device(portfolioItemIndex, deviceIndex)
 mixin portfolio-gallery__device-content(portfolioItemIndex, deviceIndex)
   - var portfolioGalleryIndex = (portfolioItemIndex * 7) + deviceIndex
   if images.portfolioGallery[portfolioGalleryIndex]
-    - console.log(portfolioItemIndex, deviceIndex, portfolioGalleryIndex)
     img(class='portfolio-gallery__device-content'
           title=images.portfolioGallery[portfolioGalleryIndex].title
           alt=images.portfolioGallery[portfolioGalleryIndex].alt
