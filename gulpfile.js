@@ -92,9 +92,9 @@ gulp.task('stylus', function () {
 		.pipe(browserSync.stream());
 });
 
-// Clean SVGs for inline inclusion
-gulp.task('svgo', () => {
-	return gulp.src('src/images/svg/*.svg')
+// Clean icon SVGs for inline inclusion
+gulp.task('svgo-icons', () => {
+	return gulp.src('src/images/svg/icon-*.svg')
 		.pipe(svgo(
 			{
 				plugins: [{
@@ -118,6 +118,43 @@ gulp.task('svgo', () => {
 				}, {
 					addAttributesToSVGElement: {
 						attribute: 'width="72"'
+					}
+				}]
+			}
+		))
+		.pipe(gulp.dest('src/images/svg/optimized'));
+});
+
+// Clean device SVGs for incline inclusion
+gulp.task('svgo-devices', () => {
+	return gulp.src('src/images/svg/device-*.svg')
+		.pipe(svgo(
+			{
+				plugins: [{
+					removeTitle: false
+				}, {
+					removeDesc: false
+				}, {
+					removeXMLNS: true
+				}, {
+					removeUnknownsAndDefaults: {
+						keepRoleAttr: true
+					}
+				}, {
+					removeViewBox: false
+				}, {
+					removeDimensions: true
+				}, {
+					removeAttrs: {
+						attrs: ('fill|stroke.*|data-name')
+					}
+				}, {
+					addClassesToSVGElement: {
+						className: 'portfolio-gallery__device-overlay'
+					}
+				}, {
+					addAttributesToSVGElement: {
+						attributes: ['role="presentation"', 'width="72"']
 					}
 				}]
 			}
@@ -153,7 +190,7 @@ gulp.task('serve', function () {
 
 	gulp.watch('src/stylus/*.styl', gulp.series('stylus'));
 	gulp.watch('src/pug/*.pug', gulp.series('pug'));
-	gulp.watch('src/images/svg/*.svg', gulp.series('svgo', 'pug'));
+	gulp.watch('src/images/svg/*.svg', gulp.series('svgo-icons', 'svgo-devices', 'pug'));
 	gulp.watch('src/js/*.js', gulp.series('js', 'pug'));
 	gulp.watch('src/fonts/*.{ttf,otf,svg,eot,woff,woff2}', gulp.series('fonts'));
 	gulp.watch(sitePath + '*.html').on('change', browserSync.reload);

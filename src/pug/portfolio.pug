@@ -2,7 +2,7 @@
 - function intToTwoDigitString(int) { return ("0" + int).slice(-2); }
 
 mixin portfolio-gallery__slide(slideNum)
-  li(class='portfolio-gallery__slide')
+  li(class='portfolio-gallery__slide portfolio-gallery__slide--' + slideNum)
     div(class='portfolio-gallery__slide-inner')
       block
 
@@ -10,8 +10,7 @@ mixin portfolio-gallery__device(portfolioItemIndex, deviceIndex)
   - var deviceStr = intToTwoDigitString(deviceIndex)
 
   figure(class='portfolio-gallery__device portfolio-gallery__device--' + deviceStr)
-    div(class='portfolio-gallery__device-overlay' role='presentation')
-      block
+    block
     div(class='portfolio-gallery__device-screen portfolio-gallery__device-screen--' + deviceStr)
       +portfolio-gallery__device-content(portfolioItemIndex, deviceIndex)
   

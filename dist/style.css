@@ -256,114 +256,12 @@ a:visited {
     display: none;
 }
 
-.portfolio-gallery {
-  height: calc(60vw + 5rem);
-  margin: 0 0 1rem;
+.no-js .site-header {
+  margin-bottom: 3rem;
 }
-.portfolio-gallery__slides {
-  height: 100%;
-  margin: 0;
-  padding: 2.5rem 0;
-  list-style: none;
-}
-.slick-list {
-  height: 100%;
-}
-.slick-track {
-  height: 100%;
-}
-.portfolio-gallery__slide {
-  text-align: center;
-  height: 100%;
-}
-.portfolio-gallery__slide-inner {
-  display: inline-block;
-  position: relative;
-  height: 100%;
-}
-.portfolio-gallery__slide-inner > svg {
-  display: block;
-  position: relative;
-  height: 100%;
-}
-.portfolio-gallery__device {
-  margin: 0;
-  position: absolute;
-  z-index: 0;
-}
-.portfolio-gallery__device-overlay {
-  position: relative;
-  z-index: 20;
-  pointer-events: none;
-}
-.portfolio-gallery__device-overlay svg {
-  display: block;
-  overflow: visible;
-  fill: #000;
-  stroke: #ddd;
-  stroke-width: 0.5;
-}
-.portfolio-gallery__device-overlay svg:hover {
-  stroke: #008aff;
-  stroke-width: 0.75;
-}
-.portfolio-gallery__device-screen {
-  position: absolute;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  height: 0;
-  z-index: 0;
-  background-color: #000;
-}
-.portfolio-gallery__device-screen--00 {
-  width: 91.33%;
-  padding-bottom: 159.19%;
-  left: 4.33%;
-  top: 8.79%;
-}
-.portfolio-gallery__device-screen--01 {
-  width: 91.24%;
-  padding-bottom: 51.98%;
-  left: 4.38%;
-  top: 6.02%;
-}
-.portfolio-gallery__device-screen--02 {
-  width: 82.01%;
-  padding-bottom: 47.44%;
-  left: 9.04%;
-  top: 4.33%;
-}
-.portfolio-gallery__device-screen--03 {
-  width: 75.53%;
-  padding-bottom: 40.34%;
-  left: 12.38%;
-  top: 9.29%;
-}
-.portfolio-gallery__device-screen--04 {
-  width: 86.23%;
-  padding-bottom: 125.71%;
-  left: 6.89%;
-  top: 7.25%;
-}
-.portfolio-gallery__device-screen--05 {
-  width: 85.91%;
-  padding-bottom: 61.18%;
-  left: 7.04%;
-  top: 7.39%;
-}
-.portfolio-gallery__device-screen--06 {
-  width: 95.76%;
-  padding-bottom: 44.2%;
-  left: 2.13%;
-  top: 4.08%;
-}
-.portfolio-gallery__device-content {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  -webkit-overflow-scrolling: touch;
-  transition: opacity 0.5s ease;
+.portfolio-item {
+  display: grid;
+  grid-template-areas: "gallery" "info";
 }
 .portfolio-info {
   overflow-x: hidden;
@@ -424,31 +322,99 @@ a:visited {
   height: 50%;
   z-index: 0;
 }
-.portfolio-info__next {
-  background: none;
-  width: 2.25rem;
-  padding: 10%;
+.portfolio-gallery {
+  grid-area: gallery;
+  margin: 0 0 1rem;
+}
+.portfolio-gallery__slides {
+  display: flex;
+  margin: 0;
+  padding: 2.5rem 0;
+  list-style: none;
+}
+.portfolio-gallery__slide {
+  text-align: center;
+}
+.portfolio-gallery__slide-inner {
+  position: relative;
+}
+.portfolio-gallery__device {
+  margin: 0;
   position: absolute;
-  right: 0;
-  top: 50%;
-  padding: 0;
-  border: none;
-  transform: translateY(-50%);
-  opacity: 0.75;
-  transition: opacity 0.2s ease;
+  z-index: 0;
 }
-.portfolio-info__next:hover {
-  opacity: 1;
+.portfolio-gallery__device-overlay {
+  display: block;
+  position: relative;
+  overflow: visible;
+  z-index: 20;
+  pointer-events: none;
+  width: 100%;
+  fill: #000;
+  stroke: #ddd;
+  stroke-width: 0.5;
 }
-.portfolio-info__half-circ {
-  fill: #008aff;
+.portfolio-gallery__device-overlay:hover {
+  stroke: #008aff;
+  stroke-width: 0.75;
 }
-.portfolio-info__right-arrow {
-  stroke: #eee;
-  stroke-width: 25;
-  stroke-linejoin: round;
-  stroke-linecap: round;
-  fill: none;
+.portfolio-gallery__device-screen {
+  position: absolute;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 0;
+  z-index: 0;
+  background-color: #000;
+}
+.portfolio-gallery__device-screen--00 {
+  width: 91.33%;
+  padding-bottom: 159.19%;
+  left: 4.33%;
+  top: 8.79%;
+}
+.portfolio-gallery__device-screen--01 {
+  width: 91.24%;
+  padding-bottom: 51.98%;
+  left: 4.38%;
+  top: 6.02%;
+}
+.portfolio-gallery__device-screen--02 {
+  width: 82.01%;
+  padding-bottom: 47.44%;
+  left: 9.04%;
+  top: 4.33%;
+}
+.portfolio-gallery__device-screen--03 {
+  width: 75.53%;
+  padding-bottom: 40.34%;
+  left: 12.38%;
+  top: 9.29%;
+}
+.portfolio-gallery__device-screen--04 {
+  width: 86.23%;
+  padding-bottom: 125.71%;
+  left: 6.89%;
+  top: 7.25%;
+}
+.portfolio-gallery__device-screen--05 {
+  width: 85.91%;
+  padding-bottom: 61.18%;
+  left: 7.04%;
+  top: 7.39%;
+}
+.portfolio-gallery__device-screen--06 {
+  width: 95.76%;
+  padding-bottom: 44.2%;
+  left: 2.13%;
+  top: 4.08%;
+}
+.portfolio-gallery__device-content {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  -webkit-overflow-scrolling: touch;
+  transition: opacity 0.5s ease;
 }
 .bio {
   background-color: #000;

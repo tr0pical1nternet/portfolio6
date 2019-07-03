@@ -1,148 +1,9 @@
+.no-js .site-header
+    margin-bottom 3rem
 
-.portfolio-gallery
-    height "calc(60vw + %s)" % (2 * margin1)
-    margin 0 0 1rem
-
-.portfolio-gallery__slides
-    height 100%
-    margin 0
-    padding margin1 0
-    list-style none
-
-.slick-list
-    height 100%
-
-.slick-track
-    height 100%
-
-.portfolio-gallery__slide
-    text-align center
-    height 100%
-
-.portfolio-gallery__slide-inner
-    display inline-block
-    position relative
-    height 100%
-
-    & > svg
-        display block
-        position relative
-        height 100%
-
-.portfolio-gallery__device
-    margin 0
-    position absolute
-    z-index 0
-    // &--00
-    //     width 23.17%
-    //     left 0
-    //     top 35.64%
-    //     z-index 10
-
-    // &--01
-    //     width 84.80%
-    //     left 15.20%
-    //     top 11.62%
-
-    // &--02
-    //     width 49.71%
-    //     left 5.49%
-    //     top 0
-
-    // &--03
-    //     width 74.61%
-    //     left 0
-    //     top 45.55%
-
-    // &--04
-    //     width 36.65%
-    //     left 63.35%
-    //     top 10.77%
-
-    // &--05
-    //     width 100%
-    //     left 0
-    //     top 0
-    
-    // &--06
-    //     width 100%
-    //     left 0
-    //     top 64.12%
-
-.portfolio-gallery__device-overlay
-    position relative
-    z-index 20
-    pointer-events none
-    
-    svg
-        display block
-        overflow visible
-        fill color0
-        stroke color8
-        stroke-width .5
-        // transition fill .2s ease
-
-        &:hover
-            stroke colorA
-            stroke-width .75
-
-.portfolio-gallery__device-screen
-    position absolute
-    overflow-x hidden
-    overflow-y scroll
-    height 0
-    z-index 0
-    background-color color0
-
-    &--00
-        width 91.33%
-        padding-bottom 159.19%
-        left 4.33%
-        top 8.79%
-
-    &--01
-        width 91.24%
-        padding-bottom 51.98%
-        left 4.38%
-        top 6.02%
-
-    &--02
-        width 82.01%
-        padding-bottom 47.44%
-        left 9.04%
-        top 4.33%
-
-    &--03
-        width 75.53%
-        padding-bottom 40.34%
-        left 12.38%
-        top 9.29%
-
-    &--04
-        width 86.23%
-        padding-bottom 125.71%
-        left 6.89%
-        top 7.25%
-
-    &--05
-        width 85.91%
-        padding-bottom 61.18%
-        left 7.04%
-        top 7.39%
-
-    &--06
-        width 95.76%
-        padding-bottom 44.20%
-        left 2.13%
-        top 4.08%
-
-.portfolio-gallery__device-content
-    position absolute
-    width 100%
-    top 0
-    left 0
-    -webkit-overflow-scrolling touch
-    transition opacity .5s ease
+.portfolio-item
+    display grid
+    grid-template-areas "gallery" "info"
 
 .portfolio-info
     overflow-x hidden
@@ -203,34 +64,173 @@
     height 50%
     z-index 0
 
-.portfolio-info__next
-    background none
-    width 2.25rem
-    padding 10%
+// .portfolio-info__next
+//     background none
+//     width 2.25rem
+//     padding 10%
+//     position absolute
+//     right 0
+//     top 50%
+//     padding 0
+//     border none
+//     transform translateY(-50%)
+//     opacity .75
+//     transition opacity .2s ease
+
+//     &:hover
+//         opacity 1
+
+// .portfolio-info__half-circ
+//     fill colorA
+//     // opacity .75
+
+// .portfolio-info__right-arrow
+//     stroke color9
+//     stroke-width 25
+//     stroke-linejoin round
+//     stroke-linecap round
+//     fill none
+    
+.portfolio-gallery
+    grid-area gallery
+    // height "calc(60vw + %s)" % (2 * margin1)
+    margin 0 0 1rem
+
+.portfolio-gallery__slides
+    display flex
+    // height 100%
+    margin 0
+    padding margin1 0
+    list-style none
+
+.portfolio-gallery__slide
+    text-align center
+    // height 100%
+
+.portfolio-gallery__slide-inner
+    // display inline-block
+    position relative
+    // height 100%
+
+    // & > svg
+    //     display block
+    //     position relative
+    //     height 100%
+
+.portfolio-gallery__device
+    margin 0
     position absolute
-    right 0
-    top 50%
-    padding 0
-    border none
-    transform translateY(-50%)
-    opacity .75
-    transition opacity .2s ease
+    z-index 0
+    // &--00
+    //     width 23.17%
+    //     left 0
+    //     top 35.64%
+    //     z-index 10
+
+    // &--01
+    //     width 84.80%
+    //     left 15.20%
+    //     top 11.62%
+
+    // &--02
+    //     width 49.71%
+    //     left 5.49%
+    //     top 0
+
+    // &--03
+    //     width 74.61%
+    //     left 0
+    //     top 45.55%
+
+    // &--04
+    //     width 36.65%
+    //     left 63.35%
+    //     top 10.77%
+
+    // &--05
+    //     width 100%
+    //     left 0
+    //     top 0
+    
+    // &--06
+    //     width 100%
+    //     left 0
+    //     top 64.12%
+
+.portfolio-gallery__device-overlay
+    display block
+    position relative
+    overflow visible
+    z-index 20
+    pointer-events none
+    width 100%
+    
+    fill color0
+    stroke color8
+    stroke-width .5
+    // transition fill .2s ease
 
     &:hover
-        opacity 1
+        stroke colorA
+        stroke-width .75
 
-.portfolio-info__half-circ
-    fill colorA
-    // opacity .75
+.portfolio-gallery__device-screen
+    position absolute
+    overflow-x hidden
+    overflow-y scroll
+    height 0
+    z-index 0
+    background-color color0
 
-.portfolio-info__right-arrow
-    stroke color9
-    stroke-width 25
-    stroke-linejoin round
-    stroke-linecap round
-    fill none
-    
+    &--00
+        width 91.33%
+        padding-bottom 159.19%
+        left 4.33%
+        top 8.79%
 
+    &--01
+        width 91.24%
+        padding-bottom 51.98%
+        left 4.38%
+        top 6.02%
+
+    &--02
+        width 82.01%
+        padding-bottom 47.44%
+        left 9.04%
+        top 4.33%
+
+    &--03
+        width 75.53%
+        padding-bottom 40.34%
+        left 12.38%
+        top 9.29%
+
+    &--04
+        width 86.23%
+        padding-bottom 125.71%
+        left 6.89%
+        top 7.25%
+
+    &--05
+        width 85.91%
+        padding-bottom 61.18%
+        left 7.04%
+        top 7.39%
+
+    &--06
+        width 95.76%
+        padding-bottom 44.20%
+        left 2.13%
+        top 4.08%
+
+.portfolio-gallery__device-content
+    position absolute
+    width 100%
+    top 0
+    left 0
+    -webkit-overflow-scrolling touch
+    transition opacity .5s ease
     
 
 
