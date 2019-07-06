@@ -1,5 +1,5 @@
 //- Declarations
-- function intToTwoDigitString(int) { return ("0" + int).slice(-2); }
+- function intToTwoDigitString(int) { return ('0' + int).slice(-2); }
 
 mixin portfolio-gallery__slide(slideNum)
   li(class='portfolio-gallery__slide portfolio-gallery__slide--' + slideNum)
@@ -30,7 +30,7 @@ article(class='portfolio' aria-labelledby='#portfolio__heading')
   h3(id='portfolio__heading' class='portfolio__heading visually-hidden') Portfolio
   each portfolioItem, portfolioItemIndex in portfolioItems
     article(class='portfolio-item')
-      div(class='portfolio-info')
+      section(class='portfolio-info')
         //- div(class='portfolio-info__slide-inner')
         header(class='portfolio-info__header')
           h4(class='portfolio-info__title') !{portfolioItem.title}
@@ -43,10 +43,14 @@ article(class='portfolio' aria-labelledby='#portfolio__heading')
           ul(class='portfolio-info__list')
             each listing in portfolioItem.scope
               li= listing
+        div(class='portfolio-info__bottom-decoration' role='presentation')
+          div(class='portfolio-info__bottom-decoration-inner')
 
       section(class='portfolio-gallery')
         ul(class='portfolio-gallery__slides')
           +portfolio-gallery__slide('00')
+            //- include ../images/svg/optimized/panel-0.svg
+            svg(class='portfolio-gallery__slide-aspect portfolio-gallery__slide-aspect--00' viewBox='0 0 290 179' role='presentation')
             +portfolio-gallery__device(portfolioItemIndex, 0)
               include ../images/svg/optimized/device-00.svg
             +portfolio-gallery__device(portfolioItemIndex, 1)

@@ -1,9 +1,17 @@
-.no-js .site-header
-    margin-bottom 3rem
+// .no-js .site-header
+    // margin-bottom 3rem
 
 .portfolio-item
     display grid
     grid-template-areas "gallery" "info"
+    .no-js &
+        margin-bottom margin1
+
+        &:last-child
+            margin-bottom 0
+
+            .portfolio-info__bottom-decoration
+                display none
 
 .portfolio-info
     overflow-x hidden
@@ -64,6 +72,14 @@
     height 50%
     z-index 0
 
+.no-js .portfolio-info__bottom-decoration
+    background-color color8
+
+.no-js .portfolio-info__bottom-decoration-inner
+    padding-bottom margin1
+    border-radius 0 0 0 3rem
+    background-color color0
+
 // .portfolio-info__next
 //     background none
 //     width 2.25rem
@@ -93,44 +109,50 @@
     
 .portfolio-gallery
     grid-area gallery
-    // height "calc(60vw + %s)" % (2 * margin1)
-    margin 0 0 1rem
+    height "calc(50vw + %s)" % (2 * margin1)
+    margin 0 0 1.75rem
+    overflow-x hidden
 
 .portfolio-gallery__slides
     display flex
-    // height 100%
+    height 100%
     margin 0
     padding margin1 0
     list-style none
 
 .portfolio-gallery__slide
     text-align center
-    // height 100%
+    height 100%
 
 .portfolio-gallery__slide-inner
-    // display inline-block
+    display inline-block
     position relative
-    // height 100%
+    height 100%
+    margin 0 1.5rem
 
     // & > svg
     //     display block
     //     position relative
     //     height 100%
 
+.portfolio-gallery__slide-aspect
+    display block
+    height 100%
+
 .portfolio-gallery__device
     margin 0
     position absolute
     z-index 0
-    // &--00
-    //     width 23.17%
-    //     left 0
-    //     top 35.64%
-    //     z-index 10
+    &--00
+        width 23.17%
+        left 0
+        bottom 0
+        z-index 10
 
-    // &--01
-    //     width 84.80%
-    //     left 15.20%
-    //     top 11.62%
+    &--01
+        width 84.80%
+        left 15.20%
+        bottom 0
 
     // &--02
     //     width 49.71%
