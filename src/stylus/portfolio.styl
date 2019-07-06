@@ -111,7 +111,7 @@
     grid-area gallery
     height "calc(50vw + %s)" % (2 * margin1)
     margin 0 0 1.75rem
-    overflow-x hidden
+    overflow-x scroll
 
 .portfolio-gallery__slides
     display flex
@@ -123,6 +123,15 @@
 .portfolio-gallery__slide
     text-align center
     height 100%
+
+    &--02
+        padding 6vw 0
+
+    &--03
+        padding 3vw 0
+    
+    &--05
+        padding 8vw 0
 
 .portfolio-gallery__slide-inner
     display inline-block
@@ -140,19 +149,32 @@
     height 100%
 
 .portfolio-gallery__device
+    display inline-block
+    position relative
     margin 0
-    position absolute
     z-index 0
+    height 100%
+
     &--00
+        position absolute
         width 23.17%
+        height auto
         left 0
         bottom 0
         z-index 10
 
+        .portfolio-gallery__device-overlay
+            width 100%
+
     &--01
+        position absolute
         width 84.80%
+        height auto
         left 15.20%
         bottom 0
+
+        .portfolio-gallery__device-overlay
+            width 100%
 
     // &--02
     //     width 49.71%
@@ -185,7 +207,9 @@
     overflow visible
     z-index 20
     pointer-events none
-    width 100%
+    // width 100%
+    height 100%
+    width auto
     
     fill color0
     stroke color8
