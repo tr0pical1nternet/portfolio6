@@ -48,7 +48,7 @@ function createSrcsets() {
 				}
 
 				siteData.images[imageSet][i]['src'] = imageAddr + imageFilename;
-				siteData.images[imageSet][i]['srcset'] = srcsets.join(' ');
+				siteData.images[imageSet][i]['srcset'] = srcsets.join(', ');
 				siteData.images[imageSet][i]['width'] = defaultWidth;
 			});
 		}
