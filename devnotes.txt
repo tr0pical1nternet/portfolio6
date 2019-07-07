@@ -7,15 +7,11 @@ Try to replace touch scroll with a slider or use another scroll library
 Content
 	Bio
 		Write Bio paragraphs
-		New pic not in a tank top
 	Portfolio
-		Center Staging (add full height mobile)
-		Raven (add full height mobile)
-		-- Sediment Press
 		CDesigns
 		Spruced
 
-		Make screen shots for other sites. Sediment Press, Spruced, CDesigns
+		Make screen shots for other sites. Spruced, CDesigns
 
 Media Queries
 	Mobile

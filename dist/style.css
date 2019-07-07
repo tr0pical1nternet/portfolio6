@@ -353,14 +353,14 @@ a:visited {
   text-align: center;
   height: 100%;
 }
-.portfolio-gallery__slide--02 {
+.portfolio-gallery__slide--01 {
   padding: 6vw 0;
 }
-.portfolio-gallery__slide--03 {
-  padding: 3vw 0;
+.portfolio-gallery__slide--02 {
+  padding: 4vw 0;
 }
-.portfolio-gallery__slide--05 {
-  padding: 8vw 0;
+.portfolio-gallery__slide--04 {
+  padding: 2vw 0;
 }
 .portfolio-gallery__slide-inner {
   display: inline-block;
@@ -461,10 +461,10 @@ a:visited {
   top: 7.39%;
 }
 .portfolio-gallery__device-screen--06 {
-  width: 95.76%;
-  padding-bottom: 44.2%;
-  left: 2.13%;
-  top: 4.08%;
+  width: 91.84%;
+  padding-bottom: 198.94%;
+  left: 4.08%;
+  top: 2.13%;
 }
 .portfolio-gallery__device-content {
   position: absolute;

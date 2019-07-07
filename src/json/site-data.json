@@ -52,37 +52,6 @@
     },
     {
       "id": 2,
-      "slug":"cdesigns",
-      "devices":["mobile","tablet","desktop"],
-      "title":"CDesigns, Inc",
-      "alt":"CDesigns, Inc. Website",
-      "url":"cdesignsinc.com",
-      "scope":[
-        "Logo Redesign",
-        "Visual Design",
-        "Custom WordPress Child Theme"
-      ],
-      "features":[
-        "Portfolio post type and taxonomies",
-        "PhotoSwipe lightbox by Dmitry Semenov",
-        "Site caching and optimization",
-        "Automatic cloud backups"
-      ],
-      "desc":"CDesigns, Inc provides high end renovations and wanted their site to reflect the sophistication of their work. After completing the visual design I was able to find an existing WordPress theme that had the right structure, and built a child theme to suit. The result was an attractive site that was inexpensive and easy to maintain."
-    },
-    {
-      "id": 3,
-      "slug":"spruced",
-      "devices":["mobile","tablet","desktop"],
-      "title":"Spruced",
-      "alt":"Spruced Website",
-      "url":"spruced-dc.com",
-      "scope":["Visual Design","Content Design","Custom WordPress Child Theme"],
-      "features":["Custom testimonial accordion","Automatic cloud backups","Google Analytics"],
-      "desc":"Spruced is a personal organizing company, so when we designed their website it was important to keep the aesthetic as clean as possible. We had a great starting point with origami-inspired logo designed by <a href=\"https:\/\/walkerinkworks.com\/\" alt=\"Walker Ink\" target=\"_blank\">Walker Ink<\/a>. I worked closely with the owner to design content that is simple, informative, and leads the customer to the contact page."
-    },
-    {
-      "id": 4,
       "slug":"sedimentpress",
       "devices":["mobile","tablet","desktop"],
       "title":"Sediment Press",
@@ -105,6 +74,37 @@
         "Google Analytics"
       ],
       "desc":"Sediment Press is a design and screenprinting company I founded in 2012. Primarily an online store and design portfolio, I wanted to make a site that was aesthetically rustic, with lots of hand drawn elements, while being functionally polished, with a seamless checkout and integrated payment gateway."
+    },
+    {
+      "id": 3,
+      "slug":"cdesigns",
+      "devices":["mobile","tablet","desktop"],
+      "title":"CDesigns, Inc",
+      "alt":"CDesigns, Inc. Website",
+      "url":"cdesignsinc.com",
+      "scope":[
+        "Logo Redesign",
+        "Visual Design",
+        "Custom WordPress Child Theme"
+      ],
+      "features":[
+        "Portfolio post type and taxonomies",
+        "PhotoSwipe lightbox by Dmitry Semenov",
+        "Site caching and optimization",
+        "Automatic cloud backups"
+      ],
+      "desc":"CDesigns, Inc provides high end renovations and wanted their site to reflect the sophistication of their work. After completing the visual design I was able to find an existing WordPress theme that had the right structure, and built a child theme to suit. The result was an attractive site that was inexpensive and easy to maintain."
+    },
+    {
+      "id": 4,
+      "slug":"spruced",
+      "devices":["mobile","tablet","desktop"],
+      "title":"Spruced",
+      "alt":"Spruced Website",
+      "url":"spruced-dc.com",
+      "scope":["Visual Design","Content Design","Custom WordPress Child Theme"],
+      "features":["Custom testimonial accordion","Automatic cloud backups","Google Analytics"],
+      "desc":"Spruced is a personal organizing company, so when we designed their website it was important to keep the aesthetic as clean as possible. We had a great starting point with origami-inspired logo designed by <a href=\"https:\/\/walkerinkworks.com\/\" alt=\"Walker Ink\" target=\"_blank\">Walker Ink<\/a>. I worked closely with the owner to design content that is simple, informative, and leads the customer to the contact page."
     }
   ],
 
@@ -202,6 +202,48 @@
         "title": "Raven Contact",
         "alt": "ravenpmg.com Contact page",
         "filename": "raven_device-06.png"
+      },
+      {
+        "id": 14,
+        "title": "Sediment Press Home Mobile",
+        "alt": "sedimentpress.com Home page on mobile",
+        "filename": "sedimentpress_device-00.jpg"
+      },
+      {
+        "id": 15,
+        "title": "Sediment Press Home Desktop",
+        "alt": "sedimentpress.com Home page on mobile",
+        "filename": "sedimentpress_device-01.jpg"
+      },
+      {
+        "id": 16,
+        "title": "Sediment Press Project",
+        "alt": "sedimentpress.com project page",
+        "filename": "sedimentpress_device-02.jpg"
+      },
+      {
+        "id": 17,
+        "title": "Sediment Press Shop",
+        "alt": "sedimentpress.com shop page",
+        "filename": "sedimentpress_device-03.jpg"
+      },
+      {
+        "id": 18,
+        "title": "Sediment Press Product",
+        "alt": "sedimentpress.com product page",
+        "filename": "sedimentpress_device-04.jpg"
+      },
+      {
+        "id": 19,
+        "title": "Sediment Press About",
+        "alt": "sedimentpress.com about page",
+        "filename": "sedimentpress_device-05.png"
+      },
+      {
+        "id": 20,
+        "title": "Sediment Press Cart",
+        "alt": "sedimentpress.com cart page",
+        "filename": "sedimentpress_device-06.jpg"
       }
     ],
 
