@@ -35,7 +35,7 @@ function createSrcsets() {
 
 			// Loop through all sizes of each image
 			Object.keys(siteData.imageSizes).map(function (objectKey) {
-				var srcsetFilename = path.basename(imageFilename, path.extname(imageFilename)) + '_' + objectKey + path.extname(imageFilename);
+				let srcsetFilename = path.basename(imageFilename, path.extname(imageFilename)) + '_' + objectKey + path.extname(imageFilename);
 
 				if (fs.existsSync(imagePath + srcsetFilename)) {
 					let srcsetWidth = sizeOf(imagePath + srcsetFilename).width;

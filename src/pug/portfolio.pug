@@ -29,7 +29,7 @@ mixin portfolio-gallery__device-content(portfolioItemIndex, deviceIndex)
 article(class='portfolio' aria-labelledby='#portfolio__heading')
   h3(id='portfolio__heading' class='portfolio__heading visually-hidden') Portfolio
   each portfolioItem, portfolioItemIndex in portfolioItems
-    article(class='portfolio-item')
+    article(class='portfolio-item' id=portfolioItem.slug)
       section(class='portfolio-info')
         //- div(class='portfolio-info__slide-inner')
         header(class='portfolio-info__header')
