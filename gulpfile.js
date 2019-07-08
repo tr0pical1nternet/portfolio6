@@ -169,16 +169,16 @@ gulp.task('fonts', function() {
 		.pipe(browserSync.stream());
 });
 
-// Copy glide files to sitePath
-gulp.task('glide', function() {
-	return gulp.src('src/glide/{glide.js,css/glide.core.css}')
-		.pipe(gulp.dest(sitePath + 'glide'))
-});
-
 // Copy js files to sitePath
 gulp.task('js', function() {
 	return gulp.src('src/js/*.js')
 		.pipe(gulp.dest(sitePath + 'js'))
+});
+
+// Copy downloads to sitePath
+gulp.task('downloads', function() {
+	return gulp.src('src/download/*.pdf')
+		.pipe(gulp.dest(sitePath + 'download'))
 });
 
 // browserSync and file watching
