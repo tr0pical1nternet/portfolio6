@@ -2,26 +2,35 @@ mixin footer-menu-item(title, href, alt)
   li.footer-menu__portfolio-item
     a(href=href alt=alt) !{title}
 
-footer
-  nav.footer-menu
-    h4.footer-menu__heading.footer-menu__heading--portfolio Portfolio
-    ul.footer-menu__list.footer-menu__list--portfolio
-      +footer-menu-item("Center Staging", "#center-staging", "Center Staging portfolio item")
-      +footer-menu-item("Raven", "#raven", "Raven portfolio item")
-      +footer-menu-item("Sediment Press", "#sedimentpress", "Sediment Press portfolio item")
-      +footer-menu-item("CDesigns, Inc.", "#cdesigns", "CDesigns portfolio item")
-    
-    h4.footer-menu__heading.footer-menu__heading--about About
-    ul.footer-menu__list.footer-menu__list--about
-      +footer-menu-item("Bio", "#bio")
-      +footer-menu-item("Resume", "download/charles robertson resume.pdf", "Charles Robertson Resume")
-
-    h4.footer-menu__heading.footer-menu__heading--contact Contact
-    ul.footer-menu__list.footer-menu__list--contact
-      +footer-menu-item("Email", "#")
-      +footer-menu-item("Twitter", "#")
-      +footer-menu-item("CodePen", "#")
-      +footer-menu-item("GitHub", "#")
-
+footer.footer
+  div.footer-inner
+    nav.footer-menu
+      h4.footer-menu__heading.footer-menu__heading--portfolio Portfolio
+      ul.footer-menu__list.footer-menu__list--portfolio
+        +footer-menu-item("Center Staging", "#center-staging", "Center Staging portfolio item")
+        +footer-menu-item("Raven", "#raven", "Raven portfolio item")
+        +footer-menu-item("Sediment Press", "#sedimentpress", "Sediment Press portfolio item")
+        +footer-menu-item("CDesigns, Inc.", "#cdesigns", "CDesigns portfolio item")
       
+      h4.footer-menu__heading.footer-menu__heading--about About
+      ul.footer-menu__list.footer-menu__list--about
+        +footer-menu-item("Bio", "#bio")
+        +footer-menu-item("Resume", "download/charles robertson resume.pdf", "Charles Robertson Resume")
+
+      h4.footer-menu__heading.footer-menu__heading--contact Contact
+      ul.footer-menu__list.footer-menu__list--contact
+        +footer-menu-item("Email", "#")
+        +footer-menu-item('Twitter', 'https://twitter.com/tr0pical1ntrnet', 'Charles on Twitter')
+        +footer-menu-item("CodePen", "https://codepen.io/tr0pical1nternet/#", 'Charles on CodePen')
+        +footer-menu-item("GitHub", "https://github.com/tr0pical1nternet", 'Charles on GitHub')
+
+    div.footer-about(id='footer-about')
+      h5.footer-about__heading About this website
+      p I wrote this site in Node.js using Gulp, Pug, Stylus, imagemin, and SVGO. Thank you the open source contributors that made it possible!
+
+    - var year = new Date().getFullYear()
+      if year > 2019
+        div.footer-copyright &copy;2019-#{year} Charles Robertson
+      else
+        div.footer-copyright &copy;#{year} Charles Robertson
 

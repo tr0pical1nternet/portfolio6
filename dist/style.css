@@ -397,18 +397,22 @@ a:visited {
   shape-outside: circle(50% at 74% 22%);
   float: right;
 }
-footer {
+.footer {
   background-color: #ddd;
 }
-.footer-menu {
+.footer-inner {
   padding: 2.5rem 1.25rem;
   border-radius: 3rem 0 0 0;
   background-color: #000;
   font-size: 0.875rem;
+  color: #ddd;
+}
+.footer-menu {
   display: grid;
-  grid-template-areas: "portfolio-heading bio-heading contact-heading" "portfolio-list bio-list contact-list";
+  grid-template-areas: "portfolio-heading about-heading contact-heading" "portfolio-list about-list contact-list";
   grid-template-columns: auto auto auto;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
 }
 .footer-menu__heading {
   width: auto;
@@ -419,8 +423,8 @@ footer {
 .footer-menu__heading--portfolio {
   grid-area: portfolio-heading;
 }
-.footer-menu__heading--bio {
-  grid-area: bio-heading;
+.footer-menu__heading--about {
+  grid-area: about-heading;
 }
 .footer-menu__heading--contact {
   grid-area: contact-heading;
@@ -436,8 +440,22 @@ footer {
   grid-area: portfolio-list;
 }
 .footer-menu__list--bio {
-  grid-area: bio-list;
+  grid-area: about-list;
 }
 .footer-menu__list--contact {
   grid-area: contact-list;
+}
+.footer-about {
+  font-size: 0.75rem;
+  color: #ccc;
+  margin-bottom: 2.5rem;
+}
+.footer-about__heading {
+  font-size: 0.875rem;
+  color: #ddd;
+}
+.footer-copyright {
+  font-size: 0.75rem;
+  color: #ccc;
+  text-align: right;
 }
