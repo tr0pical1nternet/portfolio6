@@ -1,19 +1,20 @@
-mixin footer-menu-item(title, anchor)
+mixin footer-menu-item(title, href, alt)
   li.footer-menu__portfolio-item
-    a(href=anchor) !{title}
+    a(href=href alt=alt) !{title}
 
 footer
   nav.footer-menu
     h4.footer-menu__heading.footer-menu__heading--portfolio Portfolio
     ul.footer-menu__list.footer-menu__list--portfolio
-      +footer-menu-item("Center Staging", "#center-staging")
-      +footer-menu-item("Raven", "#raven")
-      +footer-menu-item("Sediment Press", "#sedimentpress")
-      +footer-menu-item("CDesigns, Inc.", "#cdesigns")
+      +footer-menu-item("Center Staging", "#center-staging", "Center Staging portfolio item")
+      +footer-menu-item("Raven", "#raven", "Raven portfolio item")
+      +footer-menu-item("Sediment Press", "#sedimentpress", "Sediment Press portfolio item")
+      +footer-menu-item("CDesigns, Inc.", "#cdesigns", "CDesigns portfolio item")
     
-    h4.footer-menu__heading.footer-menu__heading--bio Bio
-    ul.footer-menu__list.footer-menu__list--bio
+    h4.footer-menu__heading.footer-menu__heading--about About
+    ul.footer-menu__list.footer-menu__list--about
       +footer-menu-item("Bio", "#bio")
+      +footer-menu-item("Resume", "download/charles robertson resume.pdf", "Charles Robertson Resume")
 
     h4.footer-menu__heading.footer-menu__heading--contact Contact
     ul.footer-menu__list.footer-menu__list--contact
