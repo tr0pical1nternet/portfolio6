@@ -244,6 +244,30 @@
         "title": "Sediment Press Cart",
         "alt": "sedimentpress.com cart page",
         "filename": "sedimentpress_device-06.jpg"
+      },
+      {
+        "id": 21,
+        "title": "CDesigns Home Mobile",
+        "alt": "cdesignsinc.com home page on mobile",
+        "filename": "cdesigns_device-00.jpg"
+      },
+      {
+        "id": 22,
+        "title": "CDesigns Home Desktop",
+        "alt": "cdesignsinc.com home page on desktop",
+        "filename": "cdesigns_device-01.jpg"
+      },
+      {
+        "id": 23,
+        "title": "CDesigns Residential Portfolio",
+        "alt": "cdesignsinc.com residential portfolio page",
+        "filename": "cdesigns_device-02.jpg"
+      },
+      {
+        "id": 24,
+        "title": "CDesigns Commerical Portfolio",
+        "alt": "cdesignsinc.com commercial portfolio page",
+        "filename": "cdesigns_device-03.jpg"
       }
     ],
 
