@@ -268,6 +268,24 @@
         "title": "CDesigns Commerical Portfolio",
         "alt": "cdesignsinc.com commercial portfolio page",
         "filename": "cdesigns_device-03.jpg"
+      },
+      {
+        "id": 25,
+        "title": "CDesigns About",
+        "alt": "cdesignsinc.com about page",
+        "filename": "cdesigns_device-04.png"
+      },
+      {
+        "id": 26,
+        "title": "CDesigns Kitchen Portfolio",
+        "alt": "cdesignsinc.com kitchen portfolio page",
+        "filename": "cdesigns_device-05.jpg"
+      },
+      {
+        "id": 27,
+        "title": "CDesigns Contact",
+        "alt": "cdesignsinc.com contact page",
+        "filename": "cdesigns_device-06.png"
       }
     ],
 
