@@ -55,7 +55,6 @@
 
 .main-menu
   padding 0 margin0
-  font-size 1.125rem
   
 .main-menu__list
   list-style none
@@ -63,15 +62,19 @@
   display flex
   justify-content space-around
   margin-bottom 0
-
-.main-menu__item
   font-family font-family__heading
   font-size 1.125rem
+  text-transform lowercase
+
+.main-menu__item
+  padding-bottom .2em
 
   a
-    // text-decoration none
     &:visited
       color: colorA
+  
+  &--portfolio
+    border-bottom: .2em solid colorA
 
 
 

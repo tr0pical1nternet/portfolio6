@@ -120,7 +120,6 @@ a:visited {
 }
 .main-menu {
   padding: 0 1.25rem;
-  font-size: 1.125rem;
 }
 .main-menu__list {
   list-style: none;
@@ -128,13 +127,18 @@ a:visited {
   display: flex;
   justify-content: space-around;
   margin-bottom: 0;
-}
-.main-menu__item {
   font-family: "AkzidenzGrotesk-Super", "Helvetica-Neue-Black", "Helvetica-Black", "Ariel-Black", sans-serif;
   font-size: 1.125rem;
+  text-transform: lowercase;
+}
+.main-menu__item {
+  padding-bottom: 0.2em;
 }
 .main-menu__item a:visited {
   color: #008aff;
+}
+.main-menu__item--portfolio {
+  border-bottom: 0.2em solid #008aff;
 }
 .portfolio-item {
   display: grid;
@@ -368,34 +372,30 @@ a:visited {
 .bio__content {
   background-color: #ddd;
   border-radius: 0 3rem 3rem 0;
-  padding: 2.5rem 1.25rem;
+  padding: 0 0 2.5rem 1.25rem;
   position: relative;
   overflow: hidden;
 }
+.bio__content p {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
 .bio__heading {
-  margin-top: 0;
-  font-size: 2rem;
   display: inline-block;
+  margin: 2.5rem 0 0 1.25rem;
+  font-size: 2rem;
 }
 .bio__figure {
-  position: absolute;
-  width: 62%;
-  margin: 0;
-  border-radius: 50% 0 50% 50%;
+  float: right;
+  shape-outside: circle(54% at 54% 46%);
+  width: 12rem;
+  margin: 0 0 1.25rem 1.25rem;
+  border-radius: 50% 0 0 50%;
   overflow: hidden;
-  top: -4%;
-  right: -7%;
 }
 .bio__img {
   display: block;
   width: 100%;
-}
-.bio__text-cutout {
-  width: 80%;
-  height: 0;
-  padding-bottom: 80%;
-  shape-outside: circle(50% at 74% 22%);
-  float: right;
 }
 .footer {
   background-color: #ddd;

@@ -30,13 +30,13 @@
       </div>
       <nav class="main-menu">
         <ul class="main-menu__list">
-          <li class="main-menu__item"><a href="#">Portfolio</a></li>
-          <li class="main-menu__item"><a href="#bio">Bio</a></li>
-          <li class="main-menu__item"><a href="download/charles robertson resume.pdf" alt="Charles Robertson Resume">Resume</a></li>
+          <li class="main-menu__item main-menu__item--portfolio"><a href="#portfolio">Portfolio</a></li>
+          <li class="main-menu__item main-menu__item--bio"><a href="#bio">Bio</a></li>
+          <li class="main-menu__item main-menu__item--resume"><a href="download/charles robertson resume.pdf" alt="Charles Robertson Resume">Resume</a></li>
         </ul>
       </nav>
     </header>
-    <article class="portfolio" aria-labelledby="#portfolio__heading">
+    <article class="portfolio" id="portfolio" aria-labelledby="#portfolio__heading">
       <h3 class="portfolio__heading visually-hidden" id="portfolio__heading">Portfolio</h3>
       <article class="portfolio-item" id="center-staging">
         <section class="portfolio-info">
@@ -432,10 +432,9 @@
       </div>
       <div class="bio__content">
         <h3 class="bio__heading">Bio</h3>
-        <figure class="bio__figure"><img class="bio__img" title="Charles Robertson" alt="Photo of Charles Robertson" src="images/charles-photo.jpg" srcset="images/charles-photo_xxs.jpg 128w, images/charles-photo_xs.jpg 256w, images/charles-photo_s.jpg 512w, images/charles-photo_m.jpg 1024w, images/charles-photo_l.jpg 1280w, images/charles-photo_xl.jpg 1440w" width="72"></figure>
-        <div class="bio__text-cutout"></div>
-        <p>I am a front-end developer with 6 years of experience building websites for individuals and small businesses. I have a B.A. in Fine Art from the University of New Orleans. I am good at web design and I like to do it.</p>
-        <p>My background is in graphic design. I founded Sediment Press in 2012 as graphic design and screen printing company designing event posters, cards, clothing, and fine art prints.</p>
+        <figure class="bio__figure"><img class="bio__img" title="Charles Robertson" alt="Photo of Charles Robertson" src="images/charles-photo.jpg" srcset="images/charles-photo_xxs.jpg 128w, images/charles-photo_xs.jpg 256w, images/charles-photo_s.jpg 512w, images/charles-photo_m.jpg 1024w, images/charles-photo_l.jpg 1280w, images/charles-photo_xl.jpg 1440w" width="72"></figure><p>I am a front-end developer with 6 years of experience building websites for individuals and small businesses. I have a B.A. in Fine Art from the University of New Orleans. I am good at web design and I like to do it.</p>
+<p>My background is in graphic design. I founded Sediment Press in 2012 as graphic design and screen printing company designing event posters, cards, clothing, and fine art prints.</p>
+
       </div>
     </article>
     <footer class="footer">

@@ -6,8 +6,5 @@ article.bio(id="bio")
 		h3.bio__heading Bio
 		figure.bio__figure
 			img.bio__img(title=images.bio[0].title alt=images.bio[0].alt src=images.bio[0].src srcset=images.bio[0].srcset width='72')
-		div.bio__text-cutout
-		//- div.bio__text-wrap
-		p I am a front-end developer with 6 years of experience building websites for individuals and small businesses. I have a B.A. in Fine Art from the University of New Orleans. I am good at web design and I like to do it.
-		p My background is in graphic design. I founded Sediment Press in 2012 as graphic design and screen printing company designing event posters, cards, clothing, and fine art prints.
-	
+		//- div.bio__text-cutout
+		include:markdown-it ../txt/bio.md
