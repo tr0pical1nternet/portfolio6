@@ -2,8 +2,10 @@
   // margin-bottom 1.5rem
 
 .site-title
-  display grid
-  grid-template-areas "charles-robertson contact" "web-design web-design"
+  // display grid
+  display flex
+  flex-wrap wrap
+  // grid-template-areas "charles-robertson contact" "web-design web-design"
 
   h1, h2
     margin-top 0
@@ -16,20 +18,26 @@
   background-color color0
   line-height 1
 
+.site-title__charles-robertson
+  text-align right
+  padding-right 1.75em
+  padding-top .7em
+  border-radius 0 2em 2em 0
+  font-size 1.25em
+  order 1
+  // grid-area charles-robertson
+
 .site-title__web-design
   padding-left 1.5em
   border-radius 2em 0 0 2em
   margin-left auto
   text-transform uppercase
-  font-size 2.25rem
-  grid-area web-design
+  font-size 2.25em
+  order 3
+  // grid-area web-design
 
-.site-title__charles-robertson
-  padding-right 1em
-  padding-top .7em
-  border-radius 0 2em 2em 0
-  font-size 1.25rem
-  grid-area charles-robertson
+.site-title__contact
+  order 2
 
 .site-title__contact-list
   height 100%
@@ -50,7 +58,7 @@
     padding-right 0
 
 .social-icon svg
-  width 1.75rem
+  width 1.75em
   fill colorA
 
 .main-menu
@@ -63,7 +71,7 @@
   justify-content space-around
   margin-bottom 0
   font-family font-family__heading
-  font-size 1.125rem
+  font-size 1.125em
   text-transform lowercase
 
 .main-menu__item
