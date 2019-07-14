@@ -77,6 +77,17 @@
     },
     {
       "id": 3,
+      "slug":"spruced",
+      "devices":["mobile","tablet","desktop"],
+      "title":"Spruced",
+      "alt":"Spruced Website",
+      "url":"spruced-dc.com",
+      "scope":["Visual Design","Content Design","Custom WordPress Child Theme"],
+      "features":["Custom testimonial accordion","Automatic cloud backups","Google Analytics"],
+      "desc":"Spruced is a personal organizing company, so when we designed their website it was important to keep the aesthetic as clean as possible. We had a great starting point with origami-inspired logo designed by <a href=\"https:\/\/walkerinkworks.com\/\" alt=\"Walker Ink\" target=\"_blank\">Walker Ink<\/a>. I worked closely with the owner to design content that is simple, informative, and leads the customer to the contact page."
+    },
+    {
+      "id": 4,
       "slug":"cdesigns",
       "devices":["mobile","tablet","desktop"],
       "title":"CDesigns, Inc",
@@ -94,17 +105,6 @@
         "Automatic cloud backups"
       ],
       "desc":"CDesigns, Inc provides high end renovations and wanted their site to reflect the sophistication of their work. After completing the visual design I was able to find an existing WordPress theme that had the right structure, and built a child theme to suit. The result was an attractive site that was inexpensive and easy to maintain."
-    },
-    {
-      "id": 4,
-      "slug":"spruced",
-      "devices":["mobile","tablet","desktop"],
-      "title":"Spruced",
-      "alt":"Spruced Website",
-      "url":"spruced-dc.com",
-      "scope":["Visual Design","Content Design","Custom WordPress Child Theme"],
-      "features":["Custom testimonial accordion","Automatic cloud backups","Google Analytics"],
-      "desc":"Spruced is a personal organizing company, so when we designed their website it was important to keep the aesthetic as clean as possible. We had a great starting point with origami-inspired logo designed by <a href=\"https:\/\/walkerinkworks.com\/\" alt=\"Walker Ink\" target=\"_blank\">Walker Ink<\/a>. I worked closely with the owner to design content that is simple, informative, and leads the customer to the contact page."
     }
   ],
 
@@ -247,42 +247,84 @@
       },
       {
         "id": 21,
+        "title": "Spruced Home Mobile",
+        "alt": "spruced-dc.com home page on mobile",
+        "filename": "spruced_device-00.jpg"
+      },
+      {
+        "id": 22,
+        "title": "Spruced Home Desktop",
+        "alt": "spruced-dc.com home page on desktop",
+        "filename": "spruced_device-01.jpg"
+      },
+      {
+        "id": 23,
+        "title": "Spruced Services Mobile",
+        "alt": "spruced-dc.com services page on mobile",
+        "filename": "spruced_device-02.jpg"
+      },
+      {
+        "id": 24,
+        "title": "Spruced Services Laptop",
+        "alt": "spruced-dc.com services page",
+        "filename": "spruced_device-03.jpg"
+      },
+      {
+        "id": 25,
+        "title": "Spruced About",
+        "alt": "spruced-dc.com about page",
+        "filename": "spruced_device-04.jpg"
+      },
+      {
+        "id": 26,
+        "title": "Spruced Contact",
+        "alt": "spruced-dc.com contact page",
+        "filename": "spruced_device-05.png"
+      },
+      {
+        "id": 27,
+        "title": "Spruced Testimonials",
+        "alt": "spruced-dc.com testimonials page",
+        "filename": "spruced_device-06.png"
+      },
+      {
+        "id": 28,
         "title": "CDesigns Home Mobile",
         "alt": "cdesignsinc.com home page on mobile",
         "filename": "cdesigns_device-00.jpg"
       },
       {
-        "id": 22,
+        "id": 29,
         "title": "CDesigns Home Desktop",
         "alt": "cdesignsinc.com home page on desktop",
         "filename": "cdesigns_device-01.jpg"
       },
       {
-        "id": 23,
+        "id": 30,
         "title": "CDesigns Residential Portfolio",
         "alt": "cdesignsinc.com residential portfolio page",
         "filename": "cdesigns_device-02.jpg"
       },
       {
-        "id": 24,
+        "id": 31,
         "title": "CDesigns Commerical Portfolio",
         "alt": "cdesignsinc.com commercial portfolio page",
         "filename": "cdesigns_device-03.jpg"
       },
       {
-        "id": 25,
+        "id": 32,
         "title": "CDesigns About",
         "alt": "cdesignsinc.com about page",
         "filename": "cdesigns_device-04.png"
       },
       {
-        "id": 26,
+        "id": 33,
         "title": "CDesigns Kitchen Portfolio",
         "alt": "cdesignsinc.com kitchen portfolio page",
         "filename": "cdesigns_device-05.jpg"
       },
       {
-        "id": 27,
+        "id": 34,
         "title": "CDesigns Contact",
         "alt": "cdesignsinc.com contact page",
         "filename": "cdesigns_device-06.png"

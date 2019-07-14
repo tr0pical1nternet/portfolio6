@@ -11,7 +11,7 @@ mixin portfolio-gallery__device(portfolioItemIndex, deviceIndex)
 
   figure(class='portfolio-gallery__device portfolio-gallery__device--' + deviceStr)
     block
-    div(class='portfolio-gallery__device-screen portfolio-gallery__device-screen--' + deviceStr)
+    div(class='portfolio-gallery__device-screen portfolio-gallery__device-screen--' + deviceStr tabindex='0')
       +portfolio-gallery__device-content(portfolioItemIndex, deviceIndex)
   
 mixin portfolio-gallery__device-content(portfolioItemIndex, deviceIndex)
@@ -46,7 +46,7 @@ article(class='portfolio' id='portfolio' aria-labelledby='#portfolio__heading')
         div(class='portfolio-info__bottom-decoration' role='presentation')
           div(class='portfolio-info__bottom-decoration-inner')
 
-      section(class='portfolio-gallery')
+      section(class='portfolio-gallery' tabindex='0')
         ul(class='portfolio-gallery__slides')
           +portfolio-gallery__slide('00')
             //- include ../images/svg/optimized/panel-0.svg

@@ -8,10 +8,7 @@ Content
 	Bio
 		Write Bio paragraphs
 	Portfolio
-		CDesigns
-		Spruced
-
-		Make screen shots for other sites. Spruced, CDesigns
+		Augment portfolio entries, use blink(?) as reference
 
 Media Queries
 	Mobile
@@ -20,7 +17,7 @@ Media Queries
 		Devices are grouped in slides
 
 Accessibility
-	Get working keyboard and screen reader versions BEFORE the javascript version
+	Screen reader versions BEFORE the javascript version
 	Add underline to portfolio on open
 
 Progressive Enhancement

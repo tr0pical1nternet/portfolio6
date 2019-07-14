@@ -377,12 +377,11 @@ a:visited {
   overflow: hidden;
 }
 .bio__content p {
-  margin-left: 1.25rem;
   margin-right: 1.25rem;
 }
 .bio__heading {
   display: inline-block;
-  margin: 2.5rem 0 0 1.25rem;
+  margin: 2.5rem 0 0;
   font-size: 2rem;
 }
 .bio__figure {
