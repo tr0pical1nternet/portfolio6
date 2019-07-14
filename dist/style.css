@@ -66,6 +66,8 @@ a:visited {
 .site-title {
   display: flex;
   flex-wrap: wrap;
+  font-size: calc(.048 * calc(100vw - calc(2 * 1.25rem)));
+  margin-bottom: 1.25em;
 }
 .site-title h1,
 .site-title h2 {
@@ -124,6 +126,9 @@ a:visited {
 }
 .main-menu {
   padding: 0 1.25rem;
+  font-family: "AkzidenzGrotesk-Super", "Helvetica-Neue-Black", "Helvetica-Black", "Ariel-Black", sans-serif;
+  font-size: 1.125em;
+  text-transform: lowercase;
 }
 .main-menu__list {
   list-style: none;
@@ -131,9 +136,6 @@ a:visited {
   display: flex;
   justify-content: space-around;
   margin-bottom: 0;
-  font-family: "AkzidenzGrotesk-Super", "Helvetica-Neue-Black", "Helvetica-Black", "Ariel-Black", sans-serif;
-  font-size: 1.125em;
-  text-transform: lowercase;
 }
 .main-menu__item {
   padding-bottom: 0.2em;
@@ -461,4 +463,9 @@ a:visited {
   font-size: 0.75rem;
   color: #ccc;
   text-align: right;
+}
+@media screen and (min-width: 400px) {
+  .main-menu {
+    font-size: calc(calc(0.0179 * 100vw) + 12.85px);
+  }
 }

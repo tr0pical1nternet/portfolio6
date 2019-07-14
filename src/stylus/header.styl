@@ -2,10 +2,13 @@
   // margin-bottom 1.5rem
 
 .site-title
-  // display grid
   display flex
   flex-wrap wrap
-  // grid-template-areas "charles-robertson contact" "web-design web-design"
+  
+  // font-size is computed with arbritrary coefficent that keeps
+  // site-title proportional within a fixed margin 
+  font-size 'calc(.048 * calc(100vw - calc(2 * %s)))' % margin0
+  margin-bottom 1.25em
 
   h1, h2
     margin-top 0
@@ -63,16 +66,16 @@
 
 .main-menu
   padding 0 margin0
-  
+  font-family font-family__heading
+  font-size 1.125em
+  text-transform lowercase
+
 .main-menu__list
   list-style none
   padding-left 0
   display flex
   justify-content space-around
   margin-bottom 0
-  font-family font-family__heading
-  font-size 1.125em
-  text-transform lowercase
 
 .main-menu__item
   padding-bottom .2em
