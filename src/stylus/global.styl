@@ -6,9 +6,6 @@ color9 = #EEE
 colorA = #008aff
 colorB = mediumorchid
 
-margin0 = 1.25rem // Distance from screen edge
-margin1 = 2.5rem // Vertical distance between blocks
-
 font-family__heading = "AkzidenzGrotesk-Super", "Helvetica-Neue-Black", "Helvetica-Black", "Ariel-Black", sans-serif
 
 /* Define the "System" font family */
@@ -34,6 +31,13 @@ font-family__heading = "AkzidenzGrotesk-Super", "Helvetica-Neue-Black", "Helveti
   src url('fonts/AkzidenzGroteskBQ-Super.woff')  format('woff')
   src url('fonts/AkzidenzGroteskBQ-Super.woff')  format('woff2')
 }
+
+:root
+  --margin0: 1.25rem
+  --margin1: 2.5rem
+
+margin0 = var(--margin0)
+margin1 = var(--margin1)
 
 html
   scroll-behavior smooth
