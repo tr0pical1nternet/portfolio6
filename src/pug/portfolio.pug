@@ -31,7 +31,6 @@ article(class='portfolio' id='portfolio' aria-labelledby='#portfolio__heading')
   each portfolioItem, portfolioItemIndex in portfolioItems
     article(class='portfolio-item' id=portfolioItem.slug)
       section(class='portfolio-info')
-        //- div(class='portfolio-info__slide-inner')
         header(class='portfolio-info__header')
           h4(class='portfolio-info__title') !{portfolioItem.title}
           a(class='portfolio-info__link' href='http://' + portfolioItem.url title=portfolioItem.title alt=portfolioItem.alt) !{portfolioItem.url}
