@@ -6,3 +6,21 @@
     :root
         --margin0: 2.5rem
         --margin1: 3.75rem
+
+@media screen and (min-width: 768px)
+    .site-title
+        font-size 2.063rem
+
+        &__charles-robertson
+            padding-left "calc(calc(100vw - calc(40.5rem + %s)) / 2)" % margin0
+        
+        &__web-design
+            padding-right "calc(calc(100vw - calc(40.5rem + %s)) / 2)" % margin0
+
+@media screen and (min-width: 850px)
+    .main-menu
+        font-size 1.75rem
+        max-width 850
+        margin 0 auto
+
+            
