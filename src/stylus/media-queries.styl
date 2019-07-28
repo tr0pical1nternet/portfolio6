@@ -2,23 +2,25 @@
     .main-menu
         font-size calc(calc(.0179 * 100vw) + 12.85px)
 
+@media screen and (min-width: 500px)
+    .bio__figure
+        width 13.43rem
+
 @media screen and (min-width: 640px)
     :root
         --margin0: 2.5rem
         --margin1: 3.75rem
 
-    // .social-icon
-    //     svg
-    //         width 1.68rem
+    .bio__figure
+        width 15.03rem
+
+@media screen and (min-width: 725px)
+    .bio__figure
+        width 16rem
 
 @media screen and (min-width: 768px)
     .site-title
         font-size 2.063rem
-
-    // .social-icon
-    //     svg
-    //       width 1.5em  
-       
 
 @media screen and (min-width: 850px)
     .main-menu
@@ -46,7 +48,7 @@
             align-items center
 
             &:last-child
-                .portfolio-info__bottom-decoration-inner
+                .portfolio-info__bottom-decoration
                     display block
     
         .portfolio-info__bottom-decoration-inner
