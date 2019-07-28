@@ -43,23 +43,45 @@
 
     .no-js
         .portfolio-item
-            grid-template-columns 50% 50%
+            grid-template-columns auto 1fr
             grid-template-areas "info gallery"
             align-items center
+            
 
             &:last-child
                 .portfolio-info__bottom-decoration
                     display block
     
+        .portfolio-info
+            max-width 45rem
+
         .portfolio-info__bottom-decoration-inner
             border-radius 0 0 3rem 0
 
         .portfolio-gallery
-            height 38.5vw
+            height 33vw
+            max-height 23.75rem
             margin-top (89/16)rem
-        
+
+        .portfolio-gallery__slides
+            padding 3rem 0 3.25rem
+
+        .portfolio-gallery__slide
+            &--00
+                .portfolio-gallery__slide-inner
+                    margin-left 4rem
+
+            &--01
+                padding 3rem 0
+
+            &--02
+                padding 1rem 0
+
+            &--04
+                padding 1rem 0
+            
         .portfolio-gallery__slide-inner
-            margin 0 4vw
+            margin 0 2rem
 
     .bio__top-decoration-inner
         display none
