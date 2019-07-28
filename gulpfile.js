@@ -113,7 +113,7 @@ gulp.task('svgo-icons', () => {
 					removeDimensions: true
 				}, {
 					removeAttrs: {
-						attrs: ('fill|stroke.*|data-name')
+						attrs: ('fill|stroke.*|data-name|style|font.*|color|overflow')
 					}
 				}, {
 					addAttributesToSVGElement: {

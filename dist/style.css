@@ -421,7 +421,7 @@ a:visited {
   grid-template-areas: "portfolio-heading about-heading contact-heading" "portfolio-list about-list contact-list";
   grid-template-columns: auto auto auto;
   justify-content: space-between;
-  margin-bottom: var(--margin1);
+  margin-bottom: var(--margin0);
 }
 .footer-menu__heading {
   width: auto;
@@ -454,6 +454,23 @@ a:visited {
 .footer-menu__list--contact {
   grid-area: contact-list;
 }
+.footer-back-to-top {
+  margin-bottom: var(--margin0);
+}
+.footer-back-to-top__link {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  padding: 0.5em;
+}
+.footer-back-to-top__link:visited {
+  color: #008aff;
+}
+.icon--back-to-top {
+  width: 3em;
+  margin-bottom: 0.5em;
+  fill: currentColor;
+}
 .footer-about {
   font-size: 0.75rem;
   color: #ccc;
@@ -471,6 +488,26 @@ a:visited {
 @media screen and (min-width: 400px) {
   .main-menu {
     font-size: calc(calc(0.0179 * 100vw) + 12.85px);
+  }
+}
+@media screen and (min-width: 512px) {
+  .footer-inner {
+    display: grid;
+    grid-template-areas: "menu back-to-top" "about about" "copyright copyright";
+    grid-template-columns: 3fr 1fr;
+    grid-column-gap: 7vw;
+  }
+  .footer-menu {
+    grid-area: menu;
+  }
+  .footer-back-to-top {
+    grid-area: back-to-top;
+  }
+  .footer-about {
+    grid-area: about;
+  }
+  .footer-copyright {
+    grid-area: copyright;
   }
 }
 @media screen and (min-width: 640px) {

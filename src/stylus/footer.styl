@@ -13,7 +13,7 @@
 	grid-template-areas "portfolio-heading about-heading contact-heading" "portfolio-list about-list contact-list"
 	grid-template-columns auto auto auto
 	justify-content space-between
-	margin-bottom margin1
+	margin-bottom margin0
 
 .footer-menu__heading
 	width auto
@@ -46,6 +46,23 @@
 	
 	&--contact
 		grid-area contact-list
+
+.footer-back-to-top
+	margin-bottom margin0
+
+.footer-back-to-top__link
+	display flex
+	flex-direction column-reverse
+	align-items center
+	padding .5em
+
+	&:visited
+		color colorA
+
+.icon--back-to-top
+	width 3em
+	margin-bottom .5em
+	fill currentColor
 
 .footer-about
 	font-size .75rem

@@ -6,6 +6,25 @@
 //     .bio__figure
 //         width 13.43rem
 
+@media screen and (min-width: 512px)
+    .footer-inner
+        display grid
+        grid-template-areas "menu back-to-top" "about about" "copyright copyright"
+        grid-template-columns 3fr 1fr
+        grid-column-gap 7vw
+
+    .footer-menu
+        grid-area menu
+
+    .footer-back-to-top
+        grid-area back-to-top
+
+    .footer-about
+        grid-area about
+
+    .footer-copyright
+        grid-area copyright
+
 @media screen and (min-width: 640px)
     :root
         --margin0: 2.5rem
