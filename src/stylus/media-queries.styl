@@ -7,20 +7,77 @@
         --margin0: 2.5rem
         --margin1: 3.75rem
 
+    // .social-icon
+    //     svg
+    //         width 1.68rem
+
 @media screen and (min-width: 768px)
     .site-title
         font-size 2.063rem
 
-        &__charles-robertson
-            padding-left "calc(calc(100vw - calc(40.5rem + %s)) / 2)" % margin0
-        
-        &__web-design
-            padding-right "calc(calc(100vw - calc(40.5rem + %s)) / 2)" % margin0
+    // .social-icon
+    //     svg
+    //       width 1.5em  
+       
 
 @media screen and (min-width: 850px)
     .main-menu
         font-size 1.75rem
-        max-width 850
         margin 0 auto
 
+@media screen and (min-width: 960px)
+    .site-title
+        font-size 2.917
+
+        &__charles-robertson
+            padding-left "calc(calc(100vw - calc(52.5rem + %s)) / 2)" % margin0
+        
+        &__web-design
+            padding-right "calc(calc(100vw - calc(52.5rem + %s)) / 2)" % margin0
             
+@media screen and (min-width: 1024px)
+    .site-header
+        margin-bottom margin1
+
+    .no-js
+        .portfolio-item
+            grid-template-columns 50% 50%
+            grid-template-areas "info gallery"
+            align-items center
+
+            &:last-child
+                .portfolio-info__bottom-decoration-inner
+                    display block
+    
+        .portfolio-info__bottom-decoration-inner
+            border-radius 0 0 3rem 0
+
+        .portfolio-gallery
+            height 38.5vw
+            margin-top (89/16)rem
+        
+        .portfolio-gallery__slide-inner
+            margin 0 4vw
+
+    .bio__top-decoration-inner
+        display none
+
+    .bio__figure
+        float right
+        shape-outside circle(54% at 54% 46%)
+        width 15rem
+        margin var(--margin1) 0 var(--margin0) var(--margin0)
+        border-radius 50% 0 0 50%
+        overflow hidden
+
+    .bio__content 
+        background-color #ddd
+        border-radius 0 0 3rem 0
+        padding 0 0 var(--margin1) var(--margin0)
+        position relative
+        overflow hidden
+        line-height 1.5
+        
+    
+
+    

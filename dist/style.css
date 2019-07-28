@@ -121,6 +121,7 @@ a:visited {
 }
 .social-icon svg {
   width: 1.75em;
+  max-width: 3.125rem;
   fill: #008aff;
 }
 .main-menu {
@@ -128,6 +129,7 @@ a:visited {
   font-family: "AkzidenzGrotesk-Super", "Helvetica-Neue-Black", "Helvetica-Black", "Ariel-Black", sans-serif;
   font-size: 1.125em;
   text-transform: lowercase;
+  max-width: 60rem;
 }
 .main-menu__list {
   list-style: none;
@@ -157,9 +159,6 @@ a:visited {
 }
 .no-js .portfolio-item:last-child .portfolio-info__bottom-decoration {
   display: none;
-}
-.portfolio-info {
-  overflow-x: hidden;
 }
 .portfolio-info__slides {
   list-style: none;
@@ -388,6 +387,7 @@ a:visited {
 }
 .bio__content p {
   margin-right: var(--margin0);
+  max-width: 75ch;
 }
 .bio__heading {
   display: inline-block;
@@ -483,17 +483,63 @@ a:visited {
   .site-title {
     font-size: 2.063rem;
   }
-  .site-title__charles-robertson {
-    padding-left: calc(calc(100vw - calc(40.5rem + var(--margin0))) / 2);
-  }
-  .site-title__web-design {
-    padding-right: calc(calc(100vw - calc(40.5rem + var(--margin0))) / 2);
-  }
 }
 @media screen and (min-width: 850px) {
   .main-menu {
     font-size: 1.75rem;
-    max-width: 850;
     margin: 0 auto;
+  }
+}
+@media screen and (min-width: 960px) {
+  .site-title {
+    font-size: 2.917;
+  }
+  .site-title__charles-robertson {
+    padding-left: calc(calc(100vw - calc(52.5rem + var(--margin0))) / 2);
+  }
+  .site-title__web-design {
+    padding-right: calc(calc(100vw - calc(52.5rem + var(--margin0))) / 2);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .site-header {
+    margin-bottom: var(--margin1);
+  }
+  .no-js .portfolio-item {
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "info gallery";
+    align-items: center;
+  }
+  .no-js .portfolio-item:last-child .portfolio-info__bottom-decoration-inner {
+    display: block;
+  }
+  .no-js .portfolio-info__bottom-decoration-inner {
+    border-radius: 0 0 3rem 0;
+  }
+  .no-js .portfolio-gallery {
+    height: 38.5vw;
+    margin-top: 5.5625rem;
+  }
+  .no-js .portfolio-gallery__slide-inner {
+    margin: 0 4vw;
+  }
+  .bio__top-decoration-inner {
+    display: none;
+  }
+  .bio__figure {
+    float: right;
+    shape-outside: circle(54% at 54% 46%);
+    width: 15rem;
+    margin: var(--margin1) 0 var(--margin0) var(--margin0);
+    border-radius: 50% 0 0 50%;
+    overflow: hidden;
+  }
+  .bio__content {
+    background-color: #ddd;
+    border-radius: 0 0 3rem 0;
+    padding: 0 0 var(--margin1) var(--margin0);
+    position: relative;
+    overflow: hidden;
+    line-height: 1.5;
   }
 }
