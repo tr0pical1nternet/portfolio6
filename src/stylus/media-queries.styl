@@ -10,14 +10,26 @@
     .footer-inner
         display grid
         grid-template-areas "menu back-to-top" "about about" "copyright copyright"
-        grid-template-columns 3fr 1fr
-        grid-column-gap 7vw
+        grid-template-columns auto auto
+        // grid-column-gap 7vw
+        padding-left: calc(50vw - 26rem)
+        padding-right: calc(50vw - 26rem)
 
     .footer-menu
         grid-area menu
 
     .footer-back-to-top
         grid-area back-to-top
+        align-items flex-start
+        justify-content flex-end
+        padding .5em
+
+    .footer-back-to-top__link
+        flex-direction column-reverse
+        margin 0 0 .5em 0
+
+    .icon--back-to-top
+        margin 0 0 .5em 0
 
     .footer-about
         grid-area about
@@ -72,6 +84,7 @@
                     display block
     
         .portfolio-info
+            width 50vw
             max-width 45rem
 
         .portfolio-info__bottom-decoration-inner
@@ -102,12 +115,16 @@
         .portfolio-gallery__slide-inner
             margin 0 2rem
 
+    .bio__content
+        padding-right var(--margin0)
+        border-radius 0 0 3rem 0
+
     .bio__top-decoration-inner
         display none
 
     .bio__figure
         float right
-        shape-outside circle(56% at 57% 43%)
+        shape-outside circle(51% at 57% 53%)
         width 15rem
         margin var(--margin1) 0 var(--margin0) var(--margin0)
         border-radius 50% 50% 50% 50%
