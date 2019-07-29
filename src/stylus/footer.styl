@@ -1,82 +1,103 @@
+footer-gutter = 1rem
+
 .footer
 	background-color color8
+	font-size .875rem
 
 .footer-inner
-	padding margin1 margin0
 	border-radius 3rem 0 0 0
 	background-color color0
-	font-size .875rem
 	color color8
+	padding "%s calc(%s - %s / 2)" % (margin1 margin0 footer-gutter)
+
+.footer-text-wrap
+	display flex
+	flex-wrap wrap
+	justify-content space-between
+	margin 0 auto
+	max-width 52rem
 
 .footer-menu
-	display grid
-	grid-template-areas "portfolio-heading about-heading contact-heading" "portfolio-list about-list contact-list"
-	grid-template-columns auto auto auto
+	flex-grow 1
+	// display grid
+	// grid-template-areas "portfolio-heading about-heading contact-heading" "portfolio-list about-list contact-list"
+	// grid-template-columns auto auto auto
 	justify-content space-between
-	margin-bottom margin0
+	line-height 1.5
+	font-size 1em
+	white-space nowrap
+	margin 0 (footer-gutter/2) margin0
+
+.footer-menu__level-1, .footer-menu__level-2
+	list-style none
+	padding-left 0
+
+.footer-menu__level-1
+	display flex
+	justify-content space-between
+	margin 0
+
+.footer-menu__level-1-item + .footer-menu__level-1-item
+	margin-left 1rem
 
 .footer-menu__heading
 	width auto
 	font-size 1.25em
-	margin 0 0 .375rem
+	line-height 1
+	margin 0 0 .5rem
 	color color9
 
-	&--portfolio
-		grid-area portfolio-heading
+	// &--portfolio
+	// 	grid-area portfolio-heading
 
-	&--about
-		grid-area about-heading
+	// &--about
+	// 	grid-area about-heading
 	
-	&--contact
-		grid-area contact-heading
-
-
-.footer-menu__list
-	width auto
-	list-style none
-	padding-left 0
-	line-height 1.5
-	font-size 1em
-
-	&--portfolio
-		grid-area portfolio-list
-	
-	&--bio
-		grid-area about-list
-	
-	&--contact
-		grid-area contact-list
+	// &--contact
+	// 	grid-area contact-heading
 
 .footer-back-to-top
+	flex-grow 1
 	display flex
+	align-items flex-start
 	justify-content center
-	margin-bottom margin0
+	margin 0 (footer-gutter/2) margin1
 	
 
 .footer-back-to-top__link
 	display flex
 	flex-direction row-reverse
-	align-items center
-	padding .5em
+	align-items flex-start
+	// padding .5em
 
 	&:visited
 		color colorA
 
 .icon--back-to-top
-	width 1.25em
+	width 1em
 	margin-right .5em
 	fill currentColor
 
-.footer-about
+.footer-fine-print
+	display flex
+	justify-content center
+	flex-wrap wrap
+
+.footer-about-site
 	font-size .75rem
 	color color7
-	margin-bottom margin1
+	padding 0 .5em
+	order 1
+	margin-bottom margin0
 
-.footer-about__heading
-	font-size .875rem
-	color color8
+.footer-about-site__heading
+	// font-size .875rem
+	color colorA
 
 .footer-copyright
 	font-size .75rem
 	color color7
-	text-align right
+	// text-align right
+	padding 0 .5em
+	order 2
+	margin-bottom margin0

@@ -2,40 +2,26 @@
     .main-menu
         font-size calc(calc(.0179 * 100vw) + 12.85px)
 
+    .footer-back-to-top
+        justify-content flex-end
+
 // @media screen and (min-width: 500px)
 //     .bio__figure
 //         width 13.43rem
 
-@media screen and (min-width: 512px)
-    .footer-inner
-        display grid
-        grid-template-areas "menu back-to-top" "about about" "copyright copyright"
-        grid-template-columns auto auto
-        // grid-column-gap 7vw
-        padding-left: calc(50vw - 26rem)
-        padding-right: calc(50vw - 26rem)
+// @media screen and (min-width: 512px)
+    // .footer-inner
 
-    .footer-menu
-        grid-area menu
+    // .footer-text-wrap
+    //     display flex
 
-    .footer-back-to-top
-        grid-area back-to-top
-        align-items flex-start
-        justify-content flex-end
-        padding .5em
+    // .footer-menu
+    //     flex-grow 1
 
-    .footer-back-to-top__link
-        flex-direction column-reverse
-        margin 0 0 .5em 0
-
-    .icon--back-to-top
-        margin 0 0 .5em 0
-
-    .footer-about
-        grid-area about
-
-    .footer-copyright
-        grid-area copyright
+    // .footer-back-to-top
+    //     grid-area back-to-top
+    //     align-items flex-start
+    //     justify-content flex-end
 
 @media screen and (min-width: 640px)
     :root

@@ -24,5 +24,6 @@ Progressive Enhancement
 	Site loads symantically, and then javascript disects it and reassembles into sliders
 	Replace slider plugin with flickity
 
-Optimizations	
+Optimizations
+	Add hover color for links
 	Customize CSS ease for slide animation if necessary
