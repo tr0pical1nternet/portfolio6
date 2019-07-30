@@ -1,3 +1,6 @@
+margin0-over-640px = 2.5rem
+margin1-over-640px = 3.75rem
+
 @media screen and (min-width: 400px)
     .main-menu
         font-size calc(calc(.0179 * 100vw) + 12.85px)
@@ -5,35 +8,10 @@
     .footer-back-to-top
         justify-content flex-end
 
-// @media screen and (min-width: 500px)
-//     .bio__figure
-//         width 13.43rem
-
-// @media screen and (min-width: 512px)
-    // .footer-inner
-
-    // .footer-text-wrap
-    //     display flex
-
-    // .footer-menu
-    //     flex-grow 1
-
-    // .footer-back-to-top
-    //     grid-area back-to-top
-    //     align-items flex-start
-    //     justify-content flex-end
-
 @media screen and (min-width: 640px)
     :root
-        --margin0: 2.5rem
-        --margin1: 3.75rem
-
-    // .bio__figure
-    //     width 15.03rem
-
-@media screen and (min-width: 725px)
-    // .bio__figure
-    //     width 16rem
+        --margin0: margin0-over-640px
+        --margin1: margin1-over-640px
 
 @media screen and (min-width: 768px)
     .site-title
@@ -43,6 +21,17 @@
     .main-menu
         font-size 1.75rem
         margin 0 auto
+
+@media screen and (min-width: (main-column-width + margin0-over-640px))
+    .bio__content
+        padding-right var(--margin0)
+        border-radius 0 0 3rem 0
+
+    .bio__figure
+        shape-outside circle(51% at 57% 53%)
+        width 13.43rem
+        margin var(--margin1) 0 var(--margin0) var(--margin0)
+        border-radius 50%
 
 @media screen and (min-width: 960px)
     .site-title
@@ -101,20 +90,10 @@
         .portfolio-gallery__slide-inner
             margin 0 2rem
 
-    .bio__content
-        padding-right var(--margin0)
-        border-radius 0 0 3rem 0
-
     .bio__top-decoration-inner
         display none
 
-    .bio__figure
-        float right
-        shape-outside circle(51% at 57% 53%)
-        width 15rem
-        margin var(--margin1) 0 var(--margin0) var(--margin0)
-        border-radius 50% 50% 50% 50%
-        overflow hidden
+
 
     // .bio__content 
     //     background-color #ddd
@@ -124,9 +103,9 @@
     //     overflow hidden
     //     line-height 1.5
 
-    .bio__content-inner
-        width 52rem
-        margin 0 auto
+    // .bio__content-inner
+    //     width 52rem
+    //     margin 0 auto
         
     
 

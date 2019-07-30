@@ -15,7 +15,7 @@ footer-gutter = 1rem
 	flex-wrap wrap
 	justify-content space-between
 	margin 0 auto
-	max-width 52rem
+	max-width (main-column-width + footer-gutter)
 
 .footer-menu
 	flex-grow 1
@@ -26,7 +26,7 @@ footer-gutter = 1rem
 	line-height 1.5
 	font-size 1em
 	white-space nowrap
-	margin 0 (footer-gutter/2) margin0
+	margin 0 (footer-gutter/2) margin1
 
 .footer-menu__level-1, .footer-menu__level-2
 	list-style none
@@ -82,22 +82,28 @@ footer-gutter = 1rem
 	display flex
 	justify-content center
 	flex-wrap wrap
+	max-width 75ch
+	font-size .75rem
+	padding 0 (footer-gutter/2)
+	margin 0 auto
 
 .footer-about-site
-	font-size .75rem
+	max-width 75ch
+	text-align center
 	color color7
-	padding 0 .5em
-	order 1
 	margin-bottom margin0
+	cursor pointer
 
 .footer-about-site__heading
-	// font-size .875rem
 	color colorA
 
 .footer-copyright
 	font-size .75rem
 	color color7
 	// text-align right
-	padding 0 .5em
-	order 2
+	// padding 0 .5em
 	margin-bottom margin0
+
+.footer-about-site:not([open]) + .footer-copyright::before
+	content "|"
+	margin 0 .75em
