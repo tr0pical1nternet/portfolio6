@@ -30,21 +30,6 @@ article(class='portfolio' id='portfolio' aria-labelledby='#portfolio__heading')
   h3(id='portfolio__heading' class='portfolio__heading visually-hidden') Portfolio
   each portfolioItem, portfolioItemIndex in portfolioItems
     article(class='portfolio-item' id=portfolioItem.slug)
-      section(class='portfolio-info')
-        header(class='portfolio-info__header')
-          h4(class='portfolio-info__title') !{portfolioItem.title}
-          a(class='portfolio-info__link' href='http://' + portfolioItem.url title=portfolioItem.title alt=portfolioItem.alt) !{portfolioItem.url}
-
-        div(class='portfolio-info__text-wrap')
-          p(class='portfolio-info__text') !{portfolioItem.desc}
-          
-          h5(class='portfolio-info__heading') Scope
-          ul(class='portfolio-info__list')
-            each listing in portfolioItem.scope
-              li= listing
-        div(class='portfolio-info__bottom-decoration' role='presentation')
-          div(class='portfolio-info__bottom-decoration-inner')
-
       section(class='portfolio-gallery' tabindex='0')
         ul(class='portfolio-gallery__slides')
           +portfolio-gallery__slide('00')
@@ -68,7 +53,22 @@ article(class='portfolio' id='portfolio' aria-labelledby='#portfolio__heading')
               include ../images/svg/optimized/device-05.svg
           +portfolio-gallery__slide('05')
             +portfolio-gallery__device(portfolioItemIndex, 6)
-              include ../images/svg/optimized/device-06.svg
+              include ../images/svg/optimized/device-06.svg      
+      
+      section(class='portfolio-info')
+        header(class='portfolio-info__header')
+          h4(class='portfolio-info__title') !{portfolioItem.title}
+          a(class='portfolio-info__link' href='http://' + portfolioItem.url title=portfolioItem.title alt=portfolioItem.alt) !{portfolioItem.url}
+
+        div(class='portfolio-info__text-wrap')
+          p(class='portfolio-info__text') !{portfolioItem.desc}
+          
+          h5(class='portfolio-info__heading') Scope
+          ul(class='portfolio-info__list')
+            each listing in portfolioItem.scope
+              li= listing
+        div(class='portfolio-info__bottom-decoration' role='presentation')
+          div(class='portfolio-info__bottom-decoration-inner')
 
         //- button(class='portfolio-info__next')
         //-   include ../images/svg/optimized/right-arrow.svg

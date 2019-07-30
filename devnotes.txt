@@ -1,9 +1,3 @@
-Fix gallery vertical scrolling issue in firefox
-Replace scroll bars?! They are super clunky! Probably terrible UX to fuck with!!!
-Try to replace touch scroll with a slider or use another scroll library
-
--- Restructure gallery so every device is in its own slide.
-
 Content
 	Bio
 		Write Bio paragraphs
@@ -11,14 +5,10 @@ Content
 		Augment portfolio entries, use blink(?) as reference
 
 Media Queries
-	Mobile
-		Devices are singular
-	Tablet
-		Devices are grouped in slides
+	Make accomodations for larger screens if necessary
 
 Accessibility
 	Screen reader versions BEFORE the javascript version
-	Add underline to portfolio on open
 
 Progressive Enhancement
 	Site loads symantically, and then javascript disects it and reassembles into sliders
