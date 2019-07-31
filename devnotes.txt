@@ -1,8 +1,14 @@
 Content
 	Bio
-		Write Bio paragraphs
+		Upgrade Bio paragraphs
 	Portfolio
 		Augment portfolio entries, use blink(?) as reference
+	About this site
+		Provide more details
+	Contact
+		Add email icon
+		Add javascript to sanitize email address
+		Add javascript to load twitter app
 
 Media Queries
 	Make accomodations for larger screens if necessary
