@@ -389,7 +389,7 @@ a:visited {
   margin-right: var(--margin0);
   max-width: 75ch;
 }
-.bio_content-inner {
+.bio__content-inner {
   max-width: 52rem;
   margin: 0 auto;
 }
