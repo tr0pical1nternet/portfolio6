@@ -119,6 +119,8 @@ gulp.task('svgo-icons', () => {
 					addAttributesToSVGElement: {
 						attribute: 'width="72"'
 					}
+				}, {
+					cleanupIds: false
 				}]
 			}
 		))
@@ -190,7 +192,7 @@ gulp.task('serve', function () {
 
 	gulp.watch('src/stylus/*.styl', gulp.series('stylus'));
 	gulp.watch('src/pug/*.pug', gulp.series('pug'));
-	gulp.watch('src/images/svg/*.svg', gulp.series('svgo-icons', 'svgo-devices', 'pug'));
+	gulp.watch('src/images/svg/*.svg', gulp.series('svgo-devices', 'pug'));
 	gulp.watch('src/js/*.js', gulp.series('js', 'pug'));
 	gulp.watch('src/fonts/*.{ttf,otf,svg,eot,woff,woff2}', gulp.series('fonts'));
 	gulp.watch(sitePath + '*.html').on('change', browserSync.reload);
