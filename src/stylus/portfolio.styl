@@ -13,104 +13,6 @@
             .portfolio-info__bottom-decoration
                 display none
 
-.portfolio-info
-    // overflow-x hidden
-
-.portfolio-info__slides
-    list-style none
-    padding-left 0
-    margin-bottom 0
-
-.portfolio-info__header
-    display inline-block
-    padding 1rem 2.75rem 1rem margin0
-    color color9
-    background-color color0
-    border-radius 0 3rem 3rem 0
-    margin-right auto
-
-.portfolio-info__title
-    margin 0
-    font-size 1.75rem
-    text-transform uppercase
-
-.portfolio-info__link
-    display inline-block
-    font-size 1.25rem
-    font-style italic
-
-.portfolio-info__text-wrap
-    display flex
-    position relative
-    flex-direction column
-    padding margin0 margin0 0
-    background-color color0
-    color color8
-    border-radius 0 3rem 0 0
-    line-height 1.5
-    z-index 1
-
-.portfolio-info__text
-    color color8
-    max-width 75ch
-
-    &:first-child
-        margin-top 0
-
-.portfolio-info__heading
-    font-size 1.5rem
-    margin-top "calc(%s / 2)" % margin0
-    margin-bottom margin0
-    color color9
-
-.portfolio-info__list
-    margin-top 0
-    margin-bottom 0
-
-.portfolio-info__bottom-fill
-    background-color #000
-    position absolute
-    bottom 0
-    left 0
-    right 0
-    height 50%
-    z-index 0
-
-.no-js .portfolio-info__bottom-decoration
-    background-color color8
-
-.no-js .portfolio-info__bottom-decoration-inner
-    padding-bottom margin1
-    border-radius 0 0 0 3rem
-    background-color color0
-
-// .portfolio-info__next
-//     background none
-//     width 2.25rem
-//     padding 10%
-//     position absolute
-//     right 0
-//     top 50%
-//     padding 0
-//     border none
-//     transform translateY(-50%)
-//     opacity .75
-//     transition opacity .2s ease
-
-//     &:hover
-//         opacity 1
-
-// .portfolio-info__half-circ
-//     fill colorA
-//     // opacity .75
-
-// .portfolio-info__right-arrow
-//     stroke color9
-//     stroke-width 25
-//     stroke-linejoin round
-//     stroke-linecap round
-//     fill none
-    
 .portfolio-gallery
     grid-area gallery
     height "calc(50vw + %s)" % 8.25rem
@@ -160,6 +62,10 @@
     margin 0
     z-index 0
     height 100%
+    
+    &:focus-within
+        .portfolio-gallery__device-overlay
+            stroke: colorA
 
     &--00
         position absolute
@@ -275,6 +181,7 @@
         padding-bottom 198.94%
         left 4.08%
         top 2.13%
+        border-radius 2.5vw
 
 .portfolio-gallery__device-content
     position absolute
@@ -283,7 +190,102 @@
     left 0
     -webkit-overflow-scrolling touch
     transition opacity .5s ease
+
+.portfolio-info
+    // overflow-x hidden
+
+.portfolio-info__slides
+    list-style none
+    padding-left 0
+    margin-bottom 0
+
+.portfolio-info__header
+    display inline-block
+    padding 1rem 2.75rem 1rem margin0
+    color color9
+    background-color color0
+    border-radius 0 3rem 3rem 0
+    margin-right auto
+
+.portfolio-info__title
+    margin 0
+    font-size 1.75rem
+    text-transform uppercase
+
+.portfolio-info__link
+    display inline-block
+    font-size 1.25rem
+    font-style italic
+
+.portfolio-info__text-wrap
+    display flex
+    position relative
+    flex-direction column
+    padding margin0 margin0 0
+    background-color color0
+    color color8
+    border-radius 0 3rem 0 0
+    line-height 1.5
+    z-index 1
+
+.portfolio-info__text
+    color color8
+    max-width 75ch
+
+    &:first-child
+        margin-top 0
+
+.portfolio-info__heading
+    font-size 1.5rem
+    margin-top "calc(%s / 2)" % margin0
+    margin-bottom margin0
+    color color9
+
+.portfolio-info__list
+    margin-top 0
+    margin-bottom 0
+
+.portfolio-info__bottom-fill
+    background-color #000
+    position absolute
+    bottom 0
+    left 0
+    right 0
+    height 50%
+    z-index 0
+
+.no-js .portfolio-info__bottom-decoration
+    background-color color8
+
+.no-js .portfolio-info__bottom-decoration-inner
+    padding-bottom margin1
+    border-radius 0 0 0 3rem
+    background-color color0
+
+// .portfolio-info__next
+//     background none
+//     width 2.25rem
+//     padding 10%
+//     position absolute
+//     right 0
+//     top 50%
+//     padding 0
+//     border none
+//     transform translateY(-50%)
+//     opacity .75
+//     transition opacity .2s ease
+
+//     &:hover
+//         opacity 1
+
+// .portfolio-info__half-circ
+//     fill colorA
+//     // opacity .75
+
+// .portfolio-info__right-arrow
+//     stroke color9
+//     stroke-width 25
+//     stroke-linejoin round
+//     stroke-linecap round
+//     fill none
     
-
-
-
