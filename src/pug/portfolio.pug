@@ -26,7 +26,7 @@ mixin portfolio-gallery__device-content(portfolioItemIndex, deviceIndex)
         )
 
 //- Portfolio Content
-article(class='portfolio' id='portfolio' aria-labelledby='#portfolio__heading')
+article(class='portfolio' id='portfolio' aria-labelledby='portfolio__heading')
   h3(id='portfolio__heading' class='portfolio__heading visually-hidden') Portfolio
   each portfolioItem, portfolioItemIndex in portfolioItems
     article(class='portfolio-item' id=portfolioItem.slug)

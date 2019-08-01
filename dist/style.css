@@ -65,7 +65,13 @@ a:visited {
   fill: #000;
 }
 .visually-hidden {
-  display: none;
+  position: absolute;
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  opacity: 0;
+  padding: 0;
+  border: 0;
 }
 .site-title {
   display: flex;
