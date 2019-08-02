@@ -5,7 +5,7 @@ mixin footer-menu-item(title, href, alt)
 footer.footer
   div.footer-inner
     div.footer-text-wrap
-      nav.footer-menu
+      nav.footer-menu(role="navigation")
         ul.footer-menu__level-1
           li.footer-menu__level-1-item
             h4.footer-menu__heading Portfolio
@@ -35,7 +35,7 @@ footer.footer
         a.footer-back-to-top__link(href='#site-header' alt="Back to Top") Back to Top
           include ../images/svg/optimized/icon-back-to-top.svg
 
-    div.footer-fine-print
+    div.footer-fine-print(role="contentinfo")
       details.footer-about-site(id='footer-about-site')
         summary.footer-about-site__heading About this website
         p This is a static site I wrote in Node.js using Gulp, Pug, Stylus, imagemin, and SVGO. Thank you the open source contributors that made it possible!
