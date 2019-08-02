@@ -30,6 +30,7 @@ html {
 :root {
   --margin0: 1.25rem;
   --margin1: 2.5rem;
+  --margin3: 0;
 }
 html {
   scroll-behavior: smooth;

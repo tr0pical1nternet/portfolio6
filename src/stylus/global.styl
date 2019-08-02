@@ -2,6 +2,7 @@ main-column-width = 52rem
 
 margin0 = var(--margin0)
 margin1 = var(--margin1)
+margin2 = var(--margin2)
 
 color0 = #000
 color7 = #CCC
@@ -38,8 +39,9 @@ font-family__heading = "AkzidenzGrotesk-Super", "Helvetica-Neue-Black", "Helveti
 }
 
 :root
-  --margin0: 1.25rem
-  --margin1: 2.5rem
+  --margin0: 1.25rem // Left-right margin from screen edge
+  --margin1: 2.5rem  // Vertical distance between elements
+  --margin3: 0  // Vertical distance between major sections (increases on larger screen sizes)
 
 html
   scroll-behavior smooth
@@ -53,7 +55,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family font-family__heading
   font-weight normal;
   font-style normal;
-  // letter-spacing: .04em;
 }
 
 a
@@ -73,7 +74,6 @@ a
 
 // Atomic
 .visually-hidden
-  // display none
   position absolute
   overflow hidden
   height 1px
