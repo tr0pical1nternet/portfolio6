@@ -37,7 +37,7 @@ html {
 }
 body {
   font-family: System, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Arial, sans-serif;
-  background-color: #ddd;
+  background-color: #eee;
   margin: 0;
 }
 h1,
@@ -78,12 +78,12 @@ a:visited {
   display: flex;
   flex-wrap: wrap;
   font-size: calc(.048 * calc(100vw - calc(2 * var(--margin0))));
-  margin-bottom: 1.25em;
+  margin-bottom: var(--margin0);
 }
 .site-title__web-design,
 .site-title__charles-robertson {
   padding: 0.55em var(--margin0) 0.54em;
-  color: #ddd;
+  color: #fff;
   background-color: #000;
   line-height: 1;
   margin-top: 0;
@@ -242,7 +242,7 @@ a:visited {
   height: 100%;
   width: auto;
   fill: #000;
-  stroke: #ddd;
+  stroke: #eee;
   stroke-width: 0.5;
 }
 .portfolio-gallery__device-overlay:hover {
@@ -316,7 +316,7 @@ a:visited {
 .portfolio-info__header {
   display: inline-block;
   padding: 1rem 2.75rem 1rem var(--margin0);
-  color: #eee;
+  color: #fff;
   background-color: #000;
   border-radius: 0 3rem 3rem 0;
   margin-right: auto;
@@ -337,13 +337,13 @@ a:visited {
   flex-direction: column;
   padding: var(--margin0) var(--margin0) 0;
   background-color: #000;
-  color: #ddd;
+  color: #eee;
   border-radius: 0 3rem 0 0;
   line-height: 1.5;
   z-index: 1;
 }
 .portfolio-info__text {
-  color: #ddd;
+  color: #eee;
   max-width: 75ch;
 }
 .portfolio-info__text:first-child {
@@ -353,7 +353,7 @@ a:visited {
   font-size: 1.5rem;
   margin-top: calc(var(--margin0) / 2);
   margin-bottom: var(--margin0);
-  color: #eee;
+  color: #fff;
 }
 .portfolio-info__list {
   margin-top: 0;
@@ -369,7 +369,7 @@ a:visited {
   z-index: 0;
 }
 .no-js .portfolio-info__bottom-decoration {
-  background-color: #ddd;
+  background-color: #eee;
 }
 .no-js .portfolio-info__bottom-decoration-inner {
   padding-bottom: var(--margin1);
@@ -381,7 +381,7 @@ a:visited {
   overflow: hidden;
 }
 .bio__top-decoration {
-  background-color: #ddd;
+  background-color: #eee;
 }
 .bio__top-decoration-inner {
   padding-bottom: var(--margin1);
@@ -389,7 +389,7 @@ a:visited {
   background-color: #000;
 }
 .bio__content {
-  background-color: #ddd;
+  background-color: #eee;
   border-radius: 0 3rem 3rem 0;
   padding: 0 0 var(--margin1) var(--margin0);
   position: relative;
@@ -422,13 +422,13 @@ a:visited {
   width: 100%;
 }
 .footer {
-  background-color: #ddd;
+  background-color: #eee;
   font-size: 0.875rem;
 }
 .footer-inner {
   border-radius: 3rem 0 0 0;
   background-color: #000;
-  color: #ddd;
+  color: #eee;
   padding: var(--margin1) calc(var(--margin0) - 1rem / 2);
 }
 .footer-text-wrap {
@@ -464,7 +464,7 @@ a:visited {
   font-size: 1.25em;
   line-height: 1;
   margin: 0 0 0.5rem;
-  color: #eee;
+  color: #fff;
 }
 .footer-back-to-top {
   flex-grow: 1;
