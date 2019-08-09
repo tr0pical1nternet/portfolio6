@@ -1,35 +1,48 @@
 .site-header
-  margin-bottom 0
+  margin-bottom margin2
 
 .site-title
-  display grid
-  grid-template-areas "charles-robertson contact" "web-design web-design"
+  display flex
+  flex-wrap wrap
+  
+  // font-size is computed with arbritrary coefficent that keeps
+  // site-title proportional within a fixed margin 
+  font-size 'calc(.048 * calc(100vw - calc(2 * %s)))' % margin0
+  margin-bottom margin0
 
-  h1, h2
-    margin-top 0
-    margin-bottom 0
-    color color9
+  // h1, h2
+  //   margin-top 0
+  //   margin-bottom 0
+  //   color color9
 
-.site-title__web-design, .site-title__portfolio, .site-title__charles-robertson
+.site-title__web-design, .site-title__charles-robertson
   padding .55em margin0 .54em
-  color color8
+  color color9
   background-color color0
   line-height 1
+  margin-top 0
+  margin-bottom 0
+
+.site-title__charles-robertson
+  text-align right
+  padding-right 1.75em
+  padding-top .7em
+  border-radius 0 2em 2em 0
+  font-size 1.25em
+  order 1
+  // grid-area charles-robertson
 
 .site-title__web-design
   padding-left 1.5em
   border-radius 2em 0 0 2em
   margin-left auto
   text-transform uppercase
-  font-size 2.25rem
-  grid-area web-design
+  font-size 2.25em
+  order 3
+  // grid-area web-design
 
-.site-title__charles-robertson
-  padding-right 1em
-  padding-top .7em
-  border-radius 0 2em 2em 0
-  font-size 1.25rem
-  grid-area charles-robertson
+.site-title__contact
+  order 2
 
 .site-title__contact-list
   height 100%
@@ -50,13 +63,17 @@
     padding-right 0
 
 .social-icon svg
-  width 1.75rem
+  width 1.75em
+  max-width (50/16)rem
   fill colorA
 
 .main-menu
   padding 0 margin0
-  font-size 1.125rem
-  
+  font-family font-family__heading
+  font-size 1.125em
+  text-transform lowercase
+  max-width 60rem
+
 .main-menu__list
   list-style none
   padding-left 0
@@ -65,13 +82,14 @@
   margin-bottom 0
 
 .main-menu__item
-  font-family font-family__heading
-  font-size 1.125rem
+  padding-bottom .2em
 
   a
-    // text-decoration none
     &:visited
       color: colorA
+  
+  &--portfolio
+    border-bottom: .2em solid colorA
 
 
 

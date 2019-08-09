@@ -1,44 +1,109 @@
-footer
-	background-color color8
+footer-gutter = 1rem
 
-.footer-menu
-	padding margin1 margin0
+.footer
+	background-color color8
+	font-size .875rem
+
+.footer-inner
 	border-radius 3rem 0 0 0
 	background-color color0
-	font-size .875rem
-	display grid
-	grid-template-areas "portfolio-heading bio-heading contact-heading" "portfolio-list bio-list contact-list"
-	grid-template-columns auto auto auto
-	justify-content space-around
+	color color8
+	padding "%s calc(%s - %s / 2)" % (margin1 margin0 footer-gutter)
+
+.footer-text-wrap
+	display flex
+	flex-wrap wrap
+	justify-content space-between
+	margin 0 auto
+	max-width (main-column-width + footer-gutter)
+
+.footer-menu
+	flex-grow 1
+	// display grid
+	// grid-template-areas "portfolio-heading about-heading contact-heading" "portfolio-list about-list contact-list"
+	// grid-template-columns auto auto auto
+	justify-content space-between
+	line-height 1.5
+	font-size 1em
+	white-space nowrap
+	margin 0 (footer-gutter/2) margin1
+
+.footer-menu__level-1, .footer-menu__level-2
+	list-style none
+	padding-left 0
+
+.footer-menu__level-1
+	display flex
+	justify-content space-between
+	margin 0
+
+.footer-menu__level-1-item + .footer-menu__level-1-item
+	margin-left 1rem
 
 .footer-menu__heading
 	width auto
 	font-size 1.25em
+	line-height 1
+	margin 0 0 .5rem
 	color color9
-	margin-top 0
 
-	&--portfolio
-		grid-area portfolio-heading
+	// &--portfolio
+	// 	grid-area portfolio-heading
 
-	&--bio
-		grid-area bio-heading
+	// &--about
+	// 	grid-area about-heading
 	
-	&--contact
-		grid-area contact-heading
+	// &--contact
+	// 	grid-area contact-heading
 
-
-.footer-menu__list
-	width auto
-	list-style none
-	padding-left 0
-	line-height 1.5
-	font-size 1em
-
-	&--portfolio
-		grid-area portfolio-list
+.footer-back-to-top
+	flex-grow 1
+	display flex
+	align-items flex-start
+	justify-content center
+	margin 0 (footer-gutter/2) margin1
 	
-	&--bio
-		grid-area bio-list
-	
-	&--contact
-		contact-area contact-list
+
+.footer-back-to-top__link
+	display flex
+	flex-direction row-reverse
+	align-items flex-start
+	// padding .5em
+
+	&:visited
+		color colorA
+
+.icon--back-to-top
+	width 1em
+	margin-right .5em
+	fill currentColor
+
+.footer-fine-print
+	display flex
+	justify-content center
+	flex-wrap wrap
+	max-width 75ch
+	font-size .75rem
+	padding 0 (footer-gutter/2)
+	margin 0 auto
+
+.footer-about-site
+	max-width 75ch
+	text-align center
+	color color7
+	margin-bottom margin0
+	cursor pointer
+
+.footer-about-site__heading
+	color colorA
+
+.footer-copyright
+	font-size .75rem
+	color color7
+	// text-align right
+	// padding 0 .5em
+	margin-bottom margin0
+
+.footer-about-site:not([open]) + .footer-copyright::before
+	content "|"
+	margin 0 .75em

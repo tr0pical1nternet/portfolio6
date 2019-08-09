@@ -1,27 +1,27 @@
-mixin linkItem(linkHref, linkClass, linkAlt)
+mixin site-title__contact-item(linkHref, linkClass, linkAlt)
   li.site-title__contact-item
     a(href = linkHref alt=linkAlt)
       div(id = linkClass class = "icon social-icon " + linkClass)
         block
 
-header.site-header(role="banner")
+header.site-header(id="site-header" role="banner")
   div.site-title
     //- h1  #[span.site-title__charles-robertson Charles Robertson] #[span.site-title__web-design Web Design]
     h1.site-title__charles-robertson Charles Robertson
     h2.site-title__web-design Web Design
     nav.site-title__contact(aria-label="Contact")
       ul.site-title__contact-list
-        +linkItem('https://twitter.com/tr0pical1ntrnet', 'twitter-icon', 'Charles on Twitter')
+        +site-title__contact-item('https://twitter.com/tr0pical1ntrnet', 'twitter-icon', 'Charles on Twitter')
           include ../images/svg/optimized/icon-twitter.svg
-        +linkItem('https://codepen.io/tr0pical1nternet/#', 'codepen-icon', 'Charles on CodePen')
+        +site-title__contact-item('https://codepen.io/tr0pical1nternet/#', 'codepen-icon', 'Charles on CodePen')
           include ../images/svg/optimized/icon-codepen.svg
-        +linkItem('https://github.com/tr0pical1nternet', 'github-icon', 'Charles on GitHub')
+        +site-title__contact-item('https://github.com/tr0pical1nternet', 'github-icon', 'Charles on GitHub')
           include ../images/svg/optimized/icon-github.svg
-  nav.main-menu
+  nav.main-menu(role="navigation")
     ul.main-menu__list
-      li.main-menu__item
-        a(href='#') portfolio
-      li.main-menu__item
-        a(href='#') bio
-      li.main-menu__item
-        a(href='#') resume
+      li.main-menu__item(class='main-menu__item--portfolio')
+        a(href='#portfolio') Portfolio
+      li.main-menu__item(class='main-menu__item--bio')
+        a(href='#bio') Bio
+      li.main-menu__item(class='main-menu__item--resume')
+        a(href='download/charles robertson resume.pdf' alt='Charles Robertson Resume') Resume

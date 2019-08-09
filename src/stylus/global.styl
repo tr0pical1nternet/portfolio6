@@ -1,12 +1,16 @@
-color0 = #000
-color8 = #DDD
-color9 = #EEE
-// color9 = #FFF
-colorA = #008aff
-colorB = mediumorchid
+main-column-width = 52rem
 
-margin0 = 1.25rem // Distance from screen edge
-margin1 = 2.5rem // Vertical distance between blocks
+margin0 = var(--margin0)
+margin1 = var(--margin1)
+margin2 = var(--margin2)
+
+color0 = #000
+color7 = #CCC
+color8 = #EEE
+color9 = #FFF
+// color9 = #FFF
+colorA = #008AFF
+colorB = mediumorchid
 
 font-family__heading = "AkzidenzGrotesk-Super", "Helvetica-Neue-Black", "Helvetica-Black", "Ariel-Black", sans-serif
 
@@ -34,6 +38,14 @@ font-family__heading = "AkzidenzGrotesk-Super", "Helvetica-Neue-Black", "Helveti
   src url('fonts/AkzidenzGroteskBQ-Super.woff')  format('woff2')
 }
 
+:root
+  --margin0: 1.25rem // Left-right margin from screen edge
+  --margin1: 2.5rem  // Vertical distance between elements
+  --margin2: 3.75rem  // Vertical distance between major sections (increases on larger screen sizes)
+
+html
+  scroll-behavior smooth
+
 body
   font-family System, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Arial, sans-serif
   background-color color8
@@ -43,7 +55,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family font-family__heading
   font-weight normal;
   font-style normal;
-  // letter-spacing: .04em;
 }
 
 a
@@ -54,7 +65,7 @@ a
     color colorB
 
 .icon
-  a display block
+  display block
 
   svg
     overflow visible
@@ -63,4 +74,10 @@ a
 
 // Atomic
 .visually-hidden
-  display none
+  position absolute
+  overflow hidden
+  height 1px
+  width 1px
+  opacity 0
+  padding 0
+  border 0

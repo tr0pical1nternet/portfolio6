@@ -1,90 +1,141 @@
+// .no-js .site-header
+    // margin-bottom 3rem
+padding-bottom__portfolio-slides = 4.25rem
+
+.portfolio-item
+    display grid
+    grid-template-areas "gallery" "info"
+    .no-js &
+        margin-bottom margin1
+
+        &:last-child
+            margin-bottom 0
+
+            .portfolio-info__bottom-decoration
+                display none
 
 .portfolio-gallery
-    height "calc(60vw + %s)" % (2 * margin1)
-    margin 0 0 1rem
+    grid-area gallery
+    height "calc(50vw + %s)" % padding-bottom__portfolio-slides
+    // margin 0 0 1.75rem
+    overflow-x scroll
 
 .portfolio-gallery__slides
+    display flex
     height 100%
     margin 0
-    padding margin1 0
+    padding 0 0 padding-bottom__portfolio-slides
     list-style none
-
-.slick-list
-    height 100%
-
-.slick-track
-    height 100%
 
 .portfolio-gallery__slide
     text-align center
     height 100%
 
+    &--01
+        padding 6vw 0
+    
+    &--02
+        padding 4vw 0
+
+    &--04
+        padding 2vw 0
+    // &--05
+    //     padding 8vw 0
+
 .portfolio-gallery__slide-inner
     display inline-block
     position relative
     height 100%
+    margin 0 9.25vw
 
-    & > svg
-        display block
-        position relative
-        height 100%
+    // & > svg
+    //     display block
+    //     position relative
+    //     height 100%
+
+.portfolio-gallery__slide-aspect
+    display block
+    height 100%
 
 .portfolio-gallery__device
+    display inline-block
+    position relative
     margin 0
-    position absolute
     z-index 0
+    height 100%
+    
+    &:focus-within
+        .portfolio-gallery__device-overlay
+            stroke: colorA
+
     &--00
+        position absolute
         width 23.17%
+        height auto
         left 0
-        top 35.64%
+        bottom 0
         z-index 10
 
+        .portfolio-gallery__device-overlay
+            width 100%
+
     &--01
+        position absolute
         width 84.80%
+        height auto
         left 15.20%
-        top 11.62%
+        bottom 0
+
+        .portfolio-gallery__device-overlay
+            width 100%
 
     &--02
-        width 49.71%
-        left 5.49%
-        top 0
-
-    &--03
-        width 74.61%
-        left 0
-        top 45.55%
-
-    &--04
-        width 36.65%
-        left 63.35%
-        top 10.77%
-
-    &--05
+        position absolute
         width 100%
         left 0
         top 0
+
+        .portfolio-gallery__device-overlay
+            width 100%
+
+    // &--03
+    //     width 74.61%
+    //     left 0
+    //     top 45.55%
+
+    // &--04
+    //     width 36.65%
+    //     left 63.35%
+    //     top 10.77%
+
+    // &--05
+    //     width 100%
+    //     left 0
+    //     top 0
     
-    &--06
-        width 100%
-        left 0
-        top 64.12%
+    // &--06
+    //     width 100%
+    //     left 0
+    //     top 64.12%
 
 .portfolio-gallery__device-overlay
+    display block
     position relative
+    overflow visible
     z-index 20
     pointer-events none
+    // width 100%
+    height 100%
+    width auto
     
-    svg
-        display block
-        overflow visible
-        fill color0
-        stroke color8
-        stroke-width .5
-        // transition fill .2s ease
+    fill color0
+    stroke color8
+    stroke-width .5
+    // transition fill .2s ease
 
-        &:hover
-            stroke colorA
-            stroke-width .75
+    &:hover
+        stroke colorA
+        stroke-width .75
 
 .portfolio-gallery__device-screen
     position absolute
@@ -131,10 +182,11 @@
         top 7.39%
 
     &--06
-        width 95.76%
-        padding-bottom 44.20%
-        left 2.13%
-        top 4.08%
+        width 91.84%
+        padding-bottom 198.94%
+        left 4.08%
+        top 2.13%
+        border-radius 2.5vw
 
 .portfolio-gallery__device-content
     position absolute
@@ -145,7 +197,7 @@
     transition opacity .5s ease
 
 .portfolio-info
-    overflow-x hidden
+    // overflow-x hidden
 
 .portfolio-info__slides
     list-style none
@@ -174,7 +226,7 @@
     display flex
     position relative
     flex-direction column
-    padding 0 margin0 0
+    padding margin0 margin0 0
     background-color color0
     color color8
     border-radius 0 3rem 0 0
@@ -183,6 +235,10 @@
 
 .portfolio-info__text
     color color8
+    max-width 75ch
+
+    &:first-child
+        margin-top 0
 
 .portfolio-info__heading
     font-size 1.5rem
@@ -203,35 +259,38 @@
     height 50%
     z-index 0
 
-.portfolio-info__next
-    background none
-    width 2.25rem
-    padding 10%
-    position absolute
-    right 0
-    top 50%
-    padding 0
-    border none
-    transform translateY(-50%)
-    opacity .75
-    transition opacity .2s ease
+.no-js .portfolio-info__bottom-decoration
+    background-color color8
 
-    &:hover
-        opacity 1
+.no-js .portfolio-info__bottom-decoration-inner
+    padding-bottom margin1
+    border-radius 0 0 0 3rem
+    background-color color0
 
-.portfolio-info__half-circ
-    fill colorA
-    // opacity .75
+// .portfolio-info__next
+//     background none
+//     width 2.25rem
+//     padding 10%
+//     position absolute
+//     right 0
+//     top 50%
+//     padding 0
+//     border none
+//     transform translateY(-50%)
+//     opacity .75
+//     transition opacity .2s ease
 
-.portfolio-info__right-arrow
-    stroke color9
-    stroke-width 25
-    stroke-linejoin round
-    stroke-linecap round
-    fill none
+//     &:hover
+//         opacity 1
+
+// .portfolio-info__half-circ
+//     fill colorA
+//     // opacity .75
+
+// .portfolio-info__right-arrow
+//     stroke color9
+//     stroke-width 25
+//     stroke-linejoin round
+//     stroke-linecap round
+//     fill none
     
-
-    
-
-
-

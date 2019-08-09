@@ -35,7 +35,7 @@ function createSrcsets() {
 
 			// Loop through all sizes of each image
 			Object.keys(siteData.imageSizes).map(function (objectKey) {
-				var srcsetFilename = path.basename(imageFilename, path.extname(imageFilename)) + '_' + objectKey + path.extname(imageFilename);
+				let srcsetFilename = path.basename(imageFilename, path.extname(imageFilename)) + '_' + objectKey + path.extname(imageFilename);
 
 				if (fs.existsSync(imagePath + srcsetFilename)) {
 					let srcsetWidth = sizeOf(imagePath + srcsetFilename).width;
@@ -48,7 +48,7 @@ function createSrcsets() {
 				}
 
 				siteData.images[imageSet][i]['src'] = imageAddr + imageFilename;
-				siteData.images[imageSet][i]['srcset'] = srcsets.join(' ');
+				siteData.images[imageSet][i]['srcset'] = srcsets.join(', ');
 				siteData.images[imageSet][i]['width'] = defaultWidth;
 			});
 		}
@@ -92,9 +92,9 @@ gulp.task('stylus', function () {
 		.pipe(browserSync.stream());
 });
 
-// Clean SVGs for inline inclusion
-gulp.task('svgo', () => {
-	return gulp.src('src/images/svg/*.svg')
+// Clean icon SVGs for inline inclusion
+gulp.task('svgo-icons', () => {
+	return gulp.src('src/images/svg/icon-*.svg')
 		.pipe(svgo(
 			{
 				plugins: [{
@@ -110,10 +110,53 @@ gulp.task('svgo', () => {
 				}, {
 					removeViewBox: false
 				}, {
-					// removeDimensions: true
+					removeDimensions: true
+				}, {
+					removeAttrs: {
+						attrs: ('fill|stroke.*|data-name|style|font.*|color|overflow')
+					}
+				}, {
+					addAttributesToSVGElement: {
+						attribute: 'width="72"'
+					}
+				}, {
+					cleanupIds: false
+				}]
+			}
+		))
+		.pipe(gulp.dest('src/images/svg/optimized'));
+});
+
+// Clean device SVGs for incline inclusion
+gulp.task('svgo-devices', () => {
+	return gulp.src('src/images/svg/device-*.svg')
+		.pipe(svgo(
+			{
+				plugins: [{
+					removeTitle: false
+				}, {
+					removeDesc: false
+				}, {
+					removeXMLNS: true
+				}, {
+					removeUnknownsAndDefaults: {
+						keepRoleAttr: true
+					}
+				}, {
+					removeViewBox: false
+				}, {
+					removeDimensions: true
 				}, {
 					removeAttrs: {
 						attrs: ('fill|stroke.*|data-name')
+					}
+				}, {
+					addClassesToSVGElement: {
+						className: 'portfolio-gallery__device-overlay'
+					}
+				}, {
+					addAttributesToSVGElement: {
+						attributes: ['role="presentation"', 'width="72"']
 					}
 				}]
 			}
@@ -128,16 +171,16 @@ gulp.task('fonts', function() {
 		.pipe(browserSync.stream());
 });
 
-// Copy glide files to sitePath
-gulp.task('glide', function() {
-	return gulp.src('src/glide/{glide.js,css/glide.core.css}')
-		.pipe(gulp.dest(sitePath + 'glide'))
-});
-
 // Copy js files to sitePath
 gulp.task('js', function() {
 	return gulp.src('src/js/*.js')
 		.pipe(gulp.dest(sitePath + 'js'))
+});
+
+// Copy downloads to sitePath
+gulp.task('downloads', function() {
+	return gulp.src('src/download/*.pdf')
+		.pipe(gulp.dest(sitePath + 'download'))
 });
 
 // browserSync and file watching
@@ -148,8 +191,8 @@ gulp.task('serve', function () {
 	});
 
 	gulp.watch('src/stylus/*.styl', gulp.series('stylus'));
-	gulp.watch('src/pug/*.pug', gulp.series('pug'));
-	gulp.watch('src/images/svg/*.svg', gulp.series('svgo', 'pug'));
+	gulp.watch(['src/pug/*.pug', 'src/md/*.md'], gulp.series('pug'));
+	gulp.watch('src/images/svg/*.svg', gulp.series('svgo-devices', 'pug'));
 	gulp.watch('src/js/*.js', gulp.series('js', 'pug'));
 	gulp.watch('src/fonts/*.{ttf,otf,svg,eot,woff,woff2}', gulp.series('fonts'));
 	gulp.watch(sitePath + '*.html').on('change', browserSync.reload);

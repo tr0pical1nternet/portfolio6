@@ -1,7 +1,10 @@
 doctype html
 html(lang='en')
   include head
-  body
+  body(class='no-js')
     include header
-    include main
-    include footer
+    main(role="main")
+      include portfolio
+      include bio
+      include scripts
+      include footer
