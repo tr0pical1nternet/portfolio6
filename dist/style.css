@@ -30,7 +30,7 @@ html {
 :root {
   --margin0: 1.25rem;
   --margin1: 2.5rem;
-  --margin3: 0;
+  --margin2: 3.75rem;
 }
 html {
   scroll-behavior: smooth;
@@ -73,6 +73,9 @@ a:visited {
   opacity: 0;
   padding: 0;
   border: 0;
+}
+.site-header {
+  margin-bottom: var(--margin2);
 }
 .site-title {
   display: flex;
@@ -169,14 +172,14 @@ a:visited {
 }
 .portfolio-gallery {
   grid-area: gallery;
-  height: calc(50vw + 8.25rem);
+  height: calc(50vw + 4.25rem);
   overflow-x: scroll;
 }
 .portfolio-gallery__slides {
   display: flex;
   height: 100%;
   margin: 0;
-  padding: 4rem 0 4.25rem;
+  padding: 0 0 4.25rem;
   list-style: none;
 }
 .portfolio-gallery__slide {
@@ -231,6 +234,15 @@ a:visited {
   bottom: 0;
 }
 .portfolio-gallery__device--01 .portfolio-gallery__device-overlay {
+  width: 100%;
+}
+.portfolio-gallery__device--02 {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+.portfolio-gallery__device--02 .portfolio-gallery__device-overlay {
   width: 100%;
 }
 .portfolio-gallery__device-overlay {
@@ -391,7 +403,7 @@ a:visited {
 .bio__content {
   background-color: #eee;
   border-radius: 0 3rem 3rem 0;
-  padding: 0 0 var(--margin1) var(--margin0);
+  padding: 0 0 0 var(--margin0);
   position: relative;
   overflow: hidden;
   line-height: 1.5;
@@ -402,12 +414,13 @@ a:visited {
 }
 .bio__content-inner {
   max-width: 52rem;
-  margin: 0 auto;
+  margin: var(--margin2) auto;
 }
 .bio__heading {
   display: inline-block;
-  margin: var(--margin1) 0 0;
+  margin: 0 0 1rem;
   font-size: 2rem;
+  line-height: 1;
 }
 .bio__figure {
   float: right;
@@ -526,6 +539,7 @@ a:visited {
   :root {
     --margin0: 2.5rem;
     --margin1: 3.75rem;
+    --margin2: calc(13.02vw - 1.458rem);
   }
 }
 @media screen and (min-width: 768px) {
@@ -540,6 +554,9 @@ a:visited {
   }
 }
 @media screen and (min-width: 54.5rem) {
+  .bio__heading {
+    margin-top: 0;
+  }
   .bio__content {
     padding-right: var(--margin0);
     border-radius: 0 0 3rem 0;
@@ -547,7 +564,7 @@ a:visited {
   .bio__figure {
     shape-outside: circle(51% at 57% 53%);
     width: 13.43rem;
-    margin: var(--margin1) 0 var(--margin0) var(--margin0);
+    margin: 0 0 var(--margin0) var(--margin0);
     border-radius: 50%;
   }
 }
@@ -563,9 +580,6 @@ a:visited {
   }
 }
 @media screen and (min-width: 1024px) {
-  .site-header {
-    margin-bottom: var(--margin1);
-  }
   .no-js .portfolio-item {
     grid-template-columns: auto 1fr;
     grid-template-areas: "info gallery";
@@ -587,10 +601,7 @@ a:visited {
     margin-top: 5.5625rem;
   }
   .no-js .portfolio-gallery__slides {
-    padding: 3rem 0 3.25rem;
-  }
-  .no-js .portfolio-gallery__slide--00 .portfolio-gallery__slide-inner {
-    margin-left: 4rem;
+    padding: 3rem 4rem 3.25rem;
   }
   .no-js .portfolio-gallery__slide--01 {
     padding: 3rem 0;

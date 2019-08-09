@@ -1,6 +1,10 @@
 //- Declarations
 - function intToTwoDigitString(int) { return ('0' + int).slice(-2); }
 
+mixin portfolio-gallery__slide-aspect(slideWidth, slideHeight)
+  svg(class='portfolio-gallery__slide-aspect' viewBox='0 0 ' + slideWidth + ' ' + slideHeight role='presentation')
+
+
 mixin portfolio-gallery__slide(slideNum)
   li(class='portfolio-gallery__slide portfolio-gallery__slide--' + slideNum)
     div(class='portfolio-gallery__slide-inner')
@@ -34,12 +38,14 @@ article(class='portfolio' id='portfolio' aria-labelledby='portfolio__heading')
         ul(class='portfolio-gallery__slides' role="group")
           +portfolio-gallery__slide('00')
             //- include ../images/svg/optimized/panel-0.svg
-            svg(class='portfolio-gallery__slide-aspect' viewBox='0 0 290 179' role='presentation')
+            //- svg(class='portfolio-gallery__slide-aspect' viewBox='0 0 290 179' role='presentation')
+            +portfolio-gallery__slide-aspect(290, 179)
             +portfolio-gallery__device(portfolioItemIndex, 0)
               include ../images/svg/optimized/device-00.svg
             +portfolio-gallery__device(portfolioItemIndex, 1)
               include ../images/svg/optimized/device-01.svg
           +portfolio-gallery__slide('01')
+            +portfolio-gallery__slide-aspect(137.28, 71.3)
             +portfolio-gallery__device(portfolioItemIndex, 2)
               include ../images/svg/optimized/device-02.svg
           +portfolio-gallery__slide('02')

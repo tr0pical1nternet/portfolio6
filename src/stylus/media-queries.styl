@@ -12,6 +12,7 @@ margin1-over-640px = 3.75rem
     :root
         --margin0: margin0-over-640px
         --margin1: margin1-over-640px
+        --margin2: calc(13.02vw - 1.458rem)
 
 @media screen and (min-width: 768px)
     .site-title
@@ -23,14 +24,17 @@ margin1-over-640px = 3.75rem
         margin 0 auto
 
 @media screen and (min-width: (main-column-width + margin0-over-640px))
+    .bio__heading
+        margin-top 0
+
     .bio__content
-        padding-right var(--margin0)
+        padding-right margin0
         border-radius 0 0 3rem 0
 
     .bio__figure
         shape-outside circle(51% at 57% 53%)
         width 13.43rem
-        margin var(--margin1) 0 var(--margin0) var(--margin0)
+        margin 0 0 margin0 margin0
         border-radius 50%
 
 @media screen and (min-width: 960px)
@@ -44,8 +48,8 @@ margin1-over-640px = 3.75rem
             padding-right "calc(calc(100vw - calc(52.5rem + %s)) / 2)" % margin0
             
 @media screen and (min-width: 1024px)
-    .site-header
-        margin-bottom margin1
+    :root
+        // --margin2: 
 
     .no-js
         .portfolio-item
@@ -71,13 +75,9 @@ margin1-over-640px = 3.75rem
             margin-top (89/16)rem
 
         .portfolio-gallery__slides
-            padding 3rem 0 3.25rem
+            padding 3rem 4rem 3.25rem
 
         .portfolio-gallery__slide
-            &--00
-                .portfolio-gallery__slide-inner
-                    margin-left 4rem
-
             &--01
                 padding 3rem 0
 
