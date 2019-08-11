@@ -52,7 +52,6 @@ h6 {
 }
 a {
   color: #008aff;
-  text-decoration: none;
 }
 a:visited {
   color: #ba55d3;
@@ -141,6 +140,9 @@ a:visited {
   text-transform: lowercase;
   max-width: 60rem;
 }
+.main-menu a {
+  text-decoration: none;
+}
 .main-menu__list {
   list-style: none;
   padding-left: 0;
@@ -206,44 +208,37 @@ a:visited {
   height: 100%;
 }
 .portfolio-gallery__device {
-  display: inline-block;
-  position: relative;
+  position: absolute;
+  width: 100%;
+  height: auto;
   margin: 0;
   z-index: 0;
-  height: 100%;
 }
 .portfolio-gallery__device:focus-within .portfolio-gallery__device-overlay {
   stroke: #008aff;
 }
 .portfolio-gallery__device--00 {
-  position: absolute;
   width: 23.17%;
-  height: auto;
   left: 0;
   bottom: 0;
   z-index: 10;
 }
-.portfolio-gallery__device--00 .portfolio-gallery__device-overlay {
-  width: 100%;
-}
 .portfolio-gallery__device--01 {
-  position: absolute;
   width: 84.8%;
-  height: auto;
   left: 15.2%;
   bottom: 0;
 }
-.portfolio-gallery__device--01 .portfolio-gallery__device-overlay {
-  width: 100%;
-}
 .portfolio-gallery__device--02 {
-  position: absolute;
-  width: 100%;
   left: 0;
   top: 0;
 }
-.portfolio-gallery__device--02 .portfolio-gallery__device-overlay {
-  width: 100%;
+.portfolio-gallery__device--03 {
+  left: 0;
+  top: 0;
+}
+.portfolio-gallery__device--06 {
+  left: 0;
+  top: 0;
 }
 .portfolio-gallery__device-overlay {
   display: block;
@@ -251,8 +246,8 @@ a:visited {
   overflow: visible;
   z-index: 20;
   pointer-events: none;
-  height: 100%;
-  width: auto;
+  width: 100%;
+  height: auto;
   fill: #000;
   stroke: #eee;
   stroke-width: 0.5;
