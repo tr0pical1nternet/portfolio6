@@ -166,7 +166,7 @@ gulp.task('svgo-devices', () => {
 
 // Copy root files to sitedir
 gulp.task('root', function() {
-	return gulp.src('src/root/*')
+	return gulp.src('src/root/{*,.htaccess}')
 		.pipe(gulp.dest(sitePath))
 		.pipe(browserSync.stream());
 });
