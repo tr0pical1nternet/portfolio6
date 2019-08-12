@@ -19,6 +19,7 @@ padding-bottom__portfolio-slides = 4.25rem
     height "calc(50vw + %s)" % padding-bottom__portfolio-slides
     // margin 0 0 1.75rem
     overflow-x scroll
+    scrollbar-width thin
 
 .portfolio-gallery__slides
     display flex
@@ -30,6 +31,12 @@ padding-bottom__portfolio-slides = 4.25rem
 .portfolio-gallery__slide
     text-align center
     height 100%
+
+    // &:first-child .portfolio-gallery__slide-inner
+    //     margin-left: 4rem
+
+    // &:last-child .portfolio-gallery__slide-inner
+    //     margin-right: 4rem
 
     &--01
         padding 6vw 0
@@ -47,11 +54,6 @@ padding-bottom__portfolio-slides = 4.25rem
     position relative
     height 100%
     margin 0 9.25vw
-
-    // & > svg
-    //     display block
-    //     position relative
-    //     height 100%
 
 .portfolio-gallery__slide-aspect
     display block
@@ -76,7 +78,7 @@ padding-bottom__portfolio-slides = 4.25rem
         z-index 10
 
     &--01
-        width 84.80%
+        width 82.1%
         left 15.20%
         bottom 0
 
@@ -117,6 +119,7 @@ padding-bottom__portfolio-slides = 4.25rem
     height 0
     z-index 0
     background-color color0
+    scrollbar-width none
 
     &--00
         width 91.33%
@@ -142,17 +145,17 @@ padding-bottom__portfolio-slides = 4.25rem
         left 12.38%
         top 9.29%
 
-    &--04
-        width 86.23%
-        padding-bottom 125.71%
-        left 6.89%
-        top 7.25%
+    // &--04
+    //     width 86.23%
+    //     padding-bottom 125.71%
+    //     left 6.89%
+    //     top 7.25%
 
-    &--05
-        width 85.91%
-        padding-bottom 61.18%
-        left 7.04%
-        top 7.39%
+    // &--05
+    //     width 85.91%
+    //     padding-bottom 61.18%
+    //     left 7.04%
+    //     top 7.39%
 
     &--06
         width 91.84%
@@ -187,7 +190,7 @@ padding-bottom__portfolio-slides = 4.25rem
 
 .portfolio-info__title
     margin 0
-    font-size 1.75rem
+    font-size 1.5rem
     text-transform uppercase
 
 .portfolio-info__link
