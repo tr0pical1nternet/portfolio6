@@ -164,6 +164,13 @@ gulp.task('svgo-devices', () => {
 		.pipe(gulp.dest('src/images/svg/optimized'));
 });
 
+// Copy root files to sitedir
+gulp.task('root', function() {
+	return gulp.src('src/root/{*,.htaccess}')
+		.pipe(gulp.dest(sitePath))
+		.pipe(browserSync.stream());
+});
+
 // Copy fonts to sitedir
 gulp.task('fonts', function() {
 	return gulp.src('src/fonts/*.{ttf,otf,svg,eot,woff,woff2}')
@@ -190,6 +197,7 @@ gulp.task('serve', function () {
 		browser: 'FireFox'
 	});
 
+	gulp.watch('src/root/{*,.htaccess}', gulp.series('root'));
 	gulp.watch('src/stylus/*.styl', gulp.series('stylus'));
 	gulp.watch(['src/pug/*.pug', 'src/md/*.md'], gulp.series('pug'));
 	gulp.watch('src/images/svg/*.svg', gulp.series('svgo-devices', 'pug'));
