@@ -306,6 +306,12 @@ a:visited {
   -webkit-overflow-scrolling: touch;
   transition: opacity 0.5s ease;
 }
+.portfolio-info {
+  margin-bottom: var(--margin1);
+}
+.portfolio-info:last-child {
+  margin-bottom: 0;
+}
 .portfolio-info__slides {
   list-style: none;
   padding-left: 0;
