@@ -410,6 +410,12 @@ a:visited {
   margin-right: var(--margin0);
   max-width: 75ch;
 }
+.bio__content a {
+  color: #0065bd;
+}
+.bio__content a:visited {
+  color: #9f30bb;
+}
 .bio__content-inner {
   max-width: 52rem;
   margin: var(--margin2) auto;
