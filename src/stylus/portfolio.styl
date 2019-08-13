@@ -16,7 +16,7 @@ padding-bottom__portfolio-slides = 4.25rem
 
 .portfolio-gallery
     grid-area gallery
-    height "calc(50vw + %s)" % padding-bottom__portfolio-slides
+    height "calc(50vw + %s + %s)" % (margin1 padding-bottom__portfolio-slides)
     // margin 0 0 1.75rem
     overflow-x scroll
     scrollbar-width thin
@@ -25,7 +25,7 @@ padding-bottom__portfolio-slides = 4.25rem
     display flex
     height 100%
     margin 0
-    padding 0 0 padding-bottom__portfolio-slides
+    padding margin1 0 padding-bottom__portfolio-slides
     list-style none
 
 .portfolio-gallery__slide

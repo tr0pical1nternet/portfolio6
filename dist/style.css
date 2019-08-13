@@ -181,7 +181,7 @@ a:visited {
 }
 .portfolio-gallery {
   grid-area: gallery;
-  height: calc(50vw + 4.25rem);
+  height: calc(50vw + var(--margin1) + 4.25rem);
   overflow-x: scroll;
   scrollbar-width: thin;
 }
@@ -189,7 +189,7 @@ a:visited {
   display: flex;
   height: 100%;
   margin: 0;
-  padding: 0 0 4.25rem;
+  padding: var(--margin1) 0 4.25rem;
   list-style: none;
 }
 .portfolio-gallery__slide {
