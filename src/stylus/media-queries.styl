@@ -3,10 +3,13 @@ margin1-over-640px = 3.75rem
 
 @media screen and (min-width: 400px)
     .main-menu
-        font-size calc(calc(.0179 * 100vw) + 12.85px)
+        font-size calc((.0179 * 100vw) + 12.85px)
 
     .footer-back-to-top
         justify-content flex-end
+
+    .portfolio-info__title
+        font-size 1.75rem
 
 @media screen and (min-width: 640px)
     :root
@@ -17,6 +20,15 @@ margin1-over-640px = 3.75rem
 @media screen and (min-width: 768px)
     .site-title
         font-size 2.063rem
+
+@media screen and (min-width: 800px)
+    .site-title__contact-item--github
+        position static
+        overflow visible
+        height auto
+        width auto
+        opacity 1
+        padding .5em .25em
 
 @media screen and (min-width: 850px)
     .main-menu
@@ -75,9 +87,16 @@ margin1-over-640px = 3.75rem
             margin-top (89/16)rem
 
         .portfolio-gallery__slides
-            padding 3rem 4rem 3.25rem
+            padding 3rem 0 3.25rem
 
         .portfolio-gallery__slide
+
+            &:first-child .portfolio-gallery__slide-inner
+                margin-left 6rem
+
+            &:first-child .portfolio-gallery__slide-inner
+                margin-left 6rem
+
             &--01
                 padding 3rem 0
 

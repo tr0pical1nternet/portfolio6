@@ -4,5 +4,5 @@ In 2012 I founded [Sediment Press](https://sedimentpress.com) as graphic and web
 
 I am currently seeking projects or full-time positions developing sites using static site generators, JAM Stacks, Gatsby, WordPress REST API, or building web applications using Vue, React, Svelte, Elm, or D3.
 
-If you have any projects you would like to discuss please get in touch at [&#099;&#111;&#110;&#116;&#097;&#099;&#116;&#064;&#099;&#104;&#097;&#114;&#108;&#101;&#115;&#114;&#111;&#098;&#101;&#114;&#116;&#115;&#111;&#110;&#046;&#105;&#111;](&#109;&#097;&#105;&#108;&#116;&#111;:&#099;&#111;&#110;&#116;&#097;&#099;&#116;&#064;&#099;&#104;&#097;&#114;&#108;&#101;&#115;&#114;&#111;&#098;&#101;&#114;&#116;&#115;&#111;&#110;&#046;&#105;&#111;)
+If you have any projects you would like to discuss please get in touch at [&#099;&#111;&#110;&#116;&#097;&#099;&#116;&#064;&#099;&#104;&#097;&#114;&#108;&#101;&#115;&#114;&#111;&#098;&#101;&#114;&#116;&#115;&#111;&#110;&#046;&#105;&#111;](&#109;&#097;&#105;&#108;&#116;&#111;:&#099;&#111;&#110;&#116;&#097;&#099;&#116;&#064;&#099;&#104;&#097;&#114;&#108;&#101;&#115;&#114;&#111;&#098;&#101;&#114;&#116;&#115;&#111;&#110;&#046;&#105;&#111;).
 

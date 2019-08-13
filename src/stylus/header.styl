@@ -56,16 +56,25 @@
 .site-title__contact-item
   padding .5em .25em
   
-  &:first
+  &--github
+    position absolute
+    overflow hidden
+    height 1px
+    width 1px
+    opacity 0
+    padding 0
+    border 0
+
+  &:first-child
     padding-left 0
   
   &:last-child
     padding-right 0
 
-.social-icon svg
+.icon--social
   width 1.75em
   max-width (50/16)rem
-  fill colorA
+  fill colorA0
 
 .main-menu
   padding 0 margin0
@@ -89,10 +98,10 @@
 
   a
     &:visited
-      color: colorA
+      color: colorA0
   
   &--portfolio
-    border-bottom: .2em solid colorA
+    border-bottom: .2em solid colorA0
 
 
 

@@ -1,21 +1,23 @@
-mixin site-title__contact-item(linkHref, linkClass, linkAlt)
-  li.site-title__contact-item
-    a(href = linkHref alt=linkAlt)
-      div(id = linkClass class = "icon social-icon " + linkClass)
+mixin site-title__contact-item(itemSlug, linkHref, linkTitle)
+  li.site-title__contact-item(class='site-title__contact-item--' + itemSlug)
+    a(href = linkHref title=linkTitle)
         block
 
 header.site-header(id="site-header" role="banner")
   div.site-title
-    //- h1  #[span.site-title__charles-robertson Charles Robertson] #[span.site-title__web-design Web Design]
     h1.site-title__charles-robertson Charles Robertson
     h2.site-title__web-design Web Design
     nav.site-title__contact(aria-label="Contact")
       ul.site-title__contact-list
-        +site-title__contact-item('https://twitter.com/tr0pical1ntrnet', 'twitter-icon', 'Charles on Twitter')
+        li.site-title__contact-item.site-title__contact-item--email
+          <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#099;&#111;&#110;&#116;&#097;&#099;&#116;&#064;&#099;&#104;&#097;&#114;&#108;&#101;&#115;&#114;&#111;&#098;&#101;&#114;&#116;&#115;&#111;&#110;&#046;&#105;&#111;" title="Email Charles">
+            include ../images/svg/optimized/icon-mail.svg
+          </a>
+        +site-title__contact-item('twitter', 'https://twitter.com/tr0pical1ntrnet', 'Charles on Twitter')
           include ../images/svg/optimized/icon-twitter.svg
-        +site-title__contact-item('https://codepen.io/tr0pical1nternet/#', 'codepen-icon', 'Charles on CodePen')
+        +site-title__contact-item('codepen', 'https://codepen.io/tr0pical1nternet', 'Charles on CodePen')
           include ../images/svg/optimized/icon-codepen.svg
-        +site-title__contact-item('https://github.com/tr0pical1nternet', 'github-icon', 'Charles on GitHub')
+        +site-title__contact-item('github', 'https://github.com/tr0pical1nternet', 'Charles on GitHub')
           include ../images/svg/optimized/icon-github.svg
   nav.main-menu(role="navigation")
     ul.main-menu__list
