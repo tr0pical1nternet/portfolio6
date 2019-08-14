@@ -644,3 +644,8 @@ a:visited {
     display: none;
   }
 }
+@media screen and (min-width: 1440px) {
+  html {
+    font-size: 1.11111vw;
+  }
+}
