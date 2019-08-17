@@ -186,8 +186,8 @@ gulp.task('js', function() {
 
 // Copy downloads to sitePath
 gulp.task('downloads', function() {
-	return gulp.src('src/download/*.pdf')
-		.pipe(gulp.dest(sitePath + 'download'))
+	return gulp.src('src/downloads/*.pdf')
+		.pipe(gulp.dest(sitePath + 'downloads'))
 });
 
 // browserSync and file watching
@@ -198,6 +198,7 @@ gulp.task('serve', function () {
 	});
 
 	gulp.watch('src/root/{*,.htaccess}', gulp.series('root'));
+	gulp.watch('src/downloads/*', gulp.series('downloads'));
 	gulp.watch('src/stylus/*.styl', gulp.series('stylus'));
 	gulp.watch(['src/pug/*.pug', 'src/md/*.md'], gulp.series('pug'));
 	gulp.watch('src/images/svg/*.svg', gulp.series('svgo-devices', 'pug'));
