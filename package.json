@@ -21,7 +21,7 @@
   "homepage": "https://github.com/tr0pical1nternet/portfolio5#readme",
   "dependencies": {
     "acorn": "^6.1.1",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
     "gulp-image-resize": "^0.13.1",
